@@ -1,0 +1,5 @@
+# Ports
+Each service has its own port in the kubernetes cluster. This is a
+directory of those ports.
+
+- 31000 - Timothy-portfolio

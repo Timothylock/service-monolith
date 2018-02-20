@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://timothylock.ca/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/index.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/connect.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/portfolio.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/timothy_lock_resume.pdf</loc>
+  <lastmod>2016-08-09T20:11:50+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/author/admin/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/08/upcoming-website/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/08/ubuntu-linux-on-lenovo-thinkpad-t440p/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/07/newegg-hybrid-centre-visit-winning-prizes/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/06/quadrotor-rebuilt/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/04/home-networking-upgrade/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2016/01/adobe-premier-full-cpu-discovery/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/12/2817-2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/08/laptop-heating-fix/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/07/defeating-planned-obsolescence/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/06/fixing-the-pebble-watch-screen/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/page/2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/page/3/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/author/admin/page/2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/blog/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/blog-post/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/04/reverse-engineering-the-tvpad4/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/03/the-encounter-with-pebble-support/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2015/02/the-hacking-is-real/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/author/delete/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/03/amazing-post-with-all-the-goodies/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/03/auctor-consectetur-ligula/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/03/ambrose-redmoon-2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/01/nulla-fringilla-magna/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/01/magna-fringilla-quis-condimentum-2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/01/velit-feugiat-porttito/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2013/01/quisque-sit-amet-sapien-et-lacus/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/12/premium-wordpress-themes-bursting-with-quality/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/12/mauris-pharetra-interdum-lorem-2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/12/nullam-blandit-venenatis-lectus/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/12/aenean-laoreet-tortor/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/11/suspendisse-vulputate-diam/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/11/facilisis-nulla-eget/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/2012/11/carl-sagan/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/blog/page/2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/author/delete/page/2/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/food-for-thought/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/art/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/awesome/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/cars/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/classic/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/custom/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/data/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/epic/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/funny/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/gaming-tips/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/music/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/photography/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/standard/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/themenectar/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/videos/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/tag/wordpress/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/dining/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/music/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/gaming/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/fashion/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://timothylock.ca/blog/category/uncategorized/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.41</priority>
+</url>
+</urlset>

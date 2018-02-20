@@ -1,0 +1,1106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="../../vs1.pbworks.com/shared/statics/packed-i-prod-v93180650.css" />
+
+  
+		<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="../../vs1.pbworks.com/shared/statics/ie6-i-prod-v73109637.css" /><![endif]-->
+      
+        <script>
+  PBinfo = {"CurrentPage":{"is_dev":false,"sessCookie":"ds3","requesttime":1429388457,"page":false,"editor_v3":true},"CurrentWiki":{"front_page":"FrontPage","isPublic":false,"is_archived":false,"debug":false,"usercount":28,"filecount":16,"pagecount":19,"foldercount":7,"name":"couttssfx","title":"couttssfx","cat":"edu","readonly":null,"comments_disabled":null,"comments_newest_first":null,"network_groups":[],"requestaccess":true,"starredcount":1,"granular_notifications":false},"CheckPermissions":{"uid":"b6c6656134104ca413092ebfe7354ddf972820f7","personal_wiki":null,"email":"Timothy.lock_40hotmail.com","wikiperm":"mod","level":"mod","isEditor":true,"isWriter":true,"isReader":true},"GetFeatures":{"fliqz_upsell":true,"classroom_accounts":true},"GetTimes":{"_valid_as_of":1429388457,"commenttime":1401284291,"filetime":1403534113,"foldertime":1379565546,"page_list_time":1378855212,"pagetime":1405668723,"permtime":1401325245,"tagtime":1382385096,"_args":{"op":"GetTimes","ds3":"de-j7QfPTMhNn"}},"GetUserPrefs":{"sidebar":{"folders":[],"sidebar":[],"addusers":[],"recentactivity":[]},"task_view":"list","collapsed_milestones":[],"starred":[{"type":"page","focused_revision":false,"oid":30013512,"name":"Calender"}],"sidebar_collapsed":false,"hide_file_import_dialog":false,"show_editor_fullscreen":false,"show_editor_source":false,"workspace_open_folders":"10565769,10565926,30013512,42492375,10569552,10569587","sidebar_module_collapsed":[],"show_welcome_message":true},"BuildTime":1428690245,"GetRecentWikis":{"wikis":[{"name":"timothythedude","title":"timothythedude","url":"../../timothythedude.pbworks.com/default.htm"}],"total_wiki_count":2}};
+</script>
+<script type="text/javascript" src="../../vs1.pbworks.com/shared/statics/libraries-v78145716.js"></script>
+<script type="text/javascript" src="../../vs1.pbworks.com/shared/statics/packed-v65464171.js"></script>
+<script type="text/javascript" src="../../vs1.pbworks.com/shared/statics/extras-v46757463.js"></script><!--[if lte IE 6]>
+  <script type="text/javascript">function ie6minwidth(){var size = (document.documentElement.clientWidth<960 ? '960px' : '100%'); $(document.body).setStyle({'width':size});} document.observe("dom:loaded", ie6minwidth); Event.observe(window, 'resize', ie6minwidth); 
+</script>
+<![endif]-->
+    
+    
+  
+  
+  <title>couttssfx / Recent Changes</title>
+</head>
+<body class="secondary has-ws-nav wikipage msie msie6">
+<!-- network bar -->
+<div id="network-bar" class="network-bar clearfix standalone">
+  <ul id="network-bar-breadcrumbs">
+          <li><a href="../../my.pbworks.com/default.htm">My PBworks</a></li>
+      <li><a href="../../my.pbworks.com/workspaces" id="network-crumb-all-workspaces-link">Workspaces</a></li>        <li class="last" id="network-crumb-wiki"><a href="../default.htm" id="network-crumb-wiki-link">couttssfx</a></li>
+  </ul>
+
+      <!-- user bar -->
+    <div id="user-bar" class="user-bar loggedin"><div class="user-bar-left"><div class="user-bar-right"><p><span class="username"><a id="usernamelink" href="../user/b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a></span><a id="network-bar-account" href="../../https@my.pbworks.com/@p=profile">account</a><a id="network-bar-logout" class="network-bar-logout" href="session/logout">log out</a><a id="network-bar-help" class="network-bar-help" target="_new" href="../../usermanual.pbworks.com/@wiki=couttssfx&utm_campaign=wiki-link_2F">help</a></p></div></div></div>
+  
+  
+  
+</div>
+
+    <div id="ws-nav" class="chrome-content">
+          <ul class="nav-tabs active-tab-wiki first-tab-active">
+        <li id="ws-nav-wiki" class="active"><a href="page/10565926/FrontPage">Wiki</a></li><li id="ws-nav-browse" class="last"><a href="browse/default.htm">Pages &amp; Files</a></li>      </ul>
+    
+    <div id="ws-nav-search">
+      <input type="text" placeholder="Search this workspace" class="inputtext text" name="SearchFor" id="input-search"  tabindex="1" title="Search" autocomplete="off"/>
+    </div>
+  </div>
+<table id="container"><tr>
+  <td id="main-content">
+    <div class="content">
+      <h2><a class="object_link"href=../default.htm>Home</a> &raquo; Recent Changes</h2>
+<div id="filter_section">
+  <div id="filter_changelist" class="content">
+    <h5>Filter activity</h5>
+    <ul>
+      <li><a href="#filter=all" id="filter-all" class="active" ui:data="">All activity</a></li>
+      <li><a href="#filter=newpages" id="filter-newpages" ui:data="createpage,email_import_page">New pages</a></li>
+      <li><a href="#filter=newfiles" id="filter-newfiles" ui:data="uploadfiles">New files</a></li>
+      <li><a href="#filter=newcomments" id="filter-newcomments" ui:data="commenticon">New comments</a></li>
+      <li><a href="#filter=pageedits" id="filter-pageedits" ui:data="pageediticon">Page edits</a></li>
+      <li><a href="#filter=pagedeletes" id="filter-pagedeletes" ui:data="pageremovedicon">Page deletes</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h5>Subscribe</h5>
+    <a class="iconbutton rss" href="../rss.xml">RSS feed</a>
+  </div>
+</div>
+
+<div class="changelist">
+      <h4>July 18 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">3:32am</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1405668723" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">3:31am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1405668691" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>June 23 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">10:35am</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1403534118" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="uploadfiles"><a class="object_link preview" time="10:35am" href="file/82183924/line.JPG">line.JPG</a> was uploaded by  <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>      
+      <br/><span class="aux">10:35am</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>June 2 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:04pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1401757470" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:00pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1401757241" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>May 25 2014</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10565926/FrontPage">FrontPage</a> was commented on by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">2:49pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">2:41pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1401043275" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>May 22 2014</h4>
+    <ul>
+                  <li class="uploadfiles"><a class="object_link preview" time="11:32am" href="file/80803790/Cafe%20Del%20Mare%20-%20Salsa.mp3">Cafe Del Mare - Salsa.mp3</a> was uploaded by  <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>      
+      <br/><span class="aux">11:32am</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>May 3 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">11:43am</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1399131832" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">11:43am</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1399131813" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>April 21 2014</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10565926/FrontPage">FrontPage</a> was commented on by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">7:41pm</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>April 9 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:24pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1397093095" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:24pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1397093078" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>April 1 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">9:33am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1396359197" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">9:32am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1396359178" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>March 6 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">10:08pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1394158090" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>March 3 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">7:48pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1393890491" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>February 6 2014</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was commented on by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">8:09pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">8:05pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1391731555" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">7:35pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1391729749" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>February 1 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">1:07am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1391231268" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>January 20 2014</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">6:35pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1390257314" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">6:34pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1390257248" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>January 18 2014</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was commented on by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">10:34pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">4:32pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1390077128" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 23 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">7:00pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1387839615" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 10 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:11am</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386681080" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">9:10am</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386681013" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:09am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1386648595" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 6 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">7:56am</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386330988" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 5 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">5:40pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1386279631" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">5:39pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386279540" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 3 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">9:44pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386121488" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">9:40pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/8f8869c60cf1696cc79ae35a3670f0959aa8dbe0" class="user usercard_trigger" data-uid="8f8869c60cf1696cc79ae35a3670f0959aa8dbe0">Kevin P.</a>
+      
+      <br/><span class="aux">9:39pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1386121189" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>December 2 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">10:26pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1386037565" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">10:22pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1386037323" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">10:20pm</span>
+
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">11:19am</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>November 29 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">9:48pm</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>November 26 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/914bea2d999f5f6a297f6b27283f51ac8793d01a" class="user usercard_trigger" data-uid="914bea2d999f5f6a297f6b27283f51ac8793d01a">Christy Joseph-Anton</a>
+      
+      <br/><span class="aux">7:35pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1385508939" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>November 25 2013</h4>
+    <ul>
+                  <li class="uploadfiles"><a class="object_link preview" time="11:20pm" href="file/71099275/Who%20would%20send%20a%20baby.m4a">Who would send a baby.m4a</a> was uploaded by  <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>      
+      <br/><span class="aux">11:20pm</span>
+
+      
+      </li>
+
+                  <li class="uploadfiles"><a class="object_link preview" time="11:20pm" href="file/71099272/Christmas%20rush.m4a">Christmas rush.m4a</a> was uploaded by  <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>      
+      <br/><span class="aux">11:20pm</span>
+
+      
+      </li>
+
+                  <li class="uploadfiles"><a class="object_link preview" time="11:19pm" href="file/71099270/what_child_is_this.wav">what_child_is_this.wav</a> was uploaded by  <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>      
+      <br/><span class="aux">11:19pm</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>November 24 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">7:54pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1385337283" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>November 22 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae" class="user usercard_trigger" data-uid="155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae">Ethan Ortiz</a>
+      
+      <br/><span class="aux">6:02pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1385157757" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae" class="user usercard_trigger" data-uid="155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae">Ethan Ortiz</a>
+      
+      <br/><span class="aux">6:00pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1385157601" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>November 21 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae" class="user usercard_trigger" data-uid="155a7e13fc0bf133a4eb0f9bf9bfafb3ab1dfeae">Ethan Ortiz</a>
+      
+      <br/><span class="aux">6:40pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1385073631" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>November 16 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">4:27pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1384633627" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>November 14 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was commented on by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">2:08am</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>November 12 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was commented on by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">9:39pm</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>October 29 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">5:07pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1383080853" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 28 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">6:02pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1382997745" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 23 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">6:15pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1382566515" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">4:31pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1382560310" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 21 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">8:48pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">8:48pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1382402892" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">5:54pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1382392492" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">5:54pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1382392477" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">5:42pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1382391778" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">5:31pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1382391117" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 18 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">3:42pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">3:41pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1382125293" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 15 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/7ff030931663f6863c809a2af3d4df4e81f0accf" class="user usercard_trigger" data-uid="7ff030931663f6863c809a2af3d4df4e81f0accf">Kevin L</a>
+      
+      <br/><span class="aux">8:24pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">6:43pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1381877031" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 3 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">5:55pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380837326" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/d97c7abdb402493f9d90a689a52085844b99136d" class="user usercard_trigger" data-uid="d97c7abdb402493f9d90a689a52085844b99136d">Bea Gravelle</a>
+      
+      <br/><span class="aux">4:03pm</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1380830594" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 2 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">11:35am</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1380728115" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">11:27am</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380727650" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>October 1 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">5:33pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380663195" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 30 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:00pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380574825" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 29 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was edited by <a href="../user/63e17fd68eba9e7cdf35ac9a6a3dbfd04bdef647" class="user usercard_trigger" data-uid="63e17fd68eba9e7cdf35ac9a6a3dbfd04bdef647">Dylan</a>
+      
+      <br/><span class="aux">10:24am</span>
+
+       - <a href="page-revisions/compare@page_name=Homework&rev2=1380464687" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 27 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/30013512/Calender">Calender</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:59pm</span>
+
+       - <a href="page-revisions/compare@page_name=Calender&rev2=1380319145" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 26 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was commented on by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">8:36pm</span>
+
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was commented on by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:28pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:27pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1380230864" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:18pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380230318" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 25 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">6:01pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380146504" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">6:00pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380146431" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 24 2013</h4>
+    <ul>
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d4ea10c7008a067d5500c57df1ed284592871f14" class="user usercard_trigger" data-uid="d4ea10c7008a067d5500c57df1ed284592871f14">Jessica Milar Bentia</a>
+      
+      <br/><span class="aux">6:37pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380062263" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013670/Upcoming%20Tests">Upcoming Tests</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">5:15pm</span>
+
+       - <a href="page-revisions/compare@page_name=Upcoming%20Tests&rev2=1380057318" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">5:14pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380057273" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">5:14pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1380057255" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 20 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">10:24pm</span>
+
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/63e17fd68eba9e7cdf35ac9a6a3dbfd04bdef647" class="user usercard_trigger" data-uid="63e17fd68eba9e7cdf35ac9a6a3dbfd04bdef647">Dylan</a>
+      
+      <br/><span class="aux">3:45pm</span>
+
+      
+      </li>
+
+        </ul>
+      <h4>September 19 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was commented on by <a href="../user/9a7a913365efde2a56351e249dde07d7810cdfd2" class="user usercard_trigger" data-uid="9a7a913365efde2a56351e249dde07d7810cdfd2">George</a>
+      
+      <br/><span class="aux">9:01pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">5:43pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1379627014" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569587/Today_2527s%20Questions">Today&#039;s Questions</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">5:34pm</span>
+
+       - <a href="page-revisions/compare@page_name=Today_2527s%20Questions&rev2=1379626442" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/d9fa88111a6e566df5beb7a3f52120ec9e96d229" class="user usercard_trigger" data-uid="d9fa88111a6e566df5beb7a3f52120ec9e96d229">athirai sivaseelan</a>
+      
+      <br/><span class="aux">5:30pm</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1379626202" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/10569552/SideBar">SideBar</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:41am</span>
+
+       - <a href="page-revisions/compare@page_name=SideBar&rev2=1379565690" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45445375/Spelling%20List%20Words">Spelling List Words</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:40am</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20List%20Words&rev2=1379565609" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="foldericon op_folder_delete"><a class="object_link" href="browse/#view=ViewFolder&param=paragraph">paragraph</a> was removed by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:39am</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:36am</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1379565368" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:35am</span>
+
+       - <a href="page-revisions/compare@page_name=Spelling%20Activities&rev2=1379565349" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013670/Upcoming%20Tests">Upcoming Tests</a> was edited by <a href="../user/b6c6656134104ca413092ebfe7354ddf972820f7" class="user usercard_trigger" data-uid="b6c6656134104ca413092ebfe7354ddf972820f7">Timothy</a>
+      
+      <br/><span class="aux">12:33am</span>
+
+       - <a href="page-revisions/compare@page_name=Upcoming%20Tests&rev2=1379565230" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+      <h4>September 18 2013</h4>
+    <ul>
+                  <li class="commenticon"><a class="object_link" href="page/45564420/Spelling%20Activities">Spelling Activities</a> was commented on by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">8:18pm</span>
+
+      
+      </li>
+
+                  <li class="commenticon"><a class="object_link" href="page/10568638/Homework">Homework</a> was commented on by <a href="../user/5133fe31c75edeb5bedc3a221233536690f6bda2" class="user usercard_trigger" data-uid="5133fe31c75edeb5bedc3a221233536690f6bda2">Mr. Coutts</a>
+      
+      <br/><span class="aux">8:14pm</span>
+
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013670/Upcoming%20Tests">Upcoming Tests</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">7:40pm</span>
+
+       - <a href="page-revisions/compare@page_name=Upcoming%20Tests&rev2=1379547631" class="details_link">show changes</a>
+      
+      </li>
+
+                  <li class="pageediticon"><a class="object_link" href="page/30013670/Upcoming%20Tests">Upcoming Tests</a> was edited by <a href="../user/d32c1311ef766b1aa5e65f1d44d139175f856b84" class="user usercard_trigger" data-uid="d32c1311ef766b1aa5e65f1d44d139175f856b84">mary</a>
+      
+      <br/><span class="aux">7:37pm</span>
+
+       - <a href="page-revisions/compare@page_name=Upcoming%20Tests&rev2=1379547428" class="details_link">show changes</a>
+      
+      </li>
+
+        </ul>
+  </div>
+
+
+<script>
+  function filterActivityByClass(link) {
+    $$('.changelist li').invoke('hide');
+
+    var cssClasses = link.getAttribute("ui:data").split(',');
+
+    cssClasses.each(function(cssClass) {
+      cssClass = ( cssClass.length > 0 ? ".changelist li." + cssClass : ".changelist li" );
+      $$(cssClass).invoke('show');
+    });
+
+    $$('.changelist h4').each( function(h4) {
+      var cmd = ( h4.next().immediateDescendants().reject( function(el) { return !el.visible(); }).size() > 0 ? 'show' : 'hide');
+      h4[cmd]();
+    });
+
+    $$('#filter_changelist li a').invoke('removeClassName', 'active');
+    link.addClassName('active');
+  }
+
+  PBwiki.init(function() {
+    $$('#filter_changelist ul a').invoke('observe', 'click', function(e) {
+      filterActivityByClass(Event.element(e));
+    });
+
+    var filter = PBwiki.History.getKey('filter').getValue();
+    if(filter && $('filter-' + filter)) {
+      filterActivityByClass($('filter-' + filter));
+    }
+    Util.addLinkTooltips($$('div.changelist')[0]);
+  });
+
+</script>
+
+
+    </div><!--- /.content -->
+    
+    <div id="page-footer">
+      <div class="content">
+        <div id="footer-logo" ><a href="../../pbworks.com/@utm_campaign=wiki-link" title=""></a></div>
+
+<div id="footer-pbwiki">
+  <p>
+    <strong><a href="../../https@pbworks.com/@utm_campaign=wiki-link">PBworks</a> </strong> / <a target="_new" href="../../usermanual.pbworks.com/@wiki=couttssfx&utm_campaign=wiki-link_2F">Help</a><br/>
+    <a href="../../pbworks.com/content/termsofservice@utm_campaign=wiki-link">Terms of use</a> / <a href="../../pbworks.com/content/privacypolicy@utm_campaign=wiki-link">Privacy policy</a>
+  </p>
+</div>
+<div id="footer-about">
+  <p>
+        <strong>About this workspace</strong>
+            <br/>
+    <a href="contact-owner">Contact the owner</a> /             This workspace is <strong>private</strong>
+  </p>
+</div>
+      </div>
+    </div>
+    
+    
+  </td><!--- /#main-content -->  
+  
+  <td id="side-content">  <div id="sidebar">
+    <div id="side-toolbar" class="sidebox">
+      <ul id="main-tools">
+        <li><a id="sidebar-createpage" href="newpage" class="iconbutton">Create a page</a></li>        <li><a id="sidebar-uploadfiles" href="browse/#view=ViewAllFiles" class="iconbutton">Upload files</a></li>              </ul>
+      
+    </div><!-- /#side-toolbar -->
+      <div id="sidebarModules">
+                  
+
+      
+              <div class="wikicontext-module sidebox folders" id="module-folders">
+  <div class="header"><h3 id="module-title-folders">Navigator</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div>  <div class="content wikistyle" style="height: 200px;">
+    <div class="loading" id="navigator_loading_message">Loading&hellip;</div>
+  </div>
+<div class="footer resizeable">&nbsp;</div>
+</div>                <div class="wikicontext-module sidebox sidebar" style="display: none;" id="module-sidebar">
+  <div class="header"><h3 id="module-title-sidebar">SideBar</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div><div class="footer">&nbsp;</div>
+</div>                            <div class="wikicontext-module sidebox recentactivity" id="module-recentactivity">
+  <div class="header"><h3 id="module-title-recentactivity">Recent Activity</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div>  <div id="new-recent-activity" style="display: none;">
+    <a id="new-recent-activity-refresh" href="#">
+      Show <span id="new-recent-activity-count">0</span> new item<span id="new-recent-activity-plural">s</span>
+    </a>
+  </div>
+  <div class="content" style="height: 364px;">
+    <div class="loading" id="recentactivity_loading_message">Loading&hellip;</div>
+  </div>
+<div class="footer resizeable">&nbsp;</div>
+</div>            </div>
+    </div>
+</td><!--- /#side-content -->
+</tr></table>
+
+    <script type="text/javascript">
+  var _qevents = [{ qacct : "p-16CGFkiSpdTEU" }];
+  (function() {
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "../../https@secure" : "../../edge")
+               + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+</script>
+<noscript><div style="display: none;"><img src="../../pixel.quantserve.com/pixel/p-16CGFkiSpdTEU.gif" height="1" width="1" alt="Quantcast"/></div></noscript><!--ipt type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri-->
+<!--ipt type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2694787-12");
+pageTracker._setDomainName(".pbworks.com");
+if (document.cookie.match(/hm=/)) {
+  pageTracker._setVar('authenticated');
+}
+pageTracker._setAllowHash(false);
+pageTracker._trackPageview();
+</scri-->
+</body>
+</html><!-- v=2,utz=x,ssl=0,ua=Win-MSIE-6,uid=b6c6656134104ca413092ebfe7354ddf972820f7,sn=59322,pid=27862,hn=sf70,nw=0,w=couttssfx,pv=pri,pkg=p20,perm=mod,crea=1248968732,mt=1405668723,sc=3665,cl=1,cat=edu,mpu=9,te=0.301 -->
