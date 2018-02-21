@@ -1,2 +1,2 @@
-docker build -t "timothylock/timothy-blog:latest" .
-docker push timothylock/timothy-blog:latest
+docker build -t "timothylock/8thmarkham:latest" .
+docker push timothylock/8thmarkham:latest

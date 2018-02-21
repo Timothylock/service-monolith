@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-8thmarkham
+spec:
+  type: NodePort
+  ports:
+    - port: 31002
+      nodePort: 31002
+      targetPort: http
+      protocol: TCP
+  selector:
+    app: blog-8thmarkham
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "blog-8thmarkham"
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: "blog-8thmarkham"
+        env: prod
+    spec:
+      containers:
+        - name: blog-8thmarkham
+          image: "timothylock/blog-8thmarkham:latest"
+          ports:
+            - containerPort: 80
+              name: http
+          env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-pass
+                key: password

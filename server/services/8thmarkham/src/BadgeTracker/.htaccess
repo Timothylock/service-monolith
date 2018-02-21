@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "Badge Tracker Access"
+AuthUserFile /homepages/24/d454175876/htdocs/BadgeTracker/.htpasswd
+Require valid-user
+RewriteCond %{REQUEST_URI} !^/view/.*$
+
