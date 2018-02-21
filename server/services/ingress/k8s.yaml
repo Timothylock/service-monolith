@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web-ingress
+spec:
+  rules:
+  - host: "*.timothylock.ca"
+    http:
+      paths:
+      - backend:
+          serviceName: timothy-portfolio
+          servicePort: 31000

@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: subscriptions
-          image: "timothylock:timothy-portfolio"
+          image: "timothylock/timothy-portfolio:latest"
           ports:
             - containerPort: 80
               name: http
