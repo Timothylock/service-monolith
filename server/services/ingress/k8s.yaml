@@ -4,7 +4,13 @@ metadata:
   name: web-ingress
 spec:
   rules:
-  - host: "*.timothylock.ca"
+  - host: "blog.timothylock.ca"
+    http:
+      paths:
+      - backend:
+          serviceName: timothy-blog
+          servicePort: 31001
+  - host: "www.timothylock.ca"
     http:
       paths:
       - backend:

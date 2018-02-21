@@ -28,7 +28,7 @@ spec:
         env: prod
     spec:
       containers:
-        - name: subscriptions
+        - name: timothy-portfolio
           image: "timothylock/timothy-portfolio:latest"
           ports:
             - containerPort: 80
