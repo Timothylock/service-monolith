@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: csc309-textbook-exchange
+spec:
+  type: NodePort
+  ports:
+    - port: 31003
+      nodePort: 31003
+      targetPort: http
+      protocol: TCP
+  selector:
+    app: csc309-textbook-exchange
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "csc309-textbook-exchange"
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: "csc309-textbook-exchange"
+        env: prod
+    spec:
+      containers:
+        - name: timothy-portfolio
+          image: "timothylock/csc309-textbook-exchange:latest"
+          ports:
+            - containerPort: 80
+              name: http
