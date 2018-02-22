@@ -3,14 +3,8 @@ kind: Service
 metadata:
   name: timothy-portfolio
 spec:
-  type: NodePort
-  ports:
-    - port: 31000
-      nodePort: 31000
-      targetPort: http
-      protocol: TCP
-  selector:
-    app: subscriptions
+  type: ExternalName
+  externalName: timothylock.ca
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
