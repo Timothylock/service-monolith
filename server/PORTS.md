@@ -6,3 +6,4 @@ directory of those ports.
 - 31001 - Timothy-blog
 - 31002 - blog-8thmarkham
 - 31003 - csc309-textbook-exchange
+- 31004 - php-my-admin
