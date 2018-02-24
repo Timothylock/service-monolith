@@ -28,7 +28,7 @@ spec:
         env: prod
     spec:
       containers:
-        - name: timothy-portfolio
+        - name: csc309-textbook-exchange
           image: "timothylock/csc309-textbook-exchange:latest"
           ports:
             - containerPort: 80

@@ -24,7 +24,7 @@ spec:
   template:
     metadata:
       labels:
-        app: "subscriptions"
+        app: "timothy-portfolio"
         env: prod
     spec:
       containers:
