@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 8thmarkham
+  name: timothy-blog
 spec:
   type: NodePort
   ports:
@@ -10,12 +10,12 @@ spec:
       targetPort: http
       protocol: TCP
   selector:
-    app: 8thmarkham
+    app: timothy-blog
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: "8thmarkham"
+  name: "timothy-blog"
 spec:
   replicas: 1
   strategy:
@@ -24,12 +24,12 @@ spec:
   template:
     metadata:
       labels:
-        app: "8thmarkham"
+        app: "timothy-blog"
         env: prod
     spec:
       containers:
-        - name: 8thmarkham
-          image: "timothylock/8thmarkham:latest"
+        - name: timothy-blog
+          image: "timothylock/timothy-blog:latest"
           ports:
             - containerPort: 80
               name: http
