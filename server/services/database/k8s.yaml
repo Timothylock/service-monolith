@@ -19,12 +19,8 @@ metadata:
   labels:
     app: wordpress
 spec:
-  type: NodePort
-    ports:
-      - port: 3306
-        nodePort: 31005
-        targetPort: http
-        protocol: TCP
+  ports:
+    - port: 3306
   selector:
     app: wordpress
     tier: mysql
