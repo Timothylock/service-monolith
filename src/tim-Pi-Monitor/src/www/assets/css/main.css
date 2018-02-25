@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+}
+
+.topbar {
+    background-color: #f3f3f3;
+    height: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 7vh;
+    text-align: center;
+}
+
+.maincontainer {
+    background-color: #ebebeb;
+    height: 90%;
+}
+
+.leftsidebar {
+    height: 100%;
+    padding-top: 15%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: left;
+    line-height: 0.85;
+    background: linear-gradient(#0981ba, #0d5586);
+}
+
+.mainrow {
+    height: 50%;
+    padding-bottom: 10px;
+}
+
+.module_outside {
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    background-clip: content-box;
+    height: 100%;
+}
+
+.module_inside {
+    border-radius: 5%;
+    height: 100%;
+    padding-top: 15%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    line-height: 0.85;
+    background-color: #e74c3c;
+}
+
+p.big {
+    font-size: 10vmax;
+}
+
+p.medium {
+    font-size: 5vmax;
+}
+
+p.small {
+    font-size: 3vmax;
+}
+
+/* Modal CSS */
+.myModal {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* When in portrait mode, user should be on their phone so no need for time */
+    .leftsidebar {
+        height: 180px;
+        font-weight: 300;
+        text-decoration: none;
+        font-size: 7vh;
+        text-align: center;
+    }
+
+    #date, #weather_degrees, #weather_condition, #weather_lowhigh {
+        display: none;
+    }
+
+    .module_outside {
+        height: 60%;
+    }
+
+    .module_inside {
+        padding-top: 7%;
+    }
+
+    p.big {
+        font-size: 15vmax;
+    }
+
+    p.medium {
+        font-size: 7vmax;
+    }
+
+    p.small {
+        font-size: 4vmax;
+    }
+}

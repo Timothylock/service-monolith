@@ -88,5 +88,13 @@ services:
        - "9041:27017"
      command: mongod --smallfiles --logpath=/dev/null
 
+  pi-monitor:
+     image: timothylock/tim-pi-monitor-demo:latest
+     ports:
+       - "9050:8880"
+     restart: always
+     environment:
+       VIRTUAL_HOST: homemonitordemo.timothylock.ca
+
 volumes:
     mysqldata:

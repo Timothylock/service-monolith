@@ -15,3 +15,4 @@ All of the containers running on my server
 | 9030          | 80            | markham8-blog     | 8thmarkham.com                     |
 | 9040          | 80            | csc309-tb-echange | uoftextbookexchange.timothylock.ca |
 | 9041          | 27017         | csc309-mongodb    |                                    |
+| 9050          | 8880            | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |

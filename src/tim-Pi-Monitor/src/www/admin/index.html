@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta content='width=device-width, initial-scale=0.65, maximum-scale=0.65, user-scalable=0' name='viewport'/>
+    <title>Admin - Home</title>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/admin.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+</head>
+<body onload="loadServerUpdateInfo()">
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../admin">Pi Home Monitoring Admin</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../admin">Admin Home</a></li>
+                <li><a href="dbviewer/?url=/admin/db/home_monitor.db">Database</a></li>
+                <li><a href="log.html">Log Correction</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="users.html">Users
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="users.html">View users</a></li>
+                        <li><a href="addUser.html">Add User</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Exit Admin Page</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Admin Home</h1>
+                <br>
+                <p>Welcome to the admin panel. Here you can perform administrative features such as add new users, run
+                    queries
+                    on (a local copy) the database, and more!</p>
+                <p>Features are still being implemented at the moment.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>System functions</h3>
+                <br>
+                <p>Perform system operations</p>
+                <p id="updateInfo">loading</p>
+                <button type="button" id="gitpull" onclick="pullLatestVersion();">Download latest version</button>
+            </div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p class="text-muted pull-left" id="revision" style="margin-top: 25px; margin-left: 25px;">Server running version:
+        null</p>
+    <p class="text-muted pull-right" style="margin-top: 25px; margin-right: 25px;"><a
+            href="https://github.com/Timothylock/Pi-Home-Automation">Pi Home Automation</a> made with ♥️ by <a
+            href="http://timothylock.ca">Timothy Lock</a></p>
+</footer>
+</body>
+</html>
+    
+
