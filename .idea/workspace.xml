@@ -4,11 +4,32 @@
     <list default="true" id="8b53ccb9-a956-401e-8b25-ec0ab4b8ba34" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/docker/PORTS.md" afterPath="" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.turtle" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.wt" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/collection-2--2617612826424522024.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/collection-2--2617612826424522024.wt" />
       <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T05-39-37Z-00000" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T05-39-37Z-00000" />
       <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.interim" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000002" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000002" />
-      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/k8s.yaml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/index-3--2617612826424522024.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/index-3--2617612826424522024.wt" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000002" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/sizeStorer.wt" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/plugins/hello.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/plugins/hello.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/comments.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/comments.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/css/ie.css" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/css/ie.css" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/functions.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/functions.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/inc/template-tags.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/inc/template-tags.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/readme.txt" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/readme.txt" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/rtl.css" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/rtl.css" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/single.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/single.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/style.css" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentyfifteen/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/comments.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/comments.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/functions.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/functions.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/inc/template-tags.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/inc/template-tags.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/index.php" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/index.php" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/readme.txt" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/readme.txt" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/rtl.css" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/rtl.css" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/style.css" afterPath="$PROJECT_DIR$/src/timothy-blog/wp-content/themes/twentysixteen/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,96 +40,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="104" column="60" lean-forward="false" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tim-Pi-Monitor/src/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nginx.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/timothy-portfolio/config/nginx.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-256">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/timothy-portfolio/build.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/timothy-portfolio/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/src/nginx-proxy/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="php.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lock-family/config/php.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="build.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lock-family/build.sh">
+        <entry file="file://$PROJECT_DIR$/src/nginx-proxy/build.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lock-family/Dockerfile">
+      <file leaf-file-name="default" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nginx-proxy/default">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="625">
+              <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -119,6 +85,31 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="php.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lock-family/config/php.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,8 +185,11 @@
         <option value="$PROJECT_DIR$/src/tim-Pi-Monitor/build.sh" />
         <option value="$PROJECT_DIR$/src/tim-Pi-Monitor/Dockerfile" />
         <option value="$PROJECT_DIR$/src/lockfamily.ga/build.sh" />
-        <option value="$PROJECT_DIR$/docker/docker-compose.yaml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/nginx-proxy/Dockerfile" />
+        <option value="$PROJECT_DIR$/src/nginx-proxy/build.sh" />
+        <option value="$PROJECT_DIR$/src/nginx-proxy/default" />
+        <option value="$PROJECT_DIR$/docker/docker-compose.yaml" />
       </list>
     </option>
   </component>
@@ -249,7 +243,13 @@
               <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
               <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="timothy-portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx-proxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tim-Pi-Monitor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -267,11 +267,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/nginx-proxy" />
       <recent name="$PROJECT_DIR$/src/lockfamily.ga" />
       <recent name="$PROJECT_DIR$/src/tim-Pi-Monitor" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/server/services/csc309" />
-      <recent name="$PROJECT_DIR$/server/services/CSC309" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/tim-Pi-Monitor/src" />
@@ -330,33 +330,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/timothy-portfolio/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/timothy-blog/src/wp-settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2705">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/timothy-blog/config/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/ingress/k8s.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -649,19 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/PORTS.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/csc309-textbook-exchange/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -690,14 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tim-Pi-Monitor/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -758,19 +710,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
+    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/build.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="60" lean-forward="false" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="47" lean-forward="false" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/PORTS.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
             <folding />
           </first_editor>
           <second_editor>
@@ -781,6 +754,30 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tim-Pi-Monitor/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/default">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding />
         </state>
       </provider>

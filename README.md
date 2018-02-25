@@ -4,6 +4,7 @@ All of the containers running on my server
 # Getting Started
 ## Prerequisites
 - [Docker Community Edition](https://www.docker.com/community-edition)
+- `docker network create nginx-proxy`
 
 ## Running
 To spin up all of these containers, navigate to `./docker` and run `docker-compose up -d`
