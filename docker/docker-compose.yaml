@@ -96,5 +96,13 @@ services:
      environment:
        VIRTUAL_HOST: homemonitordemo.timothylock.ca
 
+  timothy-portfolio:
+     image: timothylock/lock-family:latest
+     ports:
+       - "9060:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: lockfamily.timothylock.ca lockfamily.ga
+
 volumes:
     mysqldata:
