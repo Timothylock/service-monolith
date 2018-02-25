@@ -1,7 +1,0 @@
-group10
-
-Feedback:
-Very good keeping the project small
-You should add a chat feature
-
-Mark: 10/10

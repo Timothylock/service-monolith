@@ -1,0 +1,92 @@
+version: '3.3'
+
+services:
+  nginx-proxy:
+     image: jwilder/nginx-proxy
+     container_name: nginx-proxy
+     ports:
+       - "80:80"
+     volumes:
+       - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  timothy-blog:
+     depends_on:
+       - mysql
+     image: wordpress:latest
+     ports:
+       - "9000:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: blog.timothylock.ca
+       WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_PASSWORD: password
+       WORDPRESS_DB_NAME: timothy-blog
+     volumes:
+       - ../src/timothy-blog/wp-content:/var/www/html/wp-content/
+
+  mysql:
+     image: mysql:5.7
+     ports:
+       - "9010:3306"
+     volumes:
+       - mysqldata:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+       MYSQL_USER: user
+       MYSQL_PASSWORD: password
+
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin:latest
+     ports:
+       - "9011:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: phpmyadmin.timothylock.ca
+       MYSQL_ROOT_PASSWORD: password
+       PMA_HOST: mysql:3306
+
+  timothy-portfolio:
+     image: timothylock/timothy-portfolio:latest
+     ports:
+       - "9020:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: timothylock.ca
+
+  markham8-blog:
+     depends_on:
+       - mysql
+     image: wordpress:latest
+     ports:
+       - "9030:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: 8thmarkham.com
+       WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_PASSWORD: password
+       WORDPRESS_DB_NAME: 8thmarkham-blog
+     volumes:
+       - ../src/markham8-blog/wp-content:/var/www/html/wp-content/
+
+  csc309-tb-exchange:
+     image: timothylock/csc309-textbook-exchange:latest
+     ports:
+       - "9040:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: uoftextbookexchange.timothylock.ca
+
+  csc309-mongodb:
+     image: mongo:latest
+     environment:
+       - MONGO_DATA_DIR=/data/db
+       - MONGO_LOG_DIR=/dev/null
+     volumes:
+       - ../src/csc309-mongodb/data/db:/data/db
+     ports:
+       - "9041:27017"
+     command: mongod --smallfiles --logpath=/dev/null
+
+volumes:
+    mysqldata:

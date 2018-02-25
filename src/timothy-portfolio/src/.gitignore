@@ -1,0 +1,9 @@
+# Node
+node_modules
+npm-debug.log
+
+# OS things
+.DS_Store
+Thumbs.db
+
+DATA/owncloud/

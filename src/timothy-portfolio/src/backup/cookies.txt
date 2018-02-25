@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.8thmarkham.com	TRUE	/	FALSE	1999999999	__cfduid	d3acf992d5b4b24704570674633098f001428880256
+.timothylock.ca	TRUE	/	FALSE	1999999999	__cfduid	dc1231a8dff3ec49a1d51e3428e0c4c961428880453
+

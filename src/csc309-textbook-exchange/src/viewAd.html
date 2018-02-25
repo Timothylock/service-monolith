@@ -1,0 +1,195 @@
+<!-- Here be dragons -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>View Ad - UofTextbook Exchange</title>
+
+	<!-- Bootstrap Core -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/sidebar.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+
+    <script src="assets/js/ads.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/cookies.js"></script>
+
+</head>
+
+<body>
+	<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="allAds.html">UofTextbook Exchange</a>
+            </li>
+            <li>
+                <a class="category">Postings</a>
+            </li>
+            <li>
+                <a class="sub" href="allAds.html">View Ads</a>
+            </li>
+            <li>
+                <a class="sub" href="yourAds.html">Your Ads</a>
+            </li>
+            <li>
+                <a class="category">User</a>
+            </li>
+            <li>
+                <a class="sub" href="profile.html">Edit Profile</a>
+            </li>
+            <li>
+                <a class="sub admin" href="addUser.html" style="visibility: hidden;">Add User</a>
+            </li>
+            <li>
+                <a class="sub admin" href="searchUser.html" style="visibility: hidden;">List/Search User(s)</a>
+            </li>
+        </ul>
+        <ul class="sidebar-bottom">
+            <li>
+                <a class="sub" onclick="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+        	<!-- header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Title -->
+                    <h1>View Ad</h1>
+                </div>
+            </div>
+            <!-- table -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table">
+				    <thead>
+				      <tr>
+				        <th id="bookname">REPLACE WITH BOOKNAME VIA JAVASCRIPT</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>
+                            <div>
+                                <div class="row">
+                                    <div id="overview" class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+                                        <!-- DETAILS -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Bid -->
+                                    <div class="col-lg-4">
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th>Bid</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr style="background-color: #c1c1c1;">
+                                                <td>
+                                                    <!-- The form -->
+                                                    <form id="bidForm">
+                                                        <h3 id="currentbid">Current Bid: N/A</h3>
+                                                        <input type="number" min="1" step="any" name="bid" class="form-control nonowneronly" placeholder="50.00" required/>
+                                                        <input type="submit" class="btn btn-primary nonowneronly" value="Bid">
+                                                    </form>
+                                                    <a href="#menu-toggle" class="btn btn-primary owneronly" style="visibility: hidden;" onclick="acceptBid();">Accept Bid</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <!-- Comments -->
+                                    <div class="col-lg-8">
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th>Comment</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr style="background-color: #c1c1c1;">
+                                                <td>
+                                                    <div>
+                                                        <textarea class="form-control" rows="6" id="comments" style="resize: none;" disabled></textarea>
+                                                        <br>
+                                                    </div>
+                                                    <!-- The form -->
+                                                    <form>
+                                                        <textarea class="form-control" id="comment" rows="4" placeholder="Cheaper than the bookstore!"></textarea>
+                                                        <button id="commentBtn" type="button" class="btn btn-primary">Comment</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                      </tr>
+				    </tbody>
+				  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    // Gets the parameters passed in
+    $.parameters = function(name){
+        var res = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        try{
+            return res[1];
+        }catch(err) {
+            return null;
+        }
+    }
+
+    // Admin Check
+    loginCheck();
+    adminStuff();
+
+
+    // Make the correct calls according to parameters
+    if($.parameters('ad_id') != null && $.parameters('ad_id') != ""){
+        getDetailedAd($.parameters('ad_id'));
+        getComments($.parameters('ad_id'));
+    }else{
+        displayError("Malformed link. Missing parameters");
+    }
+
+
+    </script>
+</body>

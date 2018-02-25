@@ -1,0 +1,32 @@
+HTTrack3.48-21+htsswf+htsjava launched on Sun, 12 Apr 2015 19:09:36 at timothylock.ca -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp
+(winhttrack -qwr10C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" timothylock.ca -O1 "C:\My Web Sites\timothy" -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:09:37	Warning: 	Note: due to timothylock.ca remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+19:11:02	Warning: 	Link timothylock.ca/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
+19:11:06	Warning: 	File not parsed, looks like binary: timothylock.ca/wp-content/themes/starter/fonts/fontawesome-webfont.ttf?v=4.0.3
+19:14:13	Warning: 	Moved Permanently for timothylock.ca/?p=389
+19:14:13	Warning: 	File has moved from timothylock.ca/?p=389 to http://timothylock.ca/competitions/
+19:14:13	Warning: 	Moved Permanently for timothylock.ca/?p=414
+19:14:13	Warning: 	File has moved from timothylock.ca/?p=414 to http://timothylock.ca/programming-projects/
+19:14:13	Warning: 	Moved Permanently for timothylock.ca/?p=398
+19:14:13	Warning: 	File has moved from timothylock.ca/?p=398 to http://timothylock.ca/website-design/
+19:14:13	Error: 	"Not Found" (404) at link 104.131.44.81/wp-content/uploads/2014/08/8thmarkham-300x206.jpg (from timothylock.ca/website-design/)
+19:14:13	Warning: 	Moved Permanently for timothylock.ca/?p=409
+19:14:13	Warning: 	File has moved from timothylock.ca/?p=409 to http://timothylock.ca/video-editing-filming/
+19:14:13	Warning: 	File not parsed, looks like binary: timothylock.ca/wp-content/themes/starter/fonts/glyphicons-halflings-regular.ttf
+19:14:13	Warning: 	Moved Permanently for timothylock.ca/?p=615
+19:14:13	Warning: 	File has moved from timothylock.ca/?p=615 to http://timothylock.ca/reverse-engineering-the-tvpad4/
+19:15:32	Warning: 	Moved Permanently for timothylock.ca/?p=587
+19:15:32	Warning: 	File has moved from timothylock.ca/?p=587 to http://timothylock.ca/being-a-uoft-student-during-the-strike/
+19:15:32	Warning: 	Moved Permanently for timothylock.ca/?p=584
+19:15:32	Warning: 	File has moved from timothylock.ca/?p=584 to http://timothylock.ca/the-encounter-with-pebble-support/
+19:15:43	Warning: 	Moved Permanently for timothylock.ca/?p=575
+19:15:43	Warning: 	File has moved from timothylock.ca/?p=575 to http://timothylock.ca/the-hacking-is-real/
+
+HTTrack Website Copier/3.48-21 mirror complete in 6 minutes 7 seconds : 124 links scanned, 114 files written (9604318 bytes overall) [9086058 bytes received at 24757 bytes/sec], 927928 bytes transferred using HTTP compression in 51 files, ratio 35%, 4.1 requests per connection
+(1 errors, 20 warnings, 0 messages)

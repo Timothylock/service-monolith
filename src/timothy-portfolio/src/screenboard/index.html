@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeInfoDisplay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Main Files -->
+    <script src="assets/js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+
+
+    <!-- Libraries -->
+    <script src="assets/js/moments.js"></script>
+    <script src="assets/js/formatgooglecal.js"></script>
+    <script src="assets/js/jquery.simpleWeather.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/weather.css">
+</head>
+<body style="height: 100vh" onload="start();">
+<div class="container-fluid"
+     style="font-family: 'Roboto', sans-serif; background-color: black; color: white; height: 100%">
+    <div class="row" style="height:3wv;">
+        <div class="col-md-8" id="weather"></div>
+        <div class="col-md-4" id="datetime">
+            <p id="date"></p>
+        </div>
+    </div>
+    <div class="row" style="height: calc(100% - 85px);">
+        <div class="col-md-9" id="mainContent">
+            <iframe src="https://status.timothylock.ca" style="border:0px #ffffff none;" name="cp24" scrolling="no"
+                    frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="col-md-3" id="rightcol">
+            <p id="time"></p>
+            <ul id="events-upcoming"></ul>
+            <!-- Leave empty because the datetime above uses this space -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

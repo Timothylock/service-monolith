@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.timothylock.ca	TRUE	/	FALSE	1999999999	__cfduid	de7c07d430521c95dc14c8dc977747e001429809884
-
