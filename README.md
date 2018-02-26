@@ -8,27 +8,7 @@ All of the containers running on my server
 - `docker network create nginx-proxy`
 
 ## Running
-run
-```
-docker run -d -p 80:80 -p 443:443 \
-    --name nginx-proxy \
-    -v $(pwd)/src/nginx-proxy/certs:/etc/nginx/certs:ro \
-    -v $(pwd)/src/nginx-proxy/vhost.d:/etc/nginx/vhost.d \
-    -v $(pwd)/src/nginx-proxy/html:/usr/share/nginx/html \
-    -v /var/run/docker.sock:/tmp/docker.sock:ro \
-    --label com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy \
-    jwilder/nginx-proxy
-```
-to start the reverse proxy. Then run
-```
-docker run -d \
-    -v $(pwd)/src/nginx-proxy/certs:/etc/nginx/certs:rw \
-    -v /var/run/docker.sock:/var/run/docker.sock:ro \
-    --volumes-from nginx-proxy \
-    jrcs/letsencrypt-nginx-proxy-companion
-```
-
-To spin up all of these containers, navigate to `./docker` and run `docker-compose up -d`
+run `startServer.sh`
 
 ## Building
 The docker pulls from dockerhub repo. All of these images are also on that repo. To build and push, navigate to `./src/CONTAINERNAME` and run `./build.sh`.
