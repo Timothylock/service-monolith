@@ -30,5 +30,5 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9030          | 80            | markham8-blog     | 8thmarkham.com                     |
 | 9040          | 80            | csc309-tb-echange | uoftextbookexchange.timothylock.ca |
 | 9041          | 27017         | csc309-mongodb    |                                    |
-| 9050          | 8880          | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |
+| 9050          | 80            | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |
 | 9060          | 80            | lock-family       | lockfamily.timothylock.ca lockfamily.ga    |
