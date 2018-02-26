@@ -76,6 +76,17 @@ services:
        - ../src/markham8-blog/wp-content:/var/www/html/wp-content/
      network_mode: "bridge"
 
+  testing-repo:
+     image: timothylock/markham8-leaders:latest
+     ports:
+       - "9031:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: leaders.8thmarkham.com
+     volumes:
+       - ../src/markham8-leaders/files:/var/www/html/files/
+     network_mode: "bridge"
+
   csc309-tb-exchange:
      depends_on:
        - csc309-mongodb
