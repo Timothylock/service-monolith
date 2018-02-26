@@ -9,6 +9,13 @@ services:
        - "443:443"
      volumes:
        - /var/run/docker.sock:/tmp/docker.sock:ro
+     links:
+       - timothy-blog
+       - phpmyadmin
+       - timothy-portfolio
+       - csc309-tb-exchange
+       - pi-monitor
+       - lock-family
 
   timothy-blog:
      depends_on:
@@ -92,7 +99,7 @@ services:
        - "9050:8880"
      restart: always
 
-  timothy-portfolio:
+  lock-family:
      image: timothylock/lock-family:latest
      ports:
        - "9060:80"

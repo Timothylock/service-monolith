@@ -1,2 +1,2 @@
 FROM nginx
-COPY default /etc/nginx/sites-available/default
+COPY nginx.conf /etc/nginx/nginx.conf

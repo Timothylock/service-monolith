@@ -14,8 +14,15 @@ The docker pulls from dockerhub repo. All of these images are also on that repo.
 
 You must already be logged in to dockerhub to be able to push. If not, run `docker login`.
 
+## Making New Images
+When making a new image, the nginx-proxy must be updated with the new forwarding rule or else the container will not be exposed to the internet from port 80.
+
+The Dockerfile must also be update so that the nginx-proxy container is linked to the new container if it is to be exposed to the internet
 
 # Ports
+
+While these ports aren't externally exposed or used by nginx-proxy, they are useful for local development. Not a great practice, but the dockerfile is shared between prod and dev so these ports are _theoretically_ exposed on prod as well. In my case, the firewall only opens up port 80 so its * fine * for now.
+
 
 | External Port | Internal Port | Container Name    | URL (if reachable from internet)   |
 |---------------|---------------|-------------------|------------------------------------|
