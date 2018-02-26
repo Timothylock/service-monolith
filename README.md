@@ -4,6 +4,7 @@ All of the containers running on my server
 # Getting Started
 ## Prerequisites
 - [Docker Community Edition](https://www.docker.com/community-edition)
+- `sudo apt-get install docker-compose`
 - `docker network create nginx-proxy`
 
 ## Running
@@ -11,9 +12,9 @@ run
 ```
 docker run -d -p 80:80 -p 443:443 \
     --name nginx-proxy \
-    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/certs:/etc/nginx/certs:ro \
-    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/vhost.d:/etc/nginx/vhost.d \
-    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/html:/usr/share/nginx/html \
+    -v $(pwd)/src/nginx-proxy/certs:/etc/nginx/certs:ro \
+    -v $(pwd)/src/nginx-proxy/vhost.d:/etc/nginx/vhost.d \
+    -v $(pwd)/src/nginx-proxy/html:/usr/share/nginx/html \
     -v /var/run/docker.sock:/tmp/docker.sock:ro \
     --label com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy \
     jwilder/nginx-proxy
@@ -21,7 +22,7 @@ docker run -d -p 80:80 -p 443:443 \
 to start the reverse proxy. Then run
 ```
 docker run -d \
-    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/certs:/etc/nginx/certs:rw \
+    -v $(pwd)/src/nginx-proxy/certs:/etc/nginx/certs:rw \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     --volumes-from nginx-proxy \
     jrcs/letsencrypt-nginx-proxy-companion
