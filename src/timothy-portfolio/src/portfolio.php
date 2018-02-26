@@ -38,7 +38,7 @@ function getAge($then)
         <h3>
             <a href="https://github.com/Timothylock/Tim-Pi-Home-Monitoring">Pi Home Automation</a>
         </h3>
-        <p>A DIY home monitoring system made of the Raspberry Pi. It currently has the ability to control lights, outlets, and blinds. <a href="http://104.196.30.55:8880">Demo (user: testuser, pass: testpassword)</a></p>
+        <p>A DIY home monitoring system made of the Raspberry Pi. It currently has the ability to control lights, outlets, and blinds. <a href="https://homemonitordemo.timothylock.ca">Demo (user: testuser, pass: testpassword)</a></p>
     </div>
     <div class="col-md-4 portfolio-item">
         <a href="http://computerswithtim.ml/">
@@ -88,7 +88,7 @@ function getAge($then)
         <h3>
             <a href="http://timothylock.ca:3000">UofTextbook</a>
         </h3>
-        <p>A site that was made in a web programming course. Supports logins, posting, accepting, comments, emailing, signup, etc. Admin: user1@example.com Pass: password</p>
+        <p>A site that was made in a web programming course. Supports logins, posting, accepting, comments, emailing, signup, etc. <a href="https://uoftextbookexchange.timothylock.ca">Demo (user: testuser, pass: testpassword)</a> Admin: user1@example.com Pass: password</p>
     </div>
 </div>
 
