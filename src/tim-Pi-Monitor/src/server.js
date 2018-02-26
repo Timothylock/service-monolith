@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
     process.env.PORT = 80;
 } else {
     var Gpio = require("pigpio-mock").Gpio;
-    process.env.PORT = 8880;
+    process.env.PORT = 80;
 }
 
 //////////////////////

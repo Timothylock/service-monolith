@@ -1,35 +1,24 @@
 version: '3.3'
 
 services:
-  nginx-proxy:
-     image: nginx
-     container_name: nginx-proxy
-     ports:
-       - "80:80"
-       - "443:443"
-     volumes:
-       - ../src/nginx-proxy/nginx.conf:/etc/nginx/nginx.conf
-     links:
-       - timothy-blog
-       - phpmyadmin
-       - timothy-portfolio
-       - csc309-tb-exchange
-       - pi-monitor
-       - lock-family
-
   timothy-blog:
      depends_on:
        - mysql
+     links:
+       - mysql:mysql
      image: wordpress:latest
      ports:
        - "9000:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_USER: root
        WORDPRESS_DB_PASSWORD: password
        WORDPRESS_DB_NAME: timothy-blog
+       VIRTUAL_HOST: blog.timothylock.ca
      volumes:
        - ../src/timothy-blog/wp-content:/var/www/html/wp-content/
+     network_mode: "bridge"
 
   mysql:
      image: mysql:5.7
@@ -39,9 +28,11 @@ services:
        - mysqldata:/var/lib/mysql
      restart: always
      environment:
+       WORDPRESS_DB_USER: root
        MYSQL_ROOT_PASSWORD: password
        MYSQL_USER: user
        MYSQL_PASSWORD: password
+     network_mode: "bridge"
 
   phpmyadmin:
      depends_on:
@@ -53,16 +44,23 @@ services:
      environment:
        MYSQL_ROOT_PASSWORD: password
        PMA_HOST: mysql:3306
+       VIRTUAL_HOST: phpmyadmin.timothylock.ca
+     network_mode: "bridge"
 
   timothy-portfolio:
      image: timothylock/timothy-portfolio:latest
      ports:
        - "9020:80"
      restart: always
+     environment:
+       VIRTUAL_HOST: timothylock.ca
+     network_mode: "bridge"
 
   markham8-blog:
      depends_on:
        - mysql
+     links:
+       - mysql:mysql
      image: wordpress:latest
      ports:
        - "9030:80"
@@ -71,16 +69,23 @@ services:
        WORDPRESS_DB_HOST: mysql:3306
        WORDPRESS_DB_PASSWORD: password
        WORDPRESS_DB_NAME: 8thmarkham-blog
+       VIRTUAL_HOST: 8thmarkham.com
      volumes:
        - ../src/markham8-blog/wp-content:/var/www/html/wp-content/
+     network_mode: "bridge"
 
   csc309-tb-exchange:
      depends_on:
        - csc309-mongodb
+     links:
+       - csc309-mongodb:csc309-mongodb
      image: timothylock/csc309-textbook-exchange:latest
      ports:
        - "9040:80"
      restart: always
+     environment:
+       VIRTUAL_HOST: uoftextbookexchange.timothylock.ca
+     network_mode: "bridge"
 
   csc309-mongodb:
      image: mongo:latest
@@ -92,18 +97,25 @@ services:
      ports:
        - "9041:27017"
      command: mongod --smallfiles --logpath=/dev/null
+     network_mode: "bridge"
 
   pi-monitor:
      image: timothylock/tim-pi-monitor-demo:latest
      ports:
        - "9050:8880"
      restart: always
+     environment:
+       VIRTUAL_HOST: homemonitordemo.timothylock.ca
+     network_mode: "bridge"
 
   lock-family:
      image: timothylock/lock-family:latest
      ports:
        - "9060:80"
      restart: always
+     environment:
+       VIRTUAL_HOST: lockfamily.timothylock.ca
+     network_mode: "bridge"
 
 volumes:
     mysqldata:

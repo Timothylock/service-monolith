@@ -7,17 +7,14 @@ All of the containers running on my server
 - `docker network create nginx-proxy`
 
 ## Running
+run `docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy` to start the reverse proxy.
+
 To spin up all of these containers, navigate to `./docker` and run `docker-compose up -d`
 
 ## Building
 The docker pulls from dockerhub repo. All of these images are also on that repo. To build and push, navigate to `./src/CONTAINERNAME` and run `./build.sh`.
 
 You must already be logged in to dockerhub to be able to push. If not, run `docker login`.
-
-## Making New Images
-When making a new image, the nginx-proxy must be updated with the new forwarding rule or else the container will not be exposed to the internet from port 80.
-
-The Dockerfile must also be update so that the nginx-proxy container is linked to the new container if it is to be exposed to the internet
 
 # Ports
 
