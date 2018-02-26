@@ -2,13 +2,13 @@ version: '3.3'
 
 services:
   nginx-proxy:
-     image: timothylock/nginx-proxy
+     image: nginx
      container_name: nginx-proxy
      ports:
        - "80:80"
        - "443:443"
      volumes:
-       - /var/run/docker.sock:/tmp/docker.sock:ro
+       - ../src/nginx-proxy/nginx.conf:/etc/nginx/nginx.conf
      links:
        - timothy-blog
        - phpmyadmin

@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b53ccb9-a956-401e-8b25-ec0ab4b8ba34" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/nginx-proxy/nginx.conf" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.turtle" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/WiredTiger.wt" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/collection-2--2617612826424522024.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/collection-2--2617612826424522024.wt" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T15-47-52Z-00000" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T15-47-52Z-00000" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T22-54-19Z-00000" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.2018-02-25T22-54-19Z-00000" />
       <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/diagnostic.data/metrics.interim" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/index-3--2617612826424522024.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/index-3--2617612826424522024.wt" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000006" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/sizeStorer.wt" />
-      <change beforePath="$PROJECT_DIR$/src/nginx-proxy/Dockerfile" afterPath="$PROJECT_DIR$/src/nginx-proxy/Dockerfile" />
-      <change beforePath="$PROJECT_DIR$/src/nginx-proxy/default" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000008" afterPath="$PROJECT_DIR$/src/csc309-mongodb/data/db/journal/WiredTigerLog.0000000008" />
+      <change beforePath="$PROJECT_DIR$/src/nginx-proxy/Dockerfile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/nginx-proxy/build.sh" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,31 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="150">
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nginx-proxy/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nginx.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nginx.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nginx-proxy/nginx.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="45" />
+            <state relative-caret-position="780">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/nginx-proxy/default" />
         <option value="$PROJECT_DIR$/src/nginx-proxy/Dockerfile" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/docker/docker-compose.yaml" />
         <option value="$PROJECT_DIR$/src/nginx-proxy/nginx.conf" />
+        <option value="$PROJECT_DIR$/docker/docker-compose.yaml" />
       </list>
     </option>
   </component>
@@ -197,6 +180,12 @@
               <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
               <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx-proxy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -662,14 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tim-Pi-Monitor/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -705,6 +686,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nginx-proxy/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -713,18 +702,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
+    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/build.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nginx-proxy/nginx.conf">
+    <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="78" column="45" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="45" />
+        <state relative-caret-position="150">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="50" />
           <folding />
         </state>
       </provider>
