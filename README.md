@@ -7,7 +7,25 @@ All of the containers running on my server
 - `docker network create nginx-proxy`
 
 ## Running
-run `docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy` to start the reverse proxy.
+run
+```
+docker run -d -p 80:80 -p 443:443 \
+    --name nginx-proxy \
+    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/certs:/etc/nginx/certs:ro \
+    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/vhost.d:/etc/nginx/vhost.d \
+    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/html:/usr/share/nginx/html \
+    -v /var/run/docker.sock:/tmp/docker.sock:ro \
+    --label com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy \
+    jwilder/nginx-proxy
+```
+to start the reverse proxy. Then run
+```
+docker run -d \
+    -v /Users/timothylock/Documents/GitHub/service-monolith/src/nginx-proxy/certs:/etc/nginx/certs:rw \
+    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    --volumes-from nginx-proxy \
+    jrcs/letsencrypt-nginx-proxy-companion
+```
 
 To spin up all of these containers, navigate to `./docker` and run `docker-compose up -d`
 

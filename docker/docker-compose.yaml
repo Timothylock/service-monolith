@@ -54,6 +54,8 @@ services:
      restart: always
      environment:
        VIRTUAL_HOST: timothylock.ca
+       LETSENCRYPT_HOST: timothylock.ca
+       LETSENCRYPT_EMAIL: me@timothylock.ca
      network_mode: "bridge"
 
   markham8-blog:
