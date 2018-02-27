@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b53ccb9-a956-401e-8b25-ec0ab4b8ba34" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/markham8-leaders/src/index.php" afterPath="$PROJECT_DIR$/src/markham8-leaders/src/index.php" />
-      <change beforePath="$PROJECT_DIR$/src/markham8-leaders/src/login.php" afterPath="$PROJECT_DIR$/src/markham8-leaders/src/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/markham8-leaders/src/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,8 +61,8 @@
       <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="83" column="49" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+            <state relative-caret-position="591">
+              <caret line="83" column="43" lean-forward="true" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -74,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/nginx-proxy/nginx.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
-              <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="43" />
+              <caret line="90" column="43" lean-forward="false" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -586,7 +584,7 @@
     <entry file="file://$PROJECT_DIR$/src/nginx-proxy/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="43" />
+          <caret line="90" column="43" lean-forward="false" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -594,7 +592,7 @@
     <entry file="file://$PROJECT_DIR$/src/markham8-leaders/src/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -609,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="83" column="49" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        <state relative-caret-position="591">
+          <caret line="83" column="43" lean-forward="true" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
           <folding />
         </state>
       </provider>

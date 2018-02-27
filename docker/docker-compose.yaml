@@ -81,7 +81,7 @@ services:
        - "9031:80"
      restart: always
      environment:
-       VIRTUAL_HOST: 8thmarkham.com/leaders-area/
+       VIRTUAL_HOST: 8thmarkham.com/leaders
      volumes:
        - ../src/markham8-leaders/files:/var/www/html/files/
      network_mode: "bridge"
