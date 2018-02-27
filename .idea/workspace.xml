@@ -2,16 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b53ccb9-a956-401e-8b25-ec0ab4b8ba34" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/Dockerfile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/build.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/config/fpm-pool.conf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/config/nginx.conf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/config/php.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/comp-with-tim/config/supervisord.conf" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/markham8-leaders/src/index.php" afterPath="$PROJECT_DIR$/src/markham8-leaders/src/index.php" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/index.html" afterPath="$PROJECT_DIR$/src/comp-with-tim/src/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/HandsOnHardware/HardwareIntroduction.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/HandsOnHardware/Week2Homework.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/HandsOnHardware/upload.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/IntroductionHandout.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/challenges/1-SpecialDay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/challenges/2-triangle.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/challenges/3-speedfines.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/challenges/4-soundsfishy.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/challenges/solutions.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/javaFPfree.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/javaFPgeneral.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/javaFPngg.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/javaFPrpg.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/javaFPrps.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/startercode/NumberGuessingGame.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/startercode/RPG.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/final/startercode/rps.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/javaH2.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/javaHmwk2.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/javaHmwk3.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/Java/javaHmwk4.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/TimsCSTutoringStudents/.htaccess" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/TimsCSTutoringStudents/Homework" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/notes/TimsCSTutoringStudents/SSHServerCredentials.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/comp-with-tim/src/results.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/.htaccess" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/CHANGELOG.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/cache/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/cache/cmds.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/af.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/bg.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/cs.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/da.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/de.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/el.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/en.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/es.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/et.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/fi.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/fr.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/he.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/hi.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/hr.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/hu.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/it.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/ja.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/ko.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/lv.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/nb.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/nl.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/pl.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/pt.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/ro.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/ru.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/sk.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/sl.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/sr.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/sv.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/tr.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/uk.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/zh-cn.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/l10n/zh-tw.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/options.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/conf/types.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/class-bootstrap.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-api.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-context.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-fallback.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-filesize.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-item.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-json.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-logger.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-request.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-session.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-setup.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-theme.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/core/class-util.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/ext/class-archive.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/ext/class-custom.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/ext/class-search.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/ext/class-thumb.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/pages/index.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/private/php/pages/info.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/.htaccess" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/cache/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/cache/thumbs/thumb-e8010dd1f0b5a75978ad0d1157da60518587b7ac-240x240.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/cache/thumbs/thumb-e8010dd1f0b5a75978ad0d1157da60518587b7ac-320x240.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/css/styles.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/ext/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/fallback/file.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/fallback/folder-parent.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/fallback/folder.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/favicon/favicon-152.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/favicon/favicon-16-32.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/favicon/favicon-16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/favicon/favicon-32.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/favicon/favicon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/ar-apk.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/ar-deb.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/ar-rpm.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-css.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-go.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-html.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-js.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-less.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-md.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-php.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-py.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-rb.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-rust.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/txt-script.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/comity/x-pdf.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/ar.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/aud.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/bin.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/file.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/folder-page.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/folder-parent.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/folder.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/img.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/txt.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/vid.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/themes/default/x.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/back.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/crumb.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/download.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/filter.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/info-toggle.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/paypal.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-close.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-fullscreen.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-next.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-no-fullscreen.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-prev.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/preview-raw.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/search.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/selected.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/sidebar.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/sort.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/spinner.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/tree-indicator.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/tree-toggle.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/view-details.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/view-grid.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/images/ui/view-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/index.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/timothy-portfolio/src/_h5ai/public/js/scripts.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,31 +163,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="137" column="40" lean-forward="false" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/timothy-portfolio/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/comp-with-tim/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -112,20 +228,40 @@
         <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/logicfusion.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="29" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="85" />
+            <state relative-caret-position="375">
+              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.down" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/index.html.down">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +306,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/services/ingress/k8s.yaml" />
         <option value="$PROJECT_DIR$/server/services/timothy-blog/build.sh" />
         <option value="$PROJECT_DIR$/server/services/8thmarkham/src/wp-config.php" />
         <option value="$PROJECT_DIR$/server/services/8thmarkham/k8s.yaml" />
@@ -221,6 +356,7 @@
         <option value="$PROJECT_DIR$/docker/docker-compose.yaml" />
         <option value="$PROJECT_DIR$/src/comp-with-tim/config/nginx.conf" />
         <option value="$PROJECT_DIR$/src/comp-with-tim/src/index.html" />
+        <option value="$PROJECT_DIR$/src/comp-with-tim/src/results.html" />
       </list>
     </option>
   </component>
@@ -271,7 +407,14 @@
               <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
               <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="timothy-portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-with-tim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="service-monolith" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service-monolith" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-with-tim" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,9 +505,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/PORTS_old.md" />
-    <entry file="file://$PROJECT_DIR$/server/services/timothy-blog/README.md" />
-    <entry file="file://$PROJECT_DIR$/server/services/php-my-admin/k8s.yml" />
     <entry file="file://$PROJECT_DIR$/bin/generateSecrets.sh" />
     <entry file="file://$PROJECT_DIR$/secrets/databaseSetup.sh" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.yml" />
@@ -693,18 +833,42 @@
     <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/logicfusion.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="29" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="85" />
+        <state relative-caret-position="375">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/index.html.down">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-with-tim/src/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
