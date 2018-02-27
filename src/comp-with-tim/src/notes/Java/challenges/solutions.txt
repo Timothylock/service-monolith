@@ -1,0 +1,67 @@
+These solutions are in Python, but you can easily read it and make your own Java program from this!
+
+# CCC 2015 Junior 1: Special Day
+#
+# Straight forward else if structure
+#
+
+if month == 2 and day == 18:
+    print "Special"
+elif month < 2 or (month == 2 and day < 18):
+    print "Before"
+else:
+    print "After"
+
+
+# CCC 2014 Junior 1: Triangle Times
+#
+# Straight forward else if structure
+#
+
+if a + b + c != 180:
+    print "Error"
+elif a == 60 and b == 60 and c == 60:
+    print "Equilateral"
+elif a == b or a== c or b == c:
+    print "Isosceles"
+else:
+    print "Scalene"
+
+
+# J1 2012: Speed fines are not fine!
+#
+# simple decision and watch the formatting!
+#
+
+speedLimit = input("Enter the speed limit:  ")
+recordedSpeed  = input("Enter the recorded speed or the car:  ")
+
+if recordedSpeed <= speedLimit:
+    print "Congratulations, you are within the speed limit!"
+elif recordedSpeed <= speedLimit + 20:
+    print "You are speeding and your fine is $100."
+elif recordedSpeed <= speedLimit + 30:
+    print "You are speeding and your fine is $270."
+else:
+    print "You are speeding and your fine is $500."
+    
+
+# J2 2012: Sounds fishy!
+#
+# a simple decision.
+#
+
+a = input()
+b = input()
+c = input()
+d = input()
+
+if a == b == c == d:
+    print "Fish At Constant Depth"
+elif a < b < c < d:
+    print "Fish Rising"
+elif a > b > c > d:
+    print "Fish Diving"
+else:
+    print "No Fish"
+    

@@ -129,5 +129,14 @@ services:
        VIRTUAL_HOST: lockfamily.timothylock.ca
      network_mode: "bridge"
 
+  comp-with-tim:
+     image: timothylock/comp-with-tim:latest
+     ports:
+       - "9070:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: computerswithtim.ml
+     network_mode: "bridge"
+
 volumes:
     mysqldata:

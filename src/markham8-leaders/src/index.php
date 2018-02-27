@@ -156,6 +156,14 @@
 			<tr>
 				<td>
 				<table style="width: 100%">
+                    <tr>
+                        <td class="auto-style13" style="width: 93px">02/27/18</td>
+                        <td class="auto-style13">HTTPS has been turned on for most of the site. Please report any broken links</td>
+                    </tr>
+    				<tr>
+                        <td class="auto-style13" style="width: 93px">02/26/18</td>
+                        <td class="auto-style13">Backend has been Dockerized. Links may be broken. Please let Timothy know if something doesn't work.</td>
+                    </tr>
 					<tr>
 						<td class="auto-style13" style="width: 93px">12/13/17</td>
 						<td class="auto-style13">Added ability to rename memos</td>
