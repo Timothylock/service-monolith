@@ -1,6 +1,22 @@
 version: '2'
 
 services:
+  nginx-proxy:
+     image: nginx
+     container_name: nginx-proxy
+     ports:
+       - "80:80"
+       - "443:443"
+     volumes:
+       - ../src/nginx-proxy/nginx.conf:/etc/nginx/nginx.conf
+     links:
+       - timothy-blog
+       - phpmyadmin
+       - timothy-portfolio
+       - csc309-tb-exchange
+       - pi-monitor
+       - lock-family
+
   timothy-blog:
      depends_on:
        - mysql
