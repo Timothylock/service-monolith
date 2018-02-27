@@ -2,7 +2,6 @@
 //put sha1() encrypted password here - example is 'hello'
 $password = '6fb733896f8c8079c26ac82fdaed8842c96e40e1';
 
-session_start();
 if (!isset($_SESSION['loggedIn'])) {
     $_SESSION['loggedIn'] = false;
 }
