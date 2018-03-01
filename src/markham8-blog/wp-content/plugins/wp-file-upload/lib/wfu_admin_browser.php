@@ -87,6 +87,10 @@ function wfu_browse_files($basedir_code) {
 	$echo_str .= wfu_add_bulkactions_header("\n\t\t\t", "adminbrowser", $bulkactions);
 	$echo_str .= "\n\t\t\t".'<input id="wfu_adminbrowser_action_url" type="hidden" value="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload" />';
 	$echo_str .= "\n\t\t\t".'<input id="wfu_adminbrowser_referer" type="hidden" value="'.$referer_code.'" />';
+	$echo_str .= "\n\t\t\t".'<input id="wfu_download_file_nonce" type="hidden" value="'.wp_create_nonce('wfu_download_file_invoker').'" />';
+	$echo_str .= "\n\t\t\t".'<input id="wfu_include_file_nonce" type="hidden" value="'.wp_create_nonce('wfu_include_file').'" />';
+	//define header parameters that can be later used when defining file actions
+	$header_params = array();
 	$echo_str .= "\n\t\t".'</div>';
 	$echo_str .= "\n\t\t".'<table class="wp-list-table widefat fixed striped">';
 	$echo_str .= "\n\t\t\t".'<thead>';
@@ -221,31 +225,36 @@ function wfu_browse_files($basedir_code) {
 			$echo_str .= "\n\t\t\t\t\t\t".'<a id="wfu_file_link_'.$ii.'" class="row-title" href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=file_details&file='.$file_code.'" title="View and edit file details" style="font-weight:normal;'.( $is_included ? '' : ' display:none;' ).'">'.$file['name'].'</a>';
 		if ( !$is_included )
 			$echo_str .= "\n\t\t\t\t\t\t".'<span id="wfu_file_flat_'.$ii.'">'.$file['name'].'</span>';
+		//set additional $file properties for generating file actions
+		$file["index"] = $ii;
+		$file["code"] = $file_code;
+		$file["referer_code"] = $referer_code;
+		$file_actions = wfu_adminbrowser_file_actions($file, $header_params);
 		$echo_str .= "\n\t\t\t\t\t\t".'<div id="wfu_file_actions_'.$ii.'" name="wfu_file_actions" style="visibility:hidden;">';
 		if ( $is_included || $can_be_included ) {
 			$echo_str .= "\n\t\t\t\t\t\t\t".'<div id="wfu_file_is_included_actions_'.$ii.'" style="display:'.( $is_included ? 'block' : 'none' ).';">';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=file_details&file='.$file_code.'" title="View and edit file details">Details</a>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".' | ';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=rename_file&file='.$file_code.'" title="Rename this file">Rename</a>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".' | ';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=delete_file&file='.$file_code.'&referer='.$referer_code.'" title="Delete this file">Delete</a>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".' | ';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<a href="javascript:wfu_download_file(\''.$file_code.'\', '.$ii.', \''.wp_create_nonce('wfu_download_file_invoker').'\');" title="Download this file">Download</a>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
+			//add file actions for files already included
+			$array_keys = array_keys($file_actions["is_included"]);
+			$lastkey = array_pop($array_keys);
+			foreach ( $file_actions["is_included"] as $key => $action ) {
+				$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
+				foreach ( $action as $line )
+					$echo_str .= "\n\t\t\t\t\t\t\t\t\t".$line;
+				if ( $key != $lastkey ) $echo_str .= "\n\t\t\t\t\t\t\t\t\t".' | ';
+				$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
+			}
 			$echo_str .= "\n\t\t\t\t\t\t\t".'</div>';
 			$echo_str .= "\n\t\t\t\t\t\t\t".'<div id="wfu_file_can_be_included_actions_'.$ii.'" style="display:'.( $is_included ? 'none' : 'block' ).';">';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<a id="wfu_include_file_'.$ii.'_a" href="javascript:wfu_include_file(\''.$file_code.'\', '.$ii.', \''.wp_create_nonce('wfu_include_file').'\');" title="Include file in plugin\'s database">Include File</a>';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<img id="wfu_include_file_'.$ii.'_img" src="'.WFU_IMAGE_ADMIN_SUBFOLDER_LOADING.'" style="width:12px; display:none;" />';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t\t".'<input id="wfu_include_file_'.$ii.'_inpfail" type="hidden" value="File could not be included!" />';
-			$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
+			//add file actions for files that can be included
+			$array_keys = array_keys($file_actions["can_be_included"]);
+			$lastkey = array_pop($array_keys);
+			foreach ( $file_actions["can_be_included"] as $key => $action ) {
+				$echo_str .= "\n\t\t\t\t\t\t\t\t".'<span>';
+				foreach ( $action as $line )
+					$echo_str .= "\n\t\t\t\t\t\t\t\t\t".$line;
+				if ( $key != $lastkey ) $echo_str .= "\n\t\t\t\t\t\t\t\t\t".' | ';
+				$echo_str .= "\n\t\t\t\t\t\t\t\t".'</span>';
+			}
 			$echo_str .= "\n\t\t\t\t\t\t\t".'</div>';
 		}
 		else {
@@ -281,6 +290,31 @@ function wfu_browse_files($basedir_code) {
 	$echo_str .= "\n".'</div>';
 
 	return $echo_str;
+}
+
+function wfu_adminbrowser_file_actions($file, $params) {
+	$siteurl = site_url();
+	$actions = array(
+		"is_included"		=> array(),
+		"can_be_included"	=> array()
+	);
+	//add file actions if file is already included
+	$actions["is_included"] += array(
+		array( '<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=file_details&file='.$file["code"].'" title="View and edit file details">Details</a>' ),
+		array( '<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=rename_file&file='.$file["code"].'" title="Rename this file">Rename</a>' ),
+		array( '<a href="'.$siteurl.'/wp-admin/options-general.php?page=wordpress_file_upload&action=delete_file&file='.$file["code"].'&referer='.$file["referer_code"].'" title="Delete this file">Delete</a>' ),
+		array( '<a href="javascript:wfu_download_file(\''.$file["code"].'\', '.$file["index"].');" title="Download this file">Download</a>' )
+	);
+	//add file actions if file is already included
+	$actions["can_be_included"] += array(
+		array(
+			'<a id="wfu_include_file_'.$file["index"].'_a" href="javascript:wfu_include_file(\''.$file["code"].'\', '.$file["index"].');" title="Include file in plugin\'s database">Include File</a>',
+			'<img id="wfu_include_file_'.$file["index"].'_img" src="'.WFU_IMAGE_ADMIN_SUBFOLDER_LOADING.'" style="width:12px; display:none;" />',
+			'<input id="wfu_include_file_'.$file["index"].'_inpfail" type="hidden" value="File could not be included!" />'
+		)
+	);
+
+	return $actions;
 }
 
 function wfu_user_owns_file($userid, $filerec) {
@@ -516,11 +550,8 @@ function wfu_delete_file($file_code, $type) {
 		if ( $_POST['submit'] == "Delete" ) {
 			foreach ( $dec_files as $dec_file ) {
 				//pre-log delete action
-				if ( $type == 'file' ) $retid = wfu_log_action('delete', $dec_file, $user->ID, '', 0, 0, '', null);
-				if ( $type == 'dir' && $dec_file != "" ) wfu_delTree($dec_file);
-				else unlink($dec_file);
-				//revert log action if file has not been deleted
-				if ( $type == 'file' && file_exists($dec_file) ) wfu_revert_log_action($retid);
+				if ( $type == 'file' ) wfu_delete_file_execute($dec_file, $user->ID);
+				elseif ( $type == 'dir' && $dec_file != "" ) wfu_delTree($dec_file);
 			}
 		}
 	}

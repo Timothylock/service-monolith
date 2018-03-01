@@ -10,7 +10,7 @@ function wfu_ajax_action_send_email_notification() {
 	$params_index = sanitize_text_field($_POST['params_index']);
 	$session_token = sanitize_text_field($_POST['session_token']);
 
-	$arr = wfu_get_params_fields_from_index($params_index);
+	$arr = wfu_get_params_fields_from_index($params_index, $session_token);
 	//check referer using server sessions to avoid CSRF attacks
 	$sid = $arr['shortcode_id'];
 	if ( $_SESSION["wfu_token_".$sid] != $session_token ) die();
@@ -213,7 +213,7 @@ function wfu_ajax_action_callback() {
 	if ( $params_index == "" ) die();
 	
 	$user = wp_get_current_user();
-	$arr = wfu_get_params_fields_from_index($params_index);
+	$arr = wfu_get_params_fields_from_index($params_index, $session_token);
 	$sid = $arr['shortcode_id'];
 	//check referrer using server sessions to avoid CSRF attacks
 	if ( $_SESSION["wfu_token_".$sid] != $session_token ) {
@@ -646,7 +646,9 @@ function wfu_ajax_action_include_file() {
 	$dec_file = wfu_path_rel2abs(wfu_flatten_path($dec_file));
 	$fileid = wfu_log_action('include', $dec_file, $user->ID, '', '', get_current_blog_id(), '', null);
 	
-	if ( $fileid !== false ) die(apply_filters('_wfu_ajax_action_include_file', "wfu_include_file:success:".$fileid));
+	if ( $fileid !== false ) {
+		die(apply_filters('_wfu_ajax_action_include_file', "wfu_include_file:success:".$fileid));
+	}
 	else die(apply_filters('_wfu_ajax_action_include_file', 'wfu_include_file:fail:'));
 }
 
@@ -661,7 +663,7 @@ function wfu_ajax_action_notify_wpfilebase() {
 	$params_index = sanitize_text_field($params_index);
 	$session_token = sanitize_text_field($session_token);
 
-	$arr = wfu_get_params_fields_from_index($params_index);
+	$arr = wfu_get_params_fields_from_index($params_index, $session_token);
 	//check referer using server sessions to avoid CSRF attacks
 	if ( $_SESSION["wfu_token_".$arr['shortcode_id']] != $session_token ) die();
 

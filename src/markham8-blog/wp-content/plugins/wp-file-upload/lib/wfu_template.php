@@ -7,12 +7,50 @@ public static $name = "WFU_Original_Template";
 
 public static function get_instance() {
 	if ( null == self::$instance ) {
-		self::$instance = new self;
+		self::$instance = new static();
 		self::$name = get_called_class();
 	}
 
 	return self::$instance;
 }
+
+public static function get_name() {
+	return self::$name;
+}
+
+function wfu_base_template($data) {?>
+<?php /*************************************************************************
+          the following lines contain initialization of PHP variables
+*******************************************************************************/
+/* do not change this line */extract($data);
+/*
+ *  The following variables are available for use:
+ *  
+ *  @var $ID int the upload ID
+ *  @var $responsive bool true if responsive mode is enabled
+ *  @var $testmode bool true if the plugin is in test mode
+ *  @var $params array all plugin's attributes defined through the shortcode
+ *  
+ *  It is noted that $ID can also be used inside CSS, Javascript and HTML code.
+ */
+	if ( $testmode ) {}
+/*******************************************************************************
+              the following lines contain CSS styling rules
+*********************************************************************/ ?><style>
+div.wfu_container
+{
+}
+</style><?php /*****************************************************************
+               the following lines contain Javascript code 
+*********************************************/ ?><script type="text/javascript">
+var dummy = 0;
+</script><?php /****************************************************************
+               the following lines contain additional HTML output 
+****************************************************************************/ ?>
+<!-- init -->
+<?php /*************************************************************************
+                            end of HTML output 
+*****************************************************************************/ }
 
 function wfu_row_container_template($data) {?>
 <?php /*************************************************************************
@@ -61,7 +99,7 @@ function wfu_row_container_template($data) {?>
 	<?php endforeach ?>
 		<div class="file_space_clean"></div>
 	<?php if ( isset($p["object"]) ): ?>
-		<script type="text/javascript"><?php echo $p["object"]; ?>.init();</script>
+		<script type="text/javascript">wfu_run_js("<?php echo $p["object"]; ?>", "init");</script>
 	<?php endif ?>
 	</div>
 <?php endforeach ?>
@@ -79,7 +117,7 @@ function wfu_row_container_template($data) {?>
 						<?php endforeach ?>
 							<div class="file_space_clean"></div>
 						<?php if ( isset($p["object"]) ): ?>
-							<script type="text/javascript"><?php echo $p["object"]; ?>.init();</script>
+							<script type="text/javascript">wfu_run_js("<?php echo $p["object"]; ?>", "init");</script>
 						<?php endif ?>
 						</div>
 					</td>
@@ -1218,9 +1256,11 @@ this._set_editbox_status = function(status) {
 
 this._sel = document.getElementById("selectsubdir_$ID");
 this._editbox = document.getElementById("selectsubdiredit_$ID");
-this._editable = (this._get_editbox_status() != "disabled");
-//attach subfolder edit box handlers if it is editable
-if (this._editable) wfu_attach_element_handlers(this._editbox, new Function("GlobalData.WFU[$ID].subfolders._editbox_changed();"));
+if (this._editbox) {
+	this._editable = (this._get_editbox_status() != "disabled");
+	//attach subfolder edit box handlers if it is editable
+	if (this._editable) wfu_attach_element_handlers(this._editbox, new Function("GlobalData.WFU[$ID].subfolders._editbox_changed();"));
+}
 
 /* do not change this line */}
 </script><?php /****************************************************************
@@ -1315,7 +1355,7 @@ input[type="button"].file_input_button
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: #555555; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -1337,7 +1377,7 @@ input[type="button"].file_input_button_hover
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: #111111; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -1359,7 +1399,7 @@ input[type="button"].file_input_button:disabled, input[type="button"].file_input
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: silver; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -1565,7 +1605,7 @@ input[type="button"].file_input_submit
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: #555555; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -1586,7 +1626,7 @@ input[type="button"].file_input_submit:hover, input[type="button"].file_input_su
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: #111111; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -1607,7 +1647,7 @@ input[type="button"].file_input_submit:disabled
 	padding: 0px; /*relax*/
 	background-color: #EEEEEE; /*relax*/
 	color: silver; /*relax*/
-	background-image: url("../images/white-grad-active.png"); /*relax*/
+	background-image: url("<?php echo WPFILEUPLOAD_DIR; ?>images/white-grad-active.png"); /*relax*/
 	background-position: left top; /*relax*/
 	background-repeat: repeat-x; /*relax*/
 	border-style: solid; /*relax*/
@@ -4032,19 +4072,19 @@ this._focused = function(obj) {
 <!-- **** the following lines contain the HTML code of each field type ***** -->		
 	<?php if ( !$testmode ): ?>
 		<?php if ( $p["type"] == "text" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "multitext" ): ?>
-				<textarea id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"><?php echo $p["default"]; ?></textarea>
+				<textarea id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?>><?php echo $p["default"]; ?></textarea>
 		<?php elseif ( $p["type"] == "number" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "email" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_$ID_emailgroup_<?php echo $p["group"]; ?>" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_$ID_emailgroup_<?php echo $p["group"]; ?>" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "confirmemail" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "password" ): ?>
-				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_$ID_passwordgroup_<?php echo $p["group"]; ?>" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_$ID_passwordgroup_<?php echo $p["group"]; ?>" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "confirmpassword" ): ?>
-				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="<?php echo $p["default"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "checkbox" ): ?>
 				<input type="checkbox" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_checkbox" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" style="display:none;" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
 				<label id="userdata_$ID_checklabel_<?php echo $p["key"]; ?>" class="file_userdata_checkbox_description" for="userdata_$ID_field_<?php echo $p["key"]; ?>" style="display:none;"><?php echo $p["data"]; ?></label>
@@ -4052,11 +4092,11 @@ this._focused = function(obj) {
 				<input type="radio" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_radiobutton" name="userdata_$ID_radiogroup_<?php echo $p["group"]; ?>" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" style="display:none;" onfocus="GlobalData.WFU[$ID].userdata._focused(document.getElementById('userdata_$ID_field_<?php echo $p["key"]; ?>'));" />
 				<label id="userdata_$ID_radiolabel_<?php echo $p["key"]; ?>" class="file_userdata_radiobutton_label" for="userdata_$ID_field_<?php echo $p["key"]; ?>" style="display:none;"><?php echo $p["data"]; ?></label>
 		<?php elseif ( $p["type"] == "date" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "time" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "datetime" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" readonly="readonly" onfocus="GlobalData.WFU[$ID].userdata._focused(this);"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "list" ): ?>
 				<select id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_listbox" multiple="multiple" autocomplete="<?php echo ( $p["donotautocomplete"] ? 'off' : 'on' ); ?>" value="<?php echo $p["default"]; ?>" onfocus="GlobalData.WFU[$ID].userdata._focused(this);">
 					<option id="userdata_$ID_listitem_<?php echo $p["key"]; ?>" style="display:none;"></option>
@@ -4069,19 +4109,19 @@ this._focused = function(obj) {
 				<input id="userdata_$ID_props_<?php echo $p["key"]; ?>" type="hidden" value="p:<?php echo $p["hintposition"]; ?>" />
 	<?php else: ?>
 		<?php if ( $p["type"] == "text" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "multitext" ): ?>
-				<textarea id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" readonly="readonly">Test message</textarea>
+				<textarea id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?>>Test message</textarea>
 		<?php elseif ( $p["type"] == "number" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "email" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_emailgroup_<?php echo $p["group"]; ?>" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_emailgroup_<?php echo $p["group"]; ?>" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "confirmemail" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "password" ): ?>
-				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_passwordgroup_<?php echo $p["group"]; ?>" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message file_userdata_passwordgroup_<?php echo $p["group"]; ?>" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "confirmpassword" ): ?>
-				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly" />
+				<input type="password" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" value="Test message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "checkbox" ): ?>
 				<input type="checkbox" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_checkbox" autocomplete="off" readonly="readonly" />
 				<label id="userdata_$ID_checklabel_<?php echo $p["key"]; ?>" for="userdata_$ID_field_<?php echo $p["key"]; ?>" style="display:none;">[list]</label>
@@ -4089,11 +4129,11 @@ this._focused = function(obj) {
 				<input type="radio" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_radiobutton" name="userdata_$ID_radiogroup_<?php echo $p["group"]; ?>" autocomplete="off" readonly="readonly" />
 				<label id="userdata_$ID_radiolabel_<?php echo $p["key"]; ?>" for="userdata_$ID_field_<?php echo $p["key"]; ?>" style="display:none;">[list]</label>
 		<?php elseif ( $p["type"] == "date" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "time" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "datetime" ): ?>
-				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly" />
+				<input type="text" id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_message" autocomplete="off" readonly="readonly"<?php echo ( $p["labelposition"] == "placeholder" ? ' placeholder="'.$p["label"].'"' : '' ); ?> />
 		<?php elseif ( $p["type"] == "list" ): ?>
 				<select id="userdata_$ID_field_<?php echo $p["key"]; ?>" class="file_userdata_listbox" multiple="multiple" autocomplete="off" readonly="readonly">
 					<option>Test value</option>

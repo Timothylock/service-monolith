@@ -1,9 +1,9 @@
 === Wordpress File Upload ===
 Contributors: nickboss
 Donate link: http://www.iptanus.com/support/wordpress-file-upload
-Tags: ajax, captcha, filter, form, html5, notification, page, plugin, post, redirect, responsive, shortcode, sidebar, upload, widget
+Tags: file, upload, ajax, form, page, post, sidebar, responsive, widget, webcam, ftp
 Requires at least: 2.9.2
-Tested up to: 4.8.1
+Tested up to: 4.9.4
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -145,6 +145,41 @@ There is an option in plugin's settings in Dashboard to relax the CSS rules, so 
 8. A screenshot of the file browser.
 
 == Changelog ==
+
+= 4.3.1 =
+* added placeholder option in available label positions of additional fields; label will be the placeholder attribute of the field
+
+= 4.3.0 =
+* fixed bug where ftp credentials did not work when username or password contained (:) or (@) symbols
+* RegExp fix for wfu_js_decode_obj function for improved compatibility with caching plugins
+* corrected WFU_Original_Template::get_instance() method because it always returned the original class
+* View Log page improved so that displayed additional user fields of an uploaded file are not cropped
+
+= 4.2.0 =
+* changed logic of file sanitizer; dots in filename are by default converted to dashes, in order to avoid upload failures caused when the plugin detects double extensions
+* corrected bug where a Javascript error was generated when askforsubfolders was disabled and showtargetfolder was active
+* added css and js minifier in inline code
+* plugin modified so that the shortcodes render correctly either Javascript loads early (in header) or late (in footer)
+* plugin modified so that Media record is deleted when the associated uploaded file is deleted from plugin's database
+* corrected bug where some plugin images were not loaded while Relax CSS option was inactive
+
+= 4.1.0 =
+* changed logic of file sanitizer; dots in filename are by default converted to dashes, in order to avoid upload failures caused when the plugin detects double extensions
+* added advanced option WFU_SANITIZE_FILENAME_DOTS that determines whether file sanitizer will sanitize dots or not
+* timepicker script and style replaced by most recent version
+* timepicker script and style files removed from plugin and loaded from cdn
+* json2 script removed from plugin and loaded from Wordpress registered script
+* JQuery UI style updated to latest 1.12.1 minified version
+* added wfu_before_admin_scripts filter before loading admin scripts and styles in order to control incompatibilities
+* removed getElementsByClassName-1.0.1.js file from plugin, getElementsByClassName function was replaced by DOM querySelectorAll
+* corrected bug showing warning "Notice: Undefined variable: page_hook_suffix..." when a non-admin user opened Dashboard
+* corrected fatal error "func_get_args(): Can't be used as a function parameter" appearing in websites with PHP lower than 5.3
+* added _wfu_file_upload_hide_output filter that runs when plugin should not be shown (e.g. for users not inluded in uploadroles), in order to output custom HTML
+* corrected bug where email fields were always validated, even if validate option was not activated
+* corrected bug where number fields did not allow invalid characters, even if typehook option was not activated
+* corrected bug where email fields were not allowed to be ampty when validate option was activated
+* corrected error T_PAAMAYIM_NEKUDOTAYIM appearing when PHP version is lower than 5.3
+* corrected bug with random upload fails caused when params_index corresponds to more than one params
 
 = 4.0.1 =
 * translation of the plugin in Persian, kindly provided by Shahriyar Modami http://chabokgroup.com
@@ -693,6 +728,18 @@ Added the option to allow anyone to upload files, by setting the attribute uploa
 Initial version.
 
 == Upgrade Notice ==
+
+= 4.3.0 =
+Minor update to introduce a new feature.
+
+= 4.3.0 =
+Significant update to introduce some new features and fix some bugs.
+
+= 4.2.0 =
+Significant update to introduce some new features and fix some bugs.
+
+= 4.1.0 =
+Significant update to fix several bugs and introduce some new features.
 
 = 4.0.1 =
 Minor update to fix some bugs.

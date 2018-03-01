@@ -2,16 +2,22 @@
 
 function wordpress_file_upload_admin_init() {
 	$uri = $_SERVER['REQUEST_URI'];
-	wp_register_style( 'myPluginStylesheet', plugins_url('stylesheet.css', __FILE__) );
 	$is_admin = current_user_can( 'manage_options' );
 	if ( is_admin() && ( ( $is_admin && strpos($uri, "options-general.php") !== false ) ) ) {
+		//apply wfu_before_admin_scripts to get additional settings 
+		$changable_data = array();
+		$ret_data = apply_filters('wfu_before_admin_scripts', $changable_data);
+		//if $ret_data contains 'return_value' key then no scripts will be
+		//registered
+		if ( isset($ret_data['return_value']) ) return $ret_data['return_value'];
+		//continue with script and style registering
 		wp_register_style('wordpress-file-upload-admin-style', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_adminstyle.css',false,'1.0','all');
 		wp_register_script('wordpress_file_upload_admin_script', WPFILEUPLOAD_DIR.'js/wordpress_file_upload_adminfunctions.js', array( 'wp-color-picker' ), false, true);
-		wp_register_script('wordpress_file_upload_classname_script', WPFILEUPLOAD_DIR.'js/getElementsByClassName-1.0.1.js');
 	}
 }
 
 function wordpress_file_upload_add_admin_pages() {
+	$page_hook_suffix = false;
 	if ( current_user_can( 'manage_options' ) ) $page_hook_suffix = add_options_page('Wordpress File Upload', 'Wordpress File Upload', 'manage_options', 'wordpress_file_upload', 'wordpress_file_upload_manage_dashboard');
 	if ( $page_hook_suffix !== false ) add_action('admin_print_scripts-'.$page_hook_suffix, 'wfu_enqueue_admin_scripts');
 }
@@ -20,10 +26,16 @@ function wfu_enqueue_admin_scripts() {
 	$uri = $_SERVER['REQUEST_URI'];
 	$is_admin = current_user_can( 'manage_options' );
 	if ( is_admin() && ( ( $is_admin && strpos($uri, "options-general.php") !== false ) ) ) {
+		//apply wfu_before_admin_scripts to get additional settings 
+		$changable_data = array();
+		$ret_data = apply_filters('wfu_before_admin_scripts', $changable_data);
+		//if $ret_data contains 'return_value' key then no scripts will be
+		//enqueued
+		if ( isset($ret_data['return_value']) ) return $ret_data['return_value'];
+		//continue with script and style enqueuing
 		wp_enqueue_style('wordpress-file-upload-admin-style');
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_script('wordpress_file_upload_admin_script');
-		wp_enqueue_script('wordpress_file_upload_classname_script');
 		$AdminParams = array("wfu_ajax_url" => site_url()."/wp-admin/admin-ajax.php");
 		wp_localize_script( 'wordpress_file_upload_admin_script', 'AdminParams', $AdminParams );
 	}
@@ -377,7 +389,7 @@ function wfu_manage_mainmenu($message = '') {
 }
 
 function wfu_generate_dashboard_menu($dlp, $active) {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	$siteurl = site_url();
 	
 	$echo_str = $dlp.'<h2 class="nav-tab-wrapper" style="margin-bottom:40px;">';
@@ -704,7 +716,7 @@ function wfu_delete_shortcode($data) {
 }
 
 function wfu_media_editor_properties() {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	$plugin_options = wfu_decode_plugin_options(get_option( "wordpress_file_upload_options" ));
 	if ( $plugin_options["mediacustom"] != "1" ) return;
 	

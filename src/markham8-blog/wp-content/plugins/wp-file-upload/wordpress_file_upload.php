@@ -4,14 +4,14 @@ if( !session_id() ) { session_start(); }
 /*
 Plugin URI: http://www.iptanus.com/support/wordpress-file-upload
 Description: Simple interface to upload files from a page.
-Version: 4.0.1
+Version: 4.3.1
 Author: Nickolas Bossinas
 Author URI: http://www.iptanus.com
 */
 
 /*
 Wordpress File Upload (Wordpress Plugin)
-Copyright (C) 2010-2015 Nickolas Bossinas
+Copyright (C) 2010-2018 Nickolas Bossinas
 Contact me at http://www.iptanus.com
 
 This program is free software: you can redistribute it and/or modify
@@ -96,7 +96,7 @@ function register_wfu_widget() {
 }
 
 function wfu_enqueue_frontpage_scripts() {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	$plugin_options = wfu_decode_plugin_options(get_option( "wordpress_file_upload_options" ));
 	$relaxcss = false;
 	if ( isset($plugin_options['relaxcss']) ) $relaxcss = ( $plugin_options['relaxcss'] == '1' );
@@ -107,35 +107,43 @@ function wfu_enqueue_frontpage_scripts() {
 	if ( isset($ret_data['return_value']) ) return $ret_data['return_value'];
 
 	if ( $relaxcss ) {
-		wp_enqueue_style('wordpress-file-upload-style', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_relaxed.css',false,'1.0','all');
-		wp_enqueue_style('wordpress-file-upload-style-safe', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_safe_relaxed.css',false,'1.0','all');
+		wp_enqueue_style('wordpress-file-upload-style', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_relaxed.css');
+		wp_enqueue_style('wordpress-file-upload-style-safe', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_safe_relaxed.css');
 	}
 	else {
-		wp_enqueue_style('wordpress-file-upload-style', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style.css',false,'1.0','all');
-		wp_enqueue_style('wordpress-file-upload-style-safe', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_safe.css',false,'1.0','all');
+		wp_enqueue_style('wordpress-file-upload-style', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style.css');
+		wp_enqueue_style('wordpress-file-upload-style-safe', WPFILEUPLOAD_DIR.'css/wordpress_file_upload_style_safe.css');
 	}
-	if ( !isset($ret_data["correct_NextGenGallery_incompatibility"]) || $ret_data["correct_NextGenGallery_incompatibility"] != "true" )
-		wp_enqueue_style('jquery-ui-css', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
-	wp_enqueue_style('jquery-ui-timepicker-addon-css', WPFILEUPLOAD_DIR.'vendor/datetimepicker/jquery-ui-timepicker-addon.min.css',false,'1.0','all');
-	wp_enqueue_script('json_class', WPFILEUPLOAD_DIR.'js/json2.js');
+	//do not load JQuery UI css if $ret_data denotes incompatibility issues
+	if ( ( !isset($ret_data["correct_NextGenGallery_incompatibility"]) || $ret_data["correct_NextGenGallery_incompatibility"] != "true" ) &&
+		( !isset($ret_data["correct_JQueryUI_incompatibility"]) || $ret_data["correct_JQueryUI_incompatibility"] != "true" ) )
+		wp_enqueue_style('jquery-ui-css', '//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.min.css');
+	//do not load timepicker css if $ret_data exclude_timepicker flag is true
+	if ( !isset($ret_data["exclude_timepicker"]) || $ret_data["exclude_timepicker"] != "true" )
+		wp_enqueue_style('jquery-ui-timepicker-addon-css', '//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css');
+	wp_enqueue_script('json2');
 	wp_enqueue_script('wordpress_file_upload_script', WPFILEUPLOAD_DIR.'js/wordpress_file_upload_functions.js');
-	wp_enqueue_script('jquery-ui-slider', false, array(), false, true);
-	wp_enqueue_script('jquery-ui-datepicker', false, array(), false, true);
-	wp_enqueue_script('jquery-ui-timepicker-addon-js', WPFILEUPLOAD_DIR.'vendor/datetimepicker/jquery-ui-timepicker-addon.min.js', array(), false, true);
+	//do not load timepicker js if $ret_data exclude_timepicker flag is true
+	if ( !isset($ret_data["exclude_timepicker"]) || $ret_data["exclude_timepicker"] != "true" ) {
+		wp_enqueue_script('jquery-ui-slider');
+		wp_enqueue_script('jquery-ui-timepicker-addon-js', '//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js', array("jquery-ui-datepicker"));
+	}
 }
 
 function wfu_include_lib() {
-	if ( $handle = opendir(plugin_dir_path( __FILE__ )."lib/") ) {
+	$dir = plugin_dir_path( __FILE__ )."lib/";
+	if ( $handle = opendir($dir) ) {
 		$blacklist = array('.', '..');
 		while ( false !== ($file = readdir($handle)) )
 			if ( !in_array($file, $blacklist) && substr($file, 0, 1) != "_" )
-				include_once plugin_dir_path( __FILE__ )."lib/".$file;
+				include_once $dir.$file;
 		closedir($handle);
 	}
 	if ( $handle = opendir(plugin_dir_path( __FILE__ )) ) {
 		closedir($handle);
 	}
 }
+
 
 /* exit if we are in admin pages (in case of ajax call) */
 if ( is_admin() ) return;
@@ -165,7 +173,7 @@ function wordpress_file_upload_browser_handler($incomingfrompost) {
 }
 
 function wordpress_file_upload_function($incomingfromhandler) {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	global $post;
 	global $blog_id;
 	$plugin_options = wfu_decode_plugin_options(get_option( "wordpress_file_upload_options" ));
@@ -215,7 +223,7 @@ function wordpress_file_upload_function($incomingfromhandler) {
 		$uploadrole = trim($uploadrole);
 	}
 	$plugin_upload_user_role = wfu_get_user_role($user, $uploadroles);		
-	if ( $plugin_upload_user_role == 'nomatch' ) return;
+	if ( $plugin_upload_user_role == 'nomatch' ) return apply_filters("_wfu_file_upload_hide_output", "");
 
 	//activate debug mode only for admins
 	if ( $plugin_upload_user_role != 'administrator' ) $params["debugmode"] = "false";
@@ -302,16 +310,20 @@ function wordpress_file_upload_function($incomingfromhandler) {
 	$uploadertemplate = wfu_get_uploader_template($params["uploadertemplate"]);
 	/* Compose the html code for the plugin */
 	$wordpress_file_upload_output = "";
+	$wordpress_file_upload_output .= wfu_init_run_js_script();
 	$plugin_style = "";
 	if ( $widths["plugin"] != "" ) $plugin_style .= 'width: '.$widths["plugin"].'; ';
 	if ( $heights["plugin"] != "" ) $plugin_style .= 'height: '.$heights["plugin"].'; ';
 	if ( $plugin_style != "" ) $plugin_style = ' style="'.$plugin_style.'"';
-	$wordpress_file_upload_output .= '<div id="'.$init_params["container_id"].'" class="file_div_clean'.( $params["fitmode"] == "responsive" ? '_responsive_container' : '' ).' wfu_container"'.$plugin_style.'>';
-	$wordpress_file_upload_output .= "\n".'<!-- Using template '.$uploadertemplate::$name.' -->';
+	$wordpress_file_upload_output .= "\n".'<div id="'.$init_params["container_id"].'" class="file_div_clean'.( $params["fitmode"] == "responsive" ? '_responsive_container' : '' ).' wfu_container"'.$plugin_style.'>';
+	$wordpress_file_upload_output .= "\n".'<!-- Using template '.call_user_func(array($uploadertemplate, 'get_name')).' -->';
 	//read indexed component definitions
 	$component_output = "";
 	$css = "";
 	$js = "";
+	/* Add generic uploadform code to output from template */
+	$wordpress_file_upload_output .= wfu_template_to_HTML("base", $params, array(), 0);
+	/* Continue with uploadform elements */
 	$components = wfu_component_definitions();
 	$components_indexed = array();
 	foreach ( $components as $component ) {
@@ -369,8 +381,12 @@ function wordpress_file_upload_function($incomingfromhandler) {
 	//output javascript code
 	if ( $js != "" ) {
 		//add initialization of the object of the upload form
-		$js = 'GlobalData.WFU['.$sid.'] = '.wfu_PHP_array_to_JS_object($init_params).'; GlobalData.WFU.n.push('.$sid.');'."\n".$js;
-		$wordpress_file_upload_output .= wfu_js_to_HTML($js);
+		$wfu_js = 'var WFU_JS_'.$sid.' = function() {';
+		$wfu_js .= "\n".'GlobalData.WFU['.$sid.'] = '.wfu_PHP_array_to_JS_object($init_params).'; GlobalData.WFU.n.push('.$sid.');';
+		$wfu_js .= "\n".$js;
+		$wfu_js .= "\n".'}';
+		$wfu_js .= "\n".'wfu_run_js("window", "WFU_JS_'.$sid.'");';
+		$wordpress_file_upload_output .= "\n".wfu_js_to_HTML($wfu_js);
 	}
 	//add visual editor overlay if the current user is administrator
 	if ( current_user_can( 'manage_options' ) ) {
@@ -382,7 +398,9 @@ function wordpress_file_upload_function($incomingfromhandler) {
 	/* Pass constants to javascript and run plugin post-load actions */
 	$consts = wfu_set_javascript_constants();
 	$handler = 'function() { wfu_Initialize_Consts("'.$consts.'"); wfu_Load_Code_Connectors('.$sid.'); wfu_plugin_load_action('.$sid.'); }';
-	$wordpress_file_upload_output .= "\n\t".'<script type="text/javascript">if(window.addEventListener) { window.addEventListener("load", '.$handler.', false); } else if(window.attachEvent) { window.attachEvent("onload", '.$handler.'); } else { window["onload"] = '.$handler.'; }</script>';
+	$wfu_js = 'if (typeof wfu_addLoadHandler == "undefined") function wfu_addLoadHandler(handler) { if(window.addEventListener) { window.addEventListener("load", handler, false); } else if(window.attachEvent) { window.attachEvent("onload", handler); } else { window["onload"] = handler; } }';
+	$wfu_js .= "\n".'wfu_addLoadHandler('.$handler.');';
+	$wordpress_file_upload_output .= "\n".wfu_js_to_HTML($wfu_js);
 	$wordpress_file_upload_output .= '</div>';
 //	$wordpress_file_upload_output .= '<div>';
 //	$wordpress_file_upload_output .= wfu_test_admin();
@@ -394,7 +412,7 @@ function wordpress_file_upload_function($incomingfromhandler) {
 	if ( !isset($_SESSION['wfu_check_refresh_'.$sid]) || $_SESSION['wfu_check_refresh_'.$sid] != "form button pressed" ) {
 		$_SESSION['wfu_check_refresh_'.$sid] = 'do not process';
 		$wordpress_file_upload_output .= wfu_post_plugin_actions($params);
-		$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output);
+		$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output, $params);
 		return $wordpress_file_upload_output."\n";
 	}
 	$_SESSION['wfu_check_refresh_'.$sid] = 'do not process';
@@ -410,7 +428,7 @@ function wordpress_file_upload_function($incomingfromhandler) {
 
 	if ( $params['forceclassic'] != "true" ) {
 		$wordpress_file_upload_output .= wfu_post_plugin_actions($params);
-		$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output);
+		$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output, $params);
 		return $wordpress_file_upload_output."\n";
 	}
 
@@ -461,11 +479,12 @@ function wordpress_file_upload_function($incomingfromhandler) {
 		}
 
 		$ProcessUploadComplete_functiondef = 'function(){wfu_ProcessUploadComplete('.$sid.', 1, "'.$wfu_process_file_array_str.'", "no-ajax", "'.$safe_output.'", [false, null, false], "fileupload", "'.$js_script_enc.'");}';
-		$wordpress_file_upload_output .= '<script type="text/javascript">window.onload='.$ProcessUploadComplete_functiondef.'</script>';
+		$wfu_js = 'wfu_addLoadHandler('.$ProcessUploadComplete_functiondef.');';
+		$wordpress_file_upload_output .= "\n".wfu_js_to_HTML($wfu_js);
 	}
 	
 	$wordpress_file_upload_output .= wfu_post_plugin_actions($params);
-	$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output);
+	$wordpress_file_upload_output = apply_filters("_wfu_file_upload_output", $wordpress_file_upload_output, $params);
 	return $wordpress_file_upload_output."\n";
 }
 
@@ -480,7 +499,7 @@ function wfu_post_plugin_actions($params) {
 }
 
 function wfu_get_subfolders_paths($params) {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	$subfolder_paths = array ( );
 	if ( $params["askforsubfolders"] == "true" && $params["testmode"] != "true" ) {
 		array_push($subfolder_paths, "");
