@@ -111,9 +111,44 @@ require('login.php');
 		<table class="auto-style3" style="width: 100%">
 			<tr>
 				<td class="auto-style1"><strong><span class="auto-style7">
-				The leaders page has since moved. Please visit the main website to find the new link</span></strong></td>
+				Operations</span></strong></td>
+			</tr>
+			<tr>
+				<td class="auto-style6">
+				<a class="auto-style18" href="index.php">
+				<span class="auto-style17">Home</span></a></td>
+			</tr>
+			<tr>
+				<td class="auto-style4">
+				<a class="auto-style18" href="newpost.php">
+				<span class="auto-style17">New Post (Bulletin)</span></a></td>
+			</tr>
+			<tr>
+				<td class="auto-style2">
+				<a class="auto-style18" href="uploadfile.php">
+				<span class="auto-style17">Upload File / Memo</span></a></td>
+			</tr>
+			<tr>
+				<td class="auto-style2">
+				<a class="auto-style18" href="logout.php">
+				<span class="auto-style17">Logout</span></a></td>
+			</tr>
+			<tr>
+				<td class="auto-style16">&nbsp; &nbsp;</td>
 			</tr>
 		</table>
+		</td>
+		<td align="top" class="auto-style12" style="width: 692px"><strong>
+		Leaders Area Home<br />
+		<br />
+		</strong><span class="auto-style13">Welcome! Use the operations menu on 
+		the left to perform many actions.<br />
+		<br />
+		<strong>New Post </strong>- Allows you to post an article to the main 
+		site (notices, bulletin, etc)<br />
+		<strong>Upload File</strong> - Allows you to attach a file to the memo 
+		section (forms, etc.)<br />
+		</span></td>
 	</tr>
 	<tr>
 		<td style="width: 271px">&nbsp;</td>
@@ -127,7 +162,7 @@ require('login.php');
 				<table style="width: 100%">
 					<tr>
 						<td class="auto-style13" style="width: 93px">12/13/17</td>
-						<td class="auto-style13">Moved leaders to https://8thmarkham.com/leaders-admin/</td>
+						<td class="auto-style13">Added ability to rename memos</td>
 					</tr>
 					<tr>
 						<td class="auto-style13" style="width: 93px">10/01/16</td>
