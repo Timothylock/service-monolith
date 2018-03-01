@@ -292,11 +292,13 @@ $GLOBALS["WFU_GLOBALS"] += array(
 	"WFU_DOS_ATTACKS_TIME_INTERVAL" => array( "Denial-Of-Service Time Interval", "integer", 3600, "Defines the time interval for DOS attacks check. The time interval is given in seconds." ),
 	"WFU_DOS_ATTACKS_ADMIN_EMAIL_FREQUENCY" => array( "Denial-Of-Service Admin Email Frequency", "integer", 3600, "Defines how frequently an email will be sent to administrator notifying for Denial-Of-Service attacks. The time interval is given in seconds." ),
 	"WFU_SANITIZE_FILENAME_MODE" => array( "Filename Sanitization Mode", "string", "strict", "The sanitization mode for filenames. It can be 'strict' or 'loose'." ),
+	"WFU_SANITIZE_FILENAME_DOTS" => array( "Sanitize Filename Dots", "string", "true", "Convert dot symbols (.) in filename into dashes, in order to avoid double extensions. It can be 'true' or 'false'." ),
 	"WFU_WILDCARD_ASTERISK_MODE" => array( "Wildcard Asterisk Mode", "string", "strict", "The mode of wildcard pattern asterisk symbol. If it is strict, then the asterisk will not match dot (.) characters. It can be 'strict' or 'loose'." ),
 	"WFU_PHP_ARRAY_MAXLEN" => array( "Max PHP Array Length", "string", "10000", "The maximum allowable number of items of a PHP array." ),
 	"WFU_HISTORYLOG_TABLE_MAXROWS" => array( "History Log Table Rows Per Page", "integer", 25, "The number of rows per page of the History Log table." ),
 	"WFU_ALTERNATIVE_RANDOMIZER" => array( "Use Alternative Randomizer", "string", "false", "On fast web servers the plugin's generator of random strings may not work properly causing various problems. If it is set to true, an alternative randomizer method is employed that works for fast web servers. It can be 'true' or 'false'." ),
 	"WFU_FORCE_NOTIFICATIONS" => array( "Force Email Notifications", "string", "false", "Send email notifications (if they are activated) even if no file has been uploaded. It can be 'true' or 'false'." ),
+	"WFU_UPDATE_MEDIA_ON_DELETE" => array( "Update Media on Delete", "string", "true", "When an uploaded file is deleted then delete also the corresponding Media Library item if exists. It can be 'true' or 'false'." ),
 	"WFU_DASHBOARD_PROTECTED" => array( "Dashboard Is Protected", "string", "false", "If /wp-admin folder is password protected then this variable should be set to 'true' so that internal operations of the plugin can work. The username and password should also be set." ),
 	"WFU_DASHBOARD_USERNAME" => array( "Protected Dashboard Username", "string", "", "Username entry for accessing protected /wp-admin folder." ),
 	"WFU_DASHBOARD_PASSWORD" => array( "Protected Dashboard Password", "string", "", "Password entry for accessing protected /wp-admin folder." ),
@@ -306,7 +308,9 @@ $GLOBALS["WFU_GLOBALS"] += array(
 	"WFU_RELAX_CURL_VERIFY_HOST" => array( "Relax cURL Host Verification", "string", "false", "If it is set to 'true' then CURLOPT_SSL_VERIFYHOST will be disabled when executing a cURL POST request. This is required in some cases so that the plugin can reach https://services2.iptanus.com, because on some servers it fails with a file_get_contents warning. It can be 'true' or 'false'." ),
 	"WFU_USE_ALT_IPTANUS_SERVER" => array( "Use Alternative Iptanus Server", "string", "false", "If it is set to 'true' then the alternative Iptanus server will be used. This is a work-around in some cases where the website cannot reach https://services2.iptanus.com. It can be 'true' or 'false'." ),
 	"WFU_ALT_IPTANUS_SERVER" => array( "Alternative Iptanus Server", "string", "https://iptanusservices.appspot.com", "If it is set then this is the URL of the alternative Iptanus server." ),
-	"WFU_ALT_VERSION_SERVER" => array( "Alternative Version Server", "string", "https://iptanusservices.appspot.com/g79xo30q8s", "If the alternative Iptanus server is used and this variable is not empty, then it will be used as the alternative Version Server URL." )
+	"WFU_ALT_VERSION_SERVER" => array( "Alternative Version Server", "string", "https://iptanusservices.appspot.com/g79xo30q8s", "If the alternative Iptanus server is used and this variable is not empty, then it will be used as the alternative Version Server URL." ),
+	"WFU_MINIFY_INLINE_CSS" => array( "Minify Inline CSS Code", "string", "true", "Defines whether the inline CSS code will be minified. It can be 'true' or 'false'." ),
+	"WFU_MINIFY_INLINE_JS" => array( "Minify Inline JS Code", "string", "true", "Defines whether the inline Javascript code will be minified. It can be 'true' or 'false'." )
 );
 //color definitions
 $GLOBALS["WFU_GLOBALS"] += array(

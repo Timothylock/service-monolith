@@ -38,12 +38,14 @@ function wfu_maintenance_actions($message = '') {
 	$echo_str .= "\n\t\t".'</table>';
 	$echo_str .= "\n\t".'</div>';
 	//export actions
-	$echo_str .= "\n\t\t".'<h3 style="margin-bottom: 10px; margin-top: 20px;">Export Actions</h3>';
+	$echo_str .= "\n\t".'<div style="margin-top:20px;">';
+	$echo_str .= "\n\t\t".'<h3 style="margin-bottom: 10px;">Export Actions</h3>';
 	$echo_str .= "\n\t\t".'<table class="form-table">';
 	$echo_str .= "\n\t\t\t".'<tbody>';
 	$echo_str .= "\n\t\t\t\t".'<tr>';
 	$echo_str .= "\n\t\t\t\t\t".'<th scope="row">';
-	$echo_str .= "\n\t\t\t\t\t\t".'<a href="javascript:wfu_download_file(\'exportdata\', 1, \''.wp_create_nonce('wfu_download_file_invoker').'\');" class="button" title="Export uploaded file data">Export Uploaded File Data</a>';
+	$echo_str .= "\n\t\t\t\t\t\t".'<a href="javascript:wfu_download_file(\'exportdata\', 1);" class="button" title="Export uploaded file data">Export Uploaded File Data</a>';
+	$echo_str .= "\n\t\t\t\t\t\t".'<input id="wfu_download_file_nonce" type="hidden" value="'.wp_create_nonce('wfu_download_file_invoker').'" />';
 	$echo_str .= "\n\t\t\t\t\t".'</th>';
 	$echo_str .= "\n\t\t\t\t\t".'<td>';
 	$echo_str .= "\n\t\t\t\t\t\t".'<label>Export uploaded valid file data, together with any userdata fields, to a comma-separated text file.</label>';
@@ -85,7 +87,7 @@ function wfu_clean_log_prompt() {
 }
 
 function wfu_clean_log() {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	global $wpdb;
 
 	if ( !current_user_can( 'manage_options' ) ) return -1;

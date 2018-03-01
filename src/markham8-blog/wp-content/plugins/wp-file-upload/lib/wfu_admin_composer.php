@@ -746,7 +746,7 @@ function wfu_shortcode_composer($data = '', $shortcode_tag = 'wordpress_file_upl
 			$fieldprops_default = array ( "type" => "text", "label" => "", "labelposition" => "left", "required" => false, "donotautocomplete" => false, "validate" => false, "default" => "", "data" => "", "group" => "", "format" => "", "hintposition" => "right", "typehook" => false );
 			//parse shortcode attribute to $fields
 			$fields = wfu_parse_userdata_attribute($def['value']);
-			$labelpositions = array("none", "top", "right", "bottom", "left");
+			$labelpositions = array("none", "top", "right", "bottom", "left", "placeholder");
 			$hintpositions = array("none", "inline", "top", "right", "bottom", "left");
 			if ( count($fields) == 0 ) array_push($fields, $fieldprops_default);
 			//set html template variable

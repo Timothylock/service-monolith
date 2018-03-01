@@ -1,7 +1,7 @@
 <?php
 
 function wfu_view_log($page = 1, $only_table_rows = false) {
-	switch(WFU_FUNCTION_HOOK(__FUNCTION__, func_get_args(), $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
+	$a = func_get_args(); switch(WFU_FUNCTION_HOOK(__FUNCTION__, $a, $out)) { case 'X': break; case 'R': return $out; break; case 'D': die($out); break; }
 	global $wpdb;
 	$siteurl = site_url();
 	$table_name1 = $wpdb->prefix . "wfu_log";
@@ -79,7 +79,7 @@ function wfu_view_log($page = 1, $only_table_rows = false) {
 				}
 			}
 			if ( $remarks != '' ) {
-				$remarks = "\n\t\t\t\t\t\t".'<select multiple="multiple" style="width:100%; height:40px; background:none; font-size:small;">'.$remarks;
+				$remarks = "\n\t\t\t\t\t\t".'<select multiple="multiple" style="width:100%; height:40px; background:none; font-size:small; overflow:scroll;">'.$remarks;
 				$remarks .= "\n\t\t\t\t\t\t".'</select>';
 			}
 		}

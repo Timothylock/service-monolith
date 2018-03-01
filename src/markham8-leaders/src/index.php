@@ -1,8 +1,4 @@
-﻿<?php
-require('login.php');
-?>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -125,6 +121,14 @@ require('login.php');
 			<tr>
 				<td>
 				<table style="width: 100%">
+                    <tr>
+                        <td class="auto-style13" style="width: 93px">02/27/18</td>
+                        <td class="auto-style13">HTTPS has been turned on for most of the site. Please report any broken links</td>
+                    </tr>
+    				<tr>
+                        <td class="auto-style13" style="width: 93px">02/26/18</td>
+                        <td class="auto-style13">Backend has been Dockerized. Links may be broken. Please let Timothy know if something doesn't work.</td>
+                    </tr>
 					<tr>
 						<td class="auto-style13" style="width: 93px">12/13/17</td>
 						<td class="auto-style13">Moved leaders to https://8thmarkham.com/leaders-admin/</td>

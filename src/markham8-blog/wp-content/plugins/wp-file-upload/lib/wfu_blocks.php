@@ -1,5 +1,23 @@
 <?php
 
+/* Prepare the uploadform generic element */
+function wfu_prepare_base_block($params, $additional_params, $occurrence_index) {
+	//prepare data for template
+	$data["ID"] = $params["uploadid"];
+	$data["responsive"] = ( $params["fitmode"] == "responsive" );
+	$data["testmode"] = ( $params["testmode"] == "true" );
+	$data["params"] = $params;
+	
+	$base_item["title"] = '';
+	$base_item["hidden"] = false;
+	$base_item["width"] = "";
+	$base_item["object"] = "GlobalData.WFU[".$data["ID"]."].base";
+	//read html output from template
+	$base_item += wfu_read_template_output("base", $data);
+
+	return $base_item;
+}
+
 /* Prepare the visual editor button */
 function wfu_prepare_visualeditorbutton_block($params, $additional_params, $occurrence_index) {
 	if ( isset($params["uploadid"]) ) {
@@ -494,7 +512,7 @@ function wfu_prepare_userdata_block($params, $additional_params, $occurrence_ind
 	$userdata_init = "";
 	$userdata_init .= "\n".'GlobalData.WFU['.$data["ID"].'].userdata._init'.$init_index.' = GlobalData.WFU['.$data["ID"].'].userdata.init;';
 	$userdata_init .= "\n".'GlobalData.WFU['.$data["ID"].'].userdata.init = function() {';
-	$userdata_init .= "\n\t".'this._init'.$init_index.'();';
+	$userdata_init .= "\n\t".'GlobalData.WFU['.$data["ID"].'].userdata._init'.$init_index.'();';
 	$userdata_init .= "\n\t".'var WFU = GlobalData.WFU['.$data["ID"].'];';
 	if ( $init_index == 0 ) {
 		$userdata_init .= "\n\t".'if (typeof WFU.userdata.init_count == "undefined") {';

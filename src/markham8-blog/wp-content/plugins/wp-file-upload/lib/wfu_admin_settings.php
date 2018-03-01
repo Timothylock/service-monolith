@@ -1,4 +1,64 @@
 <?php
+
+function wfu_settings_definitions() {
+	$settings = array(
+		"version" => array("number", "1.0"),
+		"shortcode" => array("string", ""),
+		"hashfiles" => array("number", ""),
+		"basedir" => array("string", ""),
+		"postmethod" => array("number", ""),
+		"modsecurity" => array("number", ""),
+		"relaxcss" => array("number", ""),
+		"admindomain" => array("number", ""),
+		"mediacustom" => array("number", ""),
+		"createthumbnails" => array("number", ""),
+		"includeotherfiles" => array("number", ""),
+		"altserver" => array("number", ""),
+		"captcha_sitekey" => array("string", ""),
+		"captcha_secretkey" => array("string", ""),
+		"browser_permissions" => array("array", "")
+	);
+	$settings = apply_filters("_wfu_settings_definitions", $settings);
+	
+	return $settings;
+}
+
+
+function wfu_encode_plugin_options($plugin_options) {
+	$settings = wfu_settings_definitions();
+	$encoded_options = array();
+	foreach ( $settings as $setting => $data ) {
+		$encoded = $setting."=";
+		if ( !isset($plugin_options[$setting]) ) $encoded .= $data[1];
+		elseif ( $data[0] == "string" ) $encoded .= wfu_plugin_encode_string($plugin_options[$setting]);
+		elseif ( $data[0] == "array" ) $encoded .= wfu_encode_array_to_string($plugin_options[$setting]);
+		else $encoded .= $plugin_options[$setting];
+		array_push($encoded_options, $encoded);
+	}
+	
+	return implode(";", $encoded_options);
+}
+
+function wfu_decode_plugin_options($encoded_options) {
+	$settings = wfu_settings_definitions();
+	foreach ( $settings as $setting => $data )
+		$plugin_options[$setting] = $data[1];
+
+	$decoded_array = explode(';', $encoded_options);
+	foreach ($decoded_array as $decoded_item) {
+		if ( trim($decoded_item) != "" ) {
+			list($item_key, $item_value) = explode("=", $decoded_item, 2);
+			if ( isset($settings[$item_key]) ) {
+				if ( $settings[$item_key][0] == "string" ) $plugin_options[$item_key] = wfu_plugin_decode_string($item_value);
+				elseif ( $settings[$item_key][0] == "array" ) $plugin_options[$item_key] = wfu_decode_array_from_string($item_value);
+				else $plugin_options[$item_key] = $item_value;
+			}
+		}
+	}
+
+	return $plugin_options;
+}
+
 function wfu_manage_settings($message = '') {
 	if ( !current_user_can( 'manage_options' ) ) return;
 
@@ -17,6 +77,13 @@ function wfu_manage_settings($message = '') {
 	$echo_str .= "\n\t\t\t".'<input type="hidden" name="action" value="edit_settings">';
 	$echo_str .= "\n\t\t\t".'<table class="form-table">';
 	$echo_str .= "\n\t\t\t\t".'<tbody>';
+	$echo_str .= "\n\t\t\t\t\t".'<tr>';
+	$echo_str .= "\n\t\t\t\t\t\t".'<th scope="row">';
+	$echo_str .= "\n\t\t\t\t\t\t\t".'<h3>General Settings</h3>';
+	$echo_str .= "\n\t\t\t\t\t\t".'</th>';
+	$echo_str .= "\n\t\t\t\t\t\t".'<td>';
+	$echo_str .= "\n\t\t\t\t\t\t".'</td>';
+	$echo_str .= "\n\t\t\t\t\t".'</tr>';
 	$echo_str .= "\n\t\t\t\t\t".'<tr>';
 	$echo_str .= "\n\t\t\t\t\t\t".'<th scope="row">';
 	$echo_str .= "\n\t\t\t\t\t\t\t".'<label for="wfu_hashfiles">Hash Files</label>';
@@ -79,6 +146,7 @@ function wfu_manage_settings($message = '') {
 	$echo_str .= "\n\t\t\t\t\t\t\t".'<p style="cursor: text; font-size:9px; padding: 0px; margin: 0px; width: 95%; color: #AAAAAA;">Current value: <strong>'.($plugin_options['mediacustom'] == '1' ? 'Yes' : 'No' ).'</strong></p>';
 	$echo_str .= "\n\t\t\t\t\t\t".'</td>';
 	$echo_str .= "\n\t\t\t\t\t".'</tr>';
+	$echo_str .= "\n\t\t\t\t\t".'<tr>';
 	$echo_str .= "\n\t\t\t\t\t\t".'<th scope="row">';
 	$echo_str .= "\n\t\t\t\t\t\t\t".'<label for="wfu_includeotherfiles">Include Other Files in Plugin\'s Database</label>';
 	$echo_str .= "\n\t\t\t\t\t\t".'</th>';

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>KidzWhiz FLL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Frame-Options" content="allow">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="http://homework2tim.tk/assets/css/style.css" rel="stylesheet">
+	<style>
+	html {
+	  position: relative;
+	  min-height: 100%;
+	}
+	body {
+	  margin-bottom: 60px;
+	}
+	.footer {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  min-height: 60px;
+	  background-color: #f5f5f5;
+	}
+
+	.topbanner {
+		position: relative;
+	    background: #DFF2BF url("bg.jpg") center center;
+	    width: 100%;
+	    height: 100%;
+	    background-size: cover;
+	    overflow: hidden;
+	    color: white;
+  		text-shadow: #444 0 1px 1px;
+	}
+
+	.updates {
+		position: relative;
+	    background: #DFF2BF url("up_bg.jpg") center center;
+	    width: 100%;
+	    height: 100%;
+	    background-size: cover;
+	    overflow: hidden;
+	    color: white;
+  		text-shadow: #444 0 1px 1px;
+	}
+	</style>
+</head>
+<body>
+	<div class="jumbotron topbanner text-center" style="box-shadow: inset -11px -88px 57px -71px rgba(0,0,0,0.75);">
+	  <h1>KidzWhiz First lego League Team 2017</h1>
+	  <p>Welcome! Here you can find the latest information, progress, challenges, etc.</p> 
+	</div>
+	<div class="container">
+
+	<div class="row" style="padding-bottom: 50px;">
+	
+	    <div class="col-sm-12">
+				
+			<div class="alert alert-success">
+			  <strong>We did it! -</strong>Thank you for being such a great team this year! </b>
+			</div>
+			
+	    </div>
+	  </div>
+	  <div class="row" style="padding-bottom: 80px;">
+	    <div class="col-sm-4">
+	      <h3>Getting Started</h3>
+	      <p>Download the EV3 software <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">here</a></p>
+	      <p>When done, try the latest <a href="https://drive.google.com/drive/folders/0B_Rq3TDefm32UEdWREc5NWZYbXM">challenges</a></p>
+	    </div>
+	    <div class="col-sm-4">
+	      <h3>About The Competition</h3>
+	      <p>Learn more about the rules, missions, etc <a href="http://www.first-lego-league.org/en/fll/robotgame.html">here </a> NOTE: 2017 competition has not been updated yet.</p>
+	    </div>
+	    <div class="col-sm-4">
+	      <h3>Files</h3> 
+	      <p>Any files that I share from the meetings will be uploaded to <a href="https://drive.google.com/drive/folders/0B_Rq3TDefm32UEdWREc5NWZYbXM">here</a>.</p>
+	    </div>
+	  </div>
+	  
+
+	  <div class="row" style="text-align: center; padding-bottom: 80px;">
+		  <h2>Our Progress</h2>
+		  <p>We did it! Thank you for being such a great team this year! </p> 
+		  <div class="progress">
+		    <div class="progress-bar progress-bar-striped active" id="prg" role="progressbar" style="width:0%"/>
+		  </div>
+		  
+
+		  <script>
+			  setInterval(function() {
+				var firstDate = new Date("02/04/2017");
+				var secondDate = new Date("12/10/2017");
+				var today = new Date();
+
+				// Convert back to days and return
+				var totalDays = Math.ceil(Math.abs(firstDate.getTime() - secondDate.getTime()) / (1000 * 3600 * 24));
+				var daysLeft = Math.ceil(Math.abs(today.getTime() - secondDate.getTime()) / (1000 * 3600 * 24)); 
+				var percent = ((totalDays - (Math.round(daysLeft)))/304)*100;
+
+				document.getElementById("left").innerHTML = Math.round(daysLeft * 1000000) / 1000000;	
+				document.getElementById("prg").innerHTML = "100% there!";
+				document.getElementById("prg").style.width = "100%";
+			  },10);
+			</script>
+		</div>
+		</div>
+		</div>
+
+	  <div class="jumbotron updates text-center" style="box-shadow: inset 10px 76px 57px -71px rgba(0,0,0,0.75); box-shadow: inset -11px -88px 57px -71px rgba(0,0,0,0.75); ">
+	  <h2 class="text-center">Updates</h2>
+		</div>
+
+	  <div class="container">
+	  <div class="row" style="padding-bottom: 50px;">
+	  	<div class="col-sm-12">
+				<h4>September 20 - Welcome back! </h4>
+				 <p>Welcome back! I hope you all had a great summer. Classes will resume on Sept 23 6-8pm at Joey's house. Please check your email for exact address</p>
+				 <br>
+
+				<h4>June 25, 2017 - Summer time! </h4>
+				 <p>The summer break begins now and I will forward you details about when we are starting again later on in the summer. Enjoy your Canada Day weekend as well as your summer! Thanks for coming to the first half of our KidzWhiz FLL Robotics team!</p>
+				 <br>
+				 
+				<h4>May 18, 2017 - CLASS CANCELLATION</h4>
+	  	  <p>Our May 20th session is cancelled. Enjoy your Victoria Day weekend!</p>
+				<br>
+
+				<br>
+	  	  <h4>April 8, 2017 - Google Drive</h4>
+	  	  <p>Our Google Drive is up! You can access it <a href="htps://drive.google.com/drive/folders/0B02crpf6Em9-ZDJ3MVZMU201QnM?usp=sharing">here</a>. Login with your Google account and click Request Access.</p>
+
+	  	  <br>
+	  	  <h4>March 4, 2017 - March Break/Laptop Reminder</h4>
+	  	  <p>Just a reminder that you are encouraged to bring your own laptop with the <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">EV3 Software</a> installed. That way you can easily save your files and not worry about lost files. Also, you probably figured out by now that our laptops are really slow!</p>
+	  	  <br>
+	  	  <p>On a side note, the progress bar has been updated since somebody brought up that it was actually counting down instead of up! Have a great March break and see you back on March 25! </p>
+	  	  <br>
+
+	  	  <br>
+	  	  <h4>February 25, 2017 - March Break</h4>
+	  	  <p>After a really close tie between March 11 and March 18, we have decided to take both weeks off (yay!)</p>
+	  	  <br>
+
+	  	  <br>
+	  	  <h4>February 11, 2017 - Laptops</h4>
+	  	  <p>A student asked about bringing their personal laptop to class. I encourage you to do that! That way, you can save your work, and get to use a laptop that you are used to. The only restriction is that you <b>will not</b> be able to connect to our WiFi network for internet.</p>
+	  	  <br>
+	  	  
+	  	  <br>
+	  	  <h4>February 11, 2017 - Roadmap + Borrowing Robots</h4>
+	  	  <p>Good news! After assessing the level of our pros (beginners), I have created a roadmap and anticipate that they will be caught up to the super pros (intermediates) in around 2-3 weeks time. They will begin the advance challenges starting next week. I will then teach the class as a whole.</p>
+	  	  <br>
+	  	  <p>Some parents have asked about the policy for borrowing our robots. If you feel like you want to bring a robot home to learn, you can begin to sign out the set [base robot + USB cable + charger] starting in March after our ramp-up season is complete. The software used can be downloaded <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">here</a>.</p>
+	  	  <br>
+
+	  	  <br>
+	  	  <h4>January 28, 2017</h4>
+	  	  <p>Prep sessions will begin next week at Sunny Mandarin. Can't wait to meet all of you!</p>
+	  	  <br>
+	  	  
+	  	  
+	    </div>
+	  </div>
+	</div>
+	<footer class="footer">
+        <p class="text-muted pull-left" style="margin-top: 25px; margin-left: 25px;">Website Copyright © 2017 LogicFusion</p>
+        <p class="text-muted pull-right" style="margin-top: 25px; margin-right: 25px;">Past years' team sites can be found <a href="old">here</a>. Website Designed by <a href="http://timothylock.ca">Timothy Lock</a></p>
+      </div>
+    </footer>
+</body>
+</html>

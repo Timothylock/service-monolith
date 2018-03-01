@@ -1663,6 +1663,7 @@ function wfu_attribute_definitions() {
 	);
 
 	wfu_array_remove_nulls($defs);
+	
 
 	return $defs;
 }

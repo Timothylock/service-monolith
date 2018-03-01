@@ -1,0 +1,7 @@
+DirectoryIndex  index.html  index.php  /_h5ai/public/index.php
+Header set Access-Control-Allow-Origin "*"
+Redirect /winter2017 https://drive.google.com/drive/folders/0B-aQrAFjFKpBdmRpU3FrbzJnSVU?usp=sharing
+Redirect /camp2016 https://drive.google.com/drive/folders/0B-aQrAFjFKpBMnAtVFBYUEtrU3c?usp=sharing
+Redirect /spring2017 https://drive.google.com/drive/u/1/folders/0B-aQrAFjFKpBZTBxd1BIR1V2eGs
+Redirect /myStudents.html http://computerswithtim.ml/notes/TimsCSTutoringStudents/
+Redirect /notes.html /
