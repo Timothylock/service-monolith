@@ -16,21 +16,9 @@
 		<tr>
 			<th>Filename</th>
 			<th>Type</th>
-			<th>Size</th>
-			<th>Date Modified</th>
 		</tr>
 	    </thead>
 	    <tbody><?php
-
-	// Adds pretty filesizes
-	function pretty_filesize($file) {
-		$size=filesize($file);
-		if($size<1024){$size=$size." Bytes";}
-		elseif(($size<1048576)&&($size>1023)){$size=round($size/1024, 1)." KB";}
-		elseif(($size<1073741824)&&($size>1048575)){$size=round($size/1048576, 1)." MB";}
-		else{$size=round($size/1073741824, 1)." GB";}
-		return $size;
-	}
 
  	// Checks to see if veiwing hidden files is enabled
 	if($_SERVER['QUERY_STRING']=="hidden")
@@ -43,7 +31,7 @@
 	 $atext="Show";}
 
 	 // Opens directory
-	 $myDirectory=opendir(".");
+	 $myDirectory=opendir("./files");
 
 	// Gets each entry
 	while($entryName=readdir($myDirectory)) {
@@ -72,10 +60,6 @@
 	// Gets File Names
 		$name=$dirArray[$index];
 		$namehref=$dirArray[$index];
-
-	// Gets Date Modified
-		$modtime=date("M j Y g:i A", filemtime($dirArray[$index]));
-		$timekey=date("YmdHis", filemtime($dirArray[$index]));
 
 
 	// Separates directories, and performs operations on those directories
@@ -134,19 +118,14 @@
 
 				default: if($extn!=""){$extn=strtoupper($extn)." File";} else{$extn="Unknown";} break;
 			}
-
-			// Gets and cleans up file size
-				$size=pretty_filesize($dirArray[$index]);
-				$sizekey=filesize($dirArray[$index]);
 		}
 
 	// Output
 	 echo("
 		<tr class='$class'>
-			<td><a href='./$namehref'$favicon class='name'>$name</a></td>
-			<td><a href='./$namehref'>$extn</a></td>
-			<td sorttable_customkey='$sizekey'><a href='./$namehref'>$size</a></td>
-			<td sorttable_customkey='$timekey'><a href='./$namehref'>$modtime</a></td>
+			<td><a href='./files/$namehref'$favicon class='name'>$name</a></td>
+			<td><a href='./files/$namehref'>$extn</a></td>
+			<td sorttable_customkey='$timekey'><a href='./files/$namehref'>$modtime</a></td>
 		</tr>");
 	   }
 	}
@@ -157,3 +136,4 @@
 </div>
 </body>
 </html>
+

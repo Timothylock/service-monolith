@@ -73,6 +73,7 @@ services:
        VIRTUAL_HOST: 8thmarkham.com
      volumes:
        - ../src/markham8-blog/wp-content:/var/www/html/wp-content/
+       - ../src/markham8-blog/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
      network_mode: "bridge"
 
   markham8-leaders:
