@@ -48,12 +48,15 @@ services:
      network_mode: "bridge"
 
   timothy-portfolio:
-     image: timothylock/timothy-portfolio:latest
+     image: richarvey/nginx-php-fpm:latest
      ports:
        - "9020:80"
      restart: always
      environment:
        VIRTUAL_HOST: timothylock.ca
+     volumes:
+       - ../src/timothy-portfolio/src:/var/www/html
+       - ../src/timothy-portfolio/config/nginx.conf /etc/nginx/nginx.conf
      network_mode: "bridge"
 
   markham8-blog:
@@ -122,21 +125,27 @@ services:
      network_mode: "bridge"
 
   lock-family:
-     image: timothylock/lock-family:latest
+     image: richarvey/nginx-php-fpm:latest
      ports:
        - "9060:80"
      restart: always
      environment:
        VIRTUAL_HOST: lockfamily.timothylock.ca
+     volumes:
+       - ../src/lock-family/src:/var/www/html
+       - ../src/lock-family/config/nginx.conf:/etc/nginx/nginx.conf
      network_mode: "bridge"
 
   comp-with-tim:
-     image: timothylock/comp-with-tim:latest
+     image: richarvey/nginx-php-fpm:latest
      ports:
        - "9070:80"
      restart: always
      environment:
        VIRTUAL_HOST: computerswithtim.ml
+     volumes:
+       - ../src/comp-with-tim/src:/var/www/html
+       - ../src/comp-with-tim/config/nginx.conf:/etc/nginx/nginx.conf
      network_mode: "bridge"
 
 volumes:
