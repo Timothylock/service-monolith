@@ -137,15 +137,12 @@ services:
      network_mode: "bridge"
 
   comp-with-tim:
-     image: richarvey/nginx-php-fpm:latest
+     image: ianneub/redirect
      ports:
        - "9070:80"
      restart: always
      environment:
-       VIRTUAL_HOST: computerswithtim.ml
-     volumes:
-       - ../src/comp-with-tim/src:/var/www/html
-       - ../src/comp-with-tim/config/nginx.conf:/etc/nginx/nginx.conf
+       REDIRECT: https://sites.google.com/logicfusion.ca/tims-class-site/
      network_mode: "bridge"
 
 volumes:
