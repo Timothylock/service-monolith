@@ -142,6 +142,7 @@ services:
        - "9070:80"
      restart: always
      environment:
+       VIRTUAL_HOST: computerswithtim.ml
        REDIRECT: https://sites.google.com/logicfusion.ca/tims-class-site/
      network_mode: "bridge"
 
