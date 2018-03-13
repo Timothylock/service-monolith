@@ -1,8 +1,12 @@
 <?php
 function getAge($then)
 {
-    $diff = (int)date('Y') - (int)$then;
-    return $diff;
+    $d1 = new DateTime(date("Y-m-d"));
+    $d2 = new DateTime($then);
+
+    $diff = $d2->diff($d1);
+
+    return $diff->y;
 }
 
 ?>
@@ -26,16 +30,16 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Who are you?</h2>
-            <p>I am a <?php echo getAge('1996'); ?> year old software developer currently enrolled in the Computer Science program at the <a
+            <p>I am a <?php echo getAge('1996-05-16'); ?> year old software developer currently enrolled in the Computer Science program at the <a
                         href="https://www.utoronto.ca/">University of Toronto</a>. I took up a passion in
-                computers/electronics for over <?php echo getAge('2006'); ?> years and programming/circuit design for
-                over <?php echo getAge('2010'); ?> years.</p>
+                computers/electronics for over <?php echo getAge('2006-05-16'); ?> years and programming/IoT for
+                over <?php echo getAge('2010-05-16'); ?> years.</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <h2>Having job experience is important. Do you have any?</h2>
-            <p>I am currently working as an associate engineer at <a href="https://www.wattpad.com/">Wattpad</a>! I'm
+            <p>I am currently working as an associate engineer at <a href="https://www.wattpad.com/timmy">Wattpad</a>! I'm
                 also a programming / robotics instructor at <a href="https://www.logicfusion.ca/">LogicFusion</a>.</p>
             <br>
         </div>
@@ -43,7 +47,7 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>What do you do outside of school or work?</h2>
-            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> as subdivison lead as well as a division lead for over 2 years! I also work on many
+            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> as subdivison lead as well as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I also work on many
                 quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a
                         href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
                 adventures on my
@@ -76,7 +80,7 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Great, great. Now the most important question of all - tabs or spaces?</h2>
-            <p>Tabs! (but spaces are cool too)</p>
+            <p>Tabs! (but I don't believe in liking just one type... so spaces are cool too - i guess)</p>
         </div>
     </div>
 </div>
