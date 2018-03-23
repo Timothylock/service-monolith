@@ -146,5 +146,15 @@ services:
        REDIRECT: https://sites.google.com/logicfusion.ca/tims-class-site
      network_mode: "bridge"
 
+  security:
+     image: ianneub/redirect
+     ports:
+       - "9071:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: security.timothylock.ca
+       REDIRECT: http://10.88.111.12:8123
+     network_mode: "bridge"
+
 volumes:
     mysqldata:

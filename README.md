@@ -33,3 +33,5 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9041          | 27017         | csc309-mongodb    |                                    |
 | 9050          | 80            | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |
 | 9060          | 80            | lock-family       | lockfamily.timothylock.ca lockfamily.ga    |
+| 9070          | 80            | computers-with-tim| computerswithtim.ml                |
+| 9071          | 80            | security          | security.timothylock.ca            |
