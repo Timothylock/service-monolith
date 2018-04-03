@@ -160,6 +160,8 @@ services:
     image: nextcloud
     ports:
       - "9080:80"
+    environment:
+      VIRTUAL_HOST: data.timothylock.ca
     links:
       - mysql
     volumes:
