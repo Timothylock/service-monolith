@@ -156,5 +156,15 @@ services:
        REDIRECT: http://10.88.111.12:8123
      network_mode: "bridge"
 
+  nextcloud:
+    image: nextcloud
+    ports:
+      - "9080:80"
+    links:
+      - mysql
+    volumes:
+      - ../mnt/storage/nextcloud:/var/www/html/
+    restart: always
+
 volumes:
     mysqldata:
