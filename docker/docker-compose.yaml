@@ -168,5 +168,18 @@ services:
       - ../mnt/storage/nextcloud:/var/www/html/
     restart: always
 
+  mysql-backup:
+    image: dsteinkopf/backup-all-mysql:latest
+    environment:
+      - BACKUP_INTERVAL=86400
+      - BACKUP_FIRSTDELAY=5
+    links:
+      - mysql
+    restart: always
+    volumes:
+      - /mnt/storage/dbdumps/mainmysql:/var/dbdumps
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+
 volumes:
     mysqldata:
