@@ -157,7 +157,7 @@ services:
      network_mode: "bridge"
 
   nextcloud:
-    image: nextcloud:fpm
+    image: nextcloud:latest
     ports:
       - "9080:80"
     environment:
@@ -165,8 +165,9 @@ services:
     links:
       - mysql
     volumes:
-      - ../mnt/storage/nextcloud:/var/www/html/
+      - /mnt/storage/nextcloud:/var/www/html/
     restart: always
+    network_mode: "bridge"
 
   mysql-backup:
     image: dsteinkopf/backup-all-mysql:latest
@@ -180,6 +181,7 @@ services:
       - /mnt/storage/dbdumps/mainmysql:/var/dbdumps
       - /etc/localtime:/etc/localtime
       - /etc/timezone:/etc/timezone
+    network_mode: "bridge"
 
 volumes:
     mysqldata:
