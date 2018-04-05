@@ -157,7 +157,7 @@ services:
      network_mode: "bridge"
 
   nextcloud:
-    image: nextcloud
+    image: nextcloud:fpm
     ports:
       - "9080:80"
     environment:
