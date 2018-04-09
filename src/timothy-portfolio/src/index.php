@@ -51,7 +51,7 @@ function getAge($then)
                 quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a
                         href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
                 adventures on my
-                <a href="http://timothylock.ca/blog">blog</a>. I also play guitar and love biking.</p>
+                <a href="https://blog.timothylock.ca">blog</a>. I also play guitar and love climbing.</p>
             <br>
         </div>
     </div>

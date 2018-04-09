@@ -82,11 +82,11 @@ function getAge($then)
         <p>A Hackathon project at MHacks 2015. After drawing an image on the computer, the printer will print and cook your pancake. Why? Why not?</p>
     </div>
     <div class="col-md-4 portfolio-item">
-        <a href="http://timothylock.ca:3000">
+        <a href="https://uoftextbookexchange.timothylock.ca">
             <img class="img-responsive" src="https://timothylock.ca/assets/images/porfolioPic/uoftextbook.png" alt="">
         </a>
         <h3>
-            <a href="http://timothylock.ca:3000">UofTextbook</a>
+            <a href="https://uoftextbookexchange.timothylock.ca">UofTextbook</a>
         </h3>
         <p>A site that was made in a web programming course. Supports logins, posting, accepting, comments, emailing, signup, etc. <a href="https://uoftextbookexchange.timothylock.ca">Demo (user: testuser, pass: testpassword)</a> Admin: user1@example.com Pass: password</p>
     </div>
