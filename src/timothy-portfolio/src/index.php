@@ -52,7 +52,6 @@ function getAge($then)
                         href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
                 adventures on my
                 <a href="https://blog.timothylock.ca">blog</a>. </p>
-            <br>
             <p>I also play guitar, biking, as well as climbing!</p>
             <br>
         </div>
