@@ -29,7 +29,5 @@ echo'<meta charset="utf-8">
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
 
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100" rel="stylesheet" type="text/css">
 ' ?>
