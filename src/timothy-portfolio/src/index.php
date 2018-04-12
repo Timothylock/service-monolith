@@ -51,7 +51,9 @@ function getAge($then)
                 quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a
                         href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
                 adventures on my
-                <a href="https://blog.timothylock.ca">blog</a>. I also play guitar and love climbing.</p>
+                <a href="https://blog.timothylock.ca">blog</a>. I also play guitar<i class="em <i class=" em
+                                                                                     em-guitar"></i>"></i> and love
+                climbing<i class="em em-person_climbing"></i>.</p>
             <br>
         </div>
     </div>
@@ -65,7 +67,7 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Cool stuff, but I still need your resume</h2>
-            <p>Of course! <a href="timothy_lock_resume.pdf"> Here it is</a>.</p>
+            <p>Of course! <a href="timothy_lock_resume.pdf"> Here it is</a><i class="em em-pencil2"></i>.</p>
         </div>
     </div>
     <div class="row">
@@ -73,7 +75,9 @@ function getAge($then)
             <h2>Wow! You got me excited. How can I contact you?</h2>
             <p>You can shoot me an
                 <script type="text/javascript">document.write('<' + 'a' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + "'" + 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + "'" + '>' + 'e' + 'm' + 'a' + 'i' + 'l' + '<' + '/' + 'a' + '>');</script>
-                (<script type="text/javascript">document.write('m' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a');</script>).
+                (
+                <script type="text/javascript">document.write('m' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a');</script>
+                ). <i class="em em-email"></i>
             </p>
         </div>
     </div>
