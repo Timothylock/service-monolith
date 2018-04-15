@@ -30,28 +30,14 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Who are you?</h2>
-            <p>I am a <?php echo getAge('1996-05-16'); ?> year old software developer currently enrolled in the Computer Science program at the <a
-                        href="https://www.utoronto.ca/">University of Toronto</a>. I took up a passion in
-                computers/electronics for over <?php echo getAge('2006-05-16'); ?> years and programming/IoT for
-                over <?php echo getAge('2010-05-16'); ?> years.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Having job experience is important. Do you have any?</h2>
-            <p>I am currently working as an associate engineer at <a href="https://www.wattpad.com/timmy">Wattpad</a>! I'm
-                also a programming / robotics instructor at <a href="https://www.logicfusion.ca/">LogicFusion</a>.</p>
-            <br>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>What do you do outside of school or work?</h2>
-            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> as subdivison lead as well as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I also work on many
+            <p>I am enrolled in the Computer Science program at the <a href="https://www.utoronto.ca/">University of Toronto</a>. I am currently working as an associate engineer at
+                        <a href="https://www.wattpad.com/timmy">Wattpad</a>! I'm also a programming / robotics instructor at
+                        <a href="https://www.logicfusion.ca/">LogicFusion</a>.
+            <br><br>
+            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> and recently as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I also work on many
                 quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a
                         href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
-                adventures on my
-                <a href="https://blog.timothylock.ca">blog</a>. I also play guitar and love climbing.</p>
+                adventures on my <a href="https://blog.timothylock.ca">blog</a>. I also play guitar and love climbing.</p>
             <br>
         </div>
     </div>
@@ -77,17 +63,11 @@ function getAge($then)
             </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Great, great. Now the most important question of all - tabs or spaces?</h2>
-            <p>Tabs! (but I don't believe in liking just one type... so spaces are cool too - i guess)</p>
-        </div>
-    </div>
 </div>
 
 <!-- Footer -->
 <footer class="footer">
-    <p class="text-muted pull-left" style="margin-top: 25px; margin-left: 25px;">Copyright © 2017 Timothy Lock</p>
+    <p class="text-muted pull-left" style="margin-top: 25px; margin-left: 25px;">Copyright © <?php echo (date("Y")) ?> Timothy Lock</p>
     <p class="text-muted pull-right" style="margin-top: 25px; margin-right: 25px;">Designed by <a
                 href="http://timothylock.ca">Timothy Lock</a></p>
 </footer>
@@ -110,6 +90,5 @@ function getAge($then)
     ga("send", "pageview");
 
 </script>
-
 </body>
 </html>
