@@ -9,7 +9,7 @@ function getAge($then)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio - Timothy Lock</title>
+    <title>404 - Timothy Lock</title>
     <?php require 'assets/head.php'; ?>
 </head>
 <body>
@@ -20,9 +20,10 @@ function getAge($then)
 <div class="container body-content">
 
 <div class="row top-buffer">
-    <h1>Oh No! 404 Not Found</h1>
+    <h1>Oh No! My panda ate the page again</h1>
 		<br>
-		<img src="http://timothylock.ca/assets/images/404.jpg" alt="404 not found" style="display: block; max-width: 80%; padding-top: 20px; margin-left: auto; margin-right: auto;z-index: 0;">
+		<img src="assets/images/404.jpg" alt="404 not found" style="display: block; max-width: 80%; padding-top: 20px; margin-left: auto; margin-right: auto;z-index: 0;">
+		<br>
 		<p>Something, somewhere must have gone horribly wrong. Please check the spelling of the URL that you are trying to reach. If the problem still exists, let me know!</p>
 </div>
 </div>

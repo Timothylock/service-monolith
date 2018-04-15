@@ -34,11 +34,8 @@ function getAge($then)
                         <a href="https://www.wattpad.com/timmy">Wattpad</a>! I'm also a programming / robotics instructor at
                         <a href="https://www.logicfusion.ca/">LogicFusion</a>.
             <br><br>
-            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> and recently as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I also work on many
-                quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a
-                        href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! You can follow my
-                adventures on my <a href="https://blog.timothylock.ca">blog</a>. I also play guitar and love climbing.</p>
-            <br>
+            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> and recently as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I have worked on many
+                quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! I also play guitar and love climbing.</p>
         </div>
     </div>
     <div class="row">
@@ -51,16 +48,16 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Cool stuff, but I still need your resume</h2>
-            <p>Of course! <a href="timothy_lock_resume.pdf"> Here it is</a>.</p>
+            <p><a href="timothy_lock_resume.pdf">Of course</a>!</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h2>Wow! You got me excited. How can I contact you?</h2>
-            <p>You can shoot me an
-                <script type="text/javascript">document.write('<' + 'a' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + "'" + 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + "'" + '>' + 'e' + 'm' + 'a' + 'i' + 'l' + '<' + '/' + 'a' + '>');</script>
-                (<script type="text/javascript">document.write('m' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a');</script>).
-            </p>
+            <h2>Wow! You got me excited. How can I connect with you?</h2>
+            <p> <script type="text/javascript">document.write('<' + 'a' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + "'" + 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + "'" + '>' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + '<' + '/' + 'a' + '>');</script></p>
+            <p><a href="https://blog.timothylock.ca">Blog</a></p>
+            <p><a href="https://linkedin.ca/timothylock">Linkedin</a></p>
+            <p><a href="https://instagram.com/itstimofee">Instagram</a></p>
         </div>
     </div>
 </div>
