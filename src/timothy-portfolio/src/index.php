@@ -63,11 +63,7 @@ function getAge($then)
 </div>
 
 <!-- Footer -->
-<footer class="footer">
-    <p class="text-muted pull-left" style="margin-top: 25px; margin-left: 25px;">Copyright © <?php echo (date("Y")) ?> Timothy Lock</p>
-    <p class="text-muted pull-right" style="margin-top: 25px; margin-right: 25px;">Designed by <a
-                href="http://timothylock.ca">Timothy Lock</a></p>
-</footer>
+<?php require 'assets/footer.php'; ?>
 
 <!-- oMG itz G00gle Tr@ckingggg -->
 <script>

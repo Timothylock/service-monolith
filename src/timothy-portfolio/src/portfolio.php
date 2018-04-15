@@ -42,7 +42,7 @@ function getAge($then)
     </div>
     <div class="col-md-4 portfolio-item">
         <a href="http://computerswithtim.ml/">
-            <img class="img-responsive" src="https://timothylock.ca/assets/images/porfolioPic/computerswithtim.png" alt="">
+            <img class="img-responsive" src="assets/images/porfolioPic/computerswithtim.png" alt="">
         </a>
         <h3>
             <a href="http://computerswithtim.ml/">Tims Class Site</a>
@@ -65,7 +65,7 @@ function getAge($then)
 <div class="row">
     <div class="col-md-4 portfolio-item">
         <a href="#">
-            <img class="img-responsive" src="https://timothylock.ca/assets/images/porfolioPic/8thmarkham.png" alt="">
+            <img class="img-responsive" src="assets/images/porfolioPic/8thmarkham.png" alt="">
         </a>
         <h3>
             <a href="#">8th Markham Website</a>
@@ -74,7 +74,7 @@ function getAge($then)
     </div>
     <div class="col-md-4 portfolio-item">
         <a href="https://devpost.com/software/printcakes-pancake-printer">
-            <img class="img-responsive" src="https://timothylock.ca/assets/images/porfolioPic/printcakes.jpg" alt="">
+            <img class="img-responsive" src="assets/images/porfolioPic/printcakes.jpg" alt="">
         </a>
         <h3>
             <a href="https://devpost.com/software/printcakes-pancake-printer">PrintCakes</a>
@@ -83,7 +83,7 @@ function getAge($then)
     </div>
     <div class="col-md-4 portfolio-item">
         <a href="https://uoftextbookexchange.timothylock.ca">
-            <img class="img-responsive" src="https://timothylock.ca/assets/images/porfolioPic/uoftextbook.png" alt="">
+            <img class="img-responsive" src="assets/images/porfolioPic/uoftextbook.png" alt="">
         </a>
         <h3>
             <a href="https://uoftextbookexchange.timothylock.ca">UofTextbook</a>
@@ -95,11 +95,7 @@ function getAge($then)
 <hr>
 
 <!-- Footer -->
-<footer class="footer">
-    <p class="text-muted pull-left" style="margin-top: 25px; margin-left: 25px;">Copyright © 2017 Timothy Lock</p>
-    <p class="text-muted pull-right" style="margin-top: 25px; margin-right: 25px;">Designed by <a
-                href="http://timothylock.ca">Timothy Lock</a></p>
-</footer>
+<?php require 'assets/footer.php'; ?>
 
 <!-- oMG itz G00gle Tr@ckingggg -->
 <script>
