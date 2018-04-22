@@ -29,5 +29,8 @@ echo'<meta charset="utf-8">
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
 
+<link href="../assets/css/fontawesome-all.min.css" rel="stylesheet">
+<link href="../assets/css/fa-brands.min.css" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100" rel="stylesheet" type="text/css">
 ' ?>

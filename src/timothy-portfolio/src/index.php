@@ -54,10 +54,6 @@ function getAge($then)
     <div class="row">
         <div class="col-md-12">
             <h2>Wow! You got me excited. How can I connect with you?</h2>
-            <p> <script type="text/javascript">document.write('<' + 'a' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + "'" + 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + "'" + '>' + 'm' + 'e' + '@' + 't' + 'i' + 'm' + 'o' + 't' + 'h' + 'y' + 'l' + 'o' + 'c' + 'k' + '.' + 'c' + 'a' + '<' + '/' + 'a' + '>');</script></p>
-            <p><a href="https://blog.timothylock.ca">Blog</a></p>
-            <p><a href="https://linkedin.ca/timothylock">Linkedin</a></p>
-            <p><a href="https://instagram.com/itstimofee">Instagram</a></p>
         </div>
     </div>
 </div>
