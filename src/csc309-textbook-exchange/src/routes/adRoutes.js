@@ -271,7 +271,7 @@ exports.createNewAd = function(req, res) {
 
 			//user found
 			if (user[0]) {
-				(user[0].selling_ad_ids).push(newAdId);
+				(user[0].selling_ad_ids) = (user[0].selling_ad_ids).concat([newAdId]);
 
 				user[0].save(function(err)	{
 

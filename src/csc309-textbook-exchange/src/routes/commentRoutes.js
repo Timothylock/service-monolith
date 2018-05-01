@@ -39,7 +39,7 @@ exports.addComment = function(req, res) {
 			//ad found
 			if (ads[0]) {
 
-				(ads[0].comment_ids).push(generated_id);
+                (ads[0].comment_ids) = (ads[0].comment_ids).concat([generated_id]);
 
 				ads[0].save(function(err) {
 
@@ -58,7 +58,7 @@ exports.addComment = function(req, res) {
 			//user found
 			if (user[0]) {
 
-				(user[0].comment_ids).push(generated_id);
+                (user[0].comment_ids) = (user[0].comment_ids).concat([generated_id]);
 
 				user[0].save(function(err)	{
 
