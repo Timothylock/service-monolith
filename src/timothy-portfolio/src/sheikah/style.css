@@ -1,0 +1,53 @@
+body {
+    background-image: url("https://i.imgur.com/hY3rvZS.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-color: #cccccc;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 130px 100px;
+    font-family: 'Skranji', cursive;
+}
+
+h1 {
+    color: red;
+    font-size: 50px;
+
+}
+
+.checkbox-group {
+    display: flex;
+    flexDirection: 'row';
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+}
+
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext {
+    /* Checkbox text */
+    font-size: 110%;
+    display: inline;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
