@@ -25,7 +25,7 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 80            | 80            | nginx-proxy       | ALL                                |
 | 9000          | 80            | timothy-blog      | blog.timothylock.ca                |
 | 9010          | 3306          | mysql             |                                    |
-| 9011          | 80            | phpmyadmin        | phpmyadmin.timothylock.ca          |
+| ~~9011~~          | ~~80~~            | ~~phpmyadmin~~        | ~~phpmyadmin.timothylock.ca~~          |
 | 9020          | 80            | timothy-portfolio | timothylock.ca                     |
 | 9030          | 80            | markham8-blog     | 8thmarkham.com                     |
 | 9031          | 80            | markham8-leaders  | leaders.8thmarkham.com             |
@@ -34,5 +34,5 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9050          | 80            | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |
 | 9060          | 80            | lock-family       | lockfamily.timothylock.ca          |
 | 9070          | 80            | computers-with-tim| computerswithtim.ml                |
-| 9071          | 80            | security          | security.timothylock.ca            |
+| ~~9071~~          | ~~80~~            | ~~security~~          | ~~security.timothylock.ca~~            |
 | 9080          | 80            | nextcloud         | data.timothylock.ca                |
