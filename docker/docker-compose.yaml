@@ -37,6 +37,7 @@ services:
        VIRTUAL_HOST: timothys-stuff.timothylock.ca
      volumes:
        - /mnt/storage/privateblog/wp-content:/var/www/html/wp-content/
+       - ../src/timothys-stuff/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
      network_mode: "bridge"
 
   mysql:
