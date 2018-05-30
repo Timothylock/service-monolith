@@ -206,16 +206,14 @@ services:
   home-assistant:
     image: homeassistant/home-assistant
     ports:
-            - "9090:80"
+      - "9090:9999"
     environment:
       VIRTUAL_HOST: home.timothylock.ca
-    links:
-      - mysql
     restart: always
     volumes:
       - ../src/homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
-    network_mode: "bridge"
+    network_mode: "host"
 
 volumes:
     mysqldata:
