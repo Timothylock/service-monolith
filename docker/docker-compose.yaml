@@ -207,6 +207,8 @@ services:
     image: homeassistant/home-assistant
     ports:
       - "9090:80"
+    environment:
+      VIRTUAL_HOST: home.timothylock.ca
     links:
       - mysql
     restart: always
