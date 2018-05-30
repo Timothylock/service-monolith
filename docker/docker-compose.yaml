@@ -202,5 +202,17 @@ services:
       - /etc/timezone:/etc/timezone
     network_mode: "bridge"
 
+  home-assistant:
+    image: homeassistant/home-assistant
+    ports:
+      - "9090:80"
+    links:
+      - mysql
+    restart: always
+    volumes:
+      - ../src/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "bridge"
+
 volumes:
     mysqldata:
