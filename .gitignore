@@ -15,3 +15,5 @@
 
 docker/secrets/
 .idea/workspace.xml
+/src/homeassistant/scripts.yaml
+src/homeassistant/secrets.yaml
