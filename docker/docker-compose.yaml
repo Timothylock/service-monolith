@@ -206,7 +206,7 @@ services:
   home-assistant:
     image: homeassistant/home-assistant
     ports:
-      - "9090:80"
+            - "9090:8123"
     environment:
       VIRTUAL_HOST: home.timothylock.ca
     links:
