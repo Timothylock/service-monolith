@@ -26,7 +26,7 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # base_url: home.timothylock.ca
+  base_url: home.timothylock.ca
   server_port: 8123
 
 # Checks for available updates

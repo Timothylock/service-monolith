@@ -36,4 +36,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9070          | 80            | computers-with-tim| computerswithtim.ml                |
 | ~~9071~~      | ~~80~~        | ~~security~~      | ~~security.timothylock.ca~~        |
 | 9080          | 80            | nextcloud         | data.timothylock.ca                |
-| 9090          | 80            | home-assistant    | home.timothylock.ca                |
+| 8123          | 8123          | home-assistant    |                                    |
