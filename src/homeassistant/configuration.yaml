@@ -67,6 +67,12 @@ tts:
 # Cloud
 cloud:
 
+switch:
+  - platform: tplink
+    host: 10.88.111.13
+  - platform: tplink
+    host: 10.88.111.19
+
 media_player:
   - platform: cast
 
