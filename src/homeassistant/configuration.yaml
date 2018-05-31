@@ -41,17 +41,11 @@ updater:
 # Discover some devices automatically
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 # Enables support for tracking state changes over time
 history:
 
 # View all events in a logbook
 logbook:
-
-# Enables a map showing the location of tracked devices
-map:
 
 # Track the sun
 sun:
@@ -75,6 +69,12 @@ switch:
 
 media_player:
   - platform: cast
+
+camera:
+  - platform: generic
+    name: Weather
+    still_image_url: https://www.yr.no/place/Canada/Ontario/Toronto/meteogram.svg
+    content_type: 'image/svg+xml'
 
 group: !include groups.yaml
 automation: !include automations.yaml

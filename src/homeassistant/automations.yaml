@@ -1,1 +1,13 @@
-[]
+- id: keep_hallway_off_night
+  alias: 'keep hallway door light off at night'
+  trigger:
+    platform: state
+    entity_id: light.door
+    to: 'on'
+  condition:
+    condition: time
+    after: '00:00:00'
+    before: '08:00:00'
+  action:
+    service: light.turn_off
+    entity_id: light.door
