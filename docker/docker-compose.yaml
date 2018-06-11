@@ -215,5 +215,15 @@ services:
       - /etc/localtime:/etc/localtime:ro
     network_mode: "host"
 
+  screenboard:
+     image: ianneub/redirect
+     ports:
+       - "9071:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: screenboard.timothylock.ca
+       REDIRECT: http://preview.risevision.com/?type=presentation&id=5b3ed960-d778-420d-87da-c73ba8e7d76d
+     network_mode: "bridge"
+
 volumes:
     mysqldata:

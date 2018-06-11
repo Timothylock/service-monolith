@@ -37,3 +37,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | ~~9071~~      | ~~80~~        | ~~security~~      | ~~security.timothylock.ca~~        |
 | 9080          | 80            | nextcloud         | data.timothylock.ca                |
 | 8123          | 8123          | home-assistant    |                                    |
+| 9090          | 80            | screenboard       | screenboard.timothylock.ca         |
