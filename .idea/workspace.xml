@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b53ccb9-a956-401e-8b25-ec0ab4b8ba34" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker/docker-compose.yaml" afterPath="$PROJECT_DIR$/docker/docker-compose.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +17,11 @@
       <file leaf-file-name="docker-compose.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="221" column="20" lean-forward="true" selection-start-line="221" selection-start-column="20" selection-end-line="221" selection-end-column="20" />
+            <state relative-caret-position="671">
+              <caret line="220" column="14" lean-forward="false" selection-start-line="220" selection-start-column="14" selection-end-line="220" selection-end-column="14" />
               <folding>
-                <marker date="1528685508478" expanded="true" signature="5217:5230" ph="ports: &lt;1 item&gt;" />
-                <marker date="1528685508478" expanded="true" signature="5435:5436" ph="bridge" />
+                <marker date="1528686342837" expanded="true" signature="5217:5230" ph="ports: &lt;1 item&gt;" />
+                <marker date="1528686342837" expanded="true" signature="5435:5436" ph="bridge" />
               </folding>
             </state>
           </provider>
@@ -454,12 +452,12 @@
       <workItem from="1523633033541" duration="404000" />
       <workItem from="1526411021596" duration="4565000" />
       <workItem from="1528301553269" duration="2904000" />
-      <workItem from="1528502610763" duration="883000" />
+      <workItem from="1528502610763" duration="1369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11850000" />
+    <option name="totallyTimeSpent" value="12336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="981" extended-state="6" />
@@ -757,11 +755,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/docker-compose.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="221" column="20" lean-forward="true" selection-start-line="221" selection-start-column="20" selection-end-line="221" selection-end-column="20" />
+        <state relative-caret-position="671">
+          <caret line="220" column="14" lean-forward="false" selection-start-line="220" selection-start-column="14" selection-end-line="220" selection-end-column="14" />
           <folding>
-            <marker date="1528685508478" expanded="true" signature="5217:5230" ph="ports: &lt;1 item&gt;" />
-            <marker date="1528685508478" expanded="true" signature="5435:5436" ph="bridge" />
+            <marker date="1528686342837" expanded="true" signature="5217:5230" ph="ports: &lt;1 item&gt;" />
+            <marker date="1528686342837" expanded="true" signature="5435:5436" ph="bridge" />
           </folding>
         </state>
       </provider>
