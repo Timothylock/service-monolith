@@ -17,3 +17,6 @@ docker/secrets/
 .idea/workspace.xml
 /src/homeassistant/scripts.yaml
 src/homeassistant/secrets.yaml
+.idea/modules.xml
+.idea/service-monolith.iml
+.idea/vcs.xml
