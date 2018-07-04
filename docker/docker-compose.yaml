@@ -213,6 +213,9 @@ services:
     volumes:
       - ../src/homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
+    environment:
+      - HOME_ASSISTANT_API_PASSWORD=${HOME_ASSISTANT_API_PASSWORD}
+      - HOME_ASSISTANT_DB_URL=${HOME_ASSISTANT_DB_URL}
     network_mode: "host"
 
   screenboard:
