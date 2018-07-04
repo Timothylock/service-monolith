@@ -10,6 +10,14 @@ All of the containers running on my server
 ## Running
 run `startServer.sh`
 
+## Secrets
+A secrets file is required. Make `./docker/.env` and add all of the required variables. The variables are as follows:
+
+- MYSQL_ROOT_PASS
+- MYSQL_USER_PASS
+- HOME_ASSISTANT_API_PASSWORD
+- HOME_ASSISTANT_DB_URL
+
 ## Building
 The docker pulls from dockerhub repo. All of these images are also on that repo. To build and push, navigate to `./src/CONTAINERNAME` and run `./build.sh`.
 
