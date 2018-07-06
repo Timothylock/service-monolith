@@ -11,3 +11,15 @@
   action:
     service: light.turn_off
     entity_id: light.door
+- id: kitchen_light_timeout
+  alias: 'turn off kitchen light after 4 hours'
+  trigger:
+    platform: state
+    entity_id: switch.wemo_light_switch
+    to: 'on'
+    for:
+      hours: 4
+      minutes: 0
+  action:
+    service: switch.turn_on
+    entity_id: switch.wemo_light_switch
