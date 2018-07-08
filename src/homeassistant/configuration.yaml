@@ -14,8 +14,8 @@ homeassistant:
   customize: !include customize.yaml
 
 recorder:
-  purge_keep_days: 999
-  db_url: mysql://root:password@127.0.0.1:9010/homeassistant?charset=utf8
+  purge_keep_days: 30
+  db_url: !env_var HOME_ASSISTANT_DB_URL
 
 # Enables the frontend
 frontend:
@@ -25,7 +25,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+  api_password: !env_var HOME_ASSISTANT_API_PASSWORD
   base_url: home.timothylock.ca
   server_port: 8123
 
@@ -36,7 +36,7 @@ http:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
+  include_used_components: true
 
 # Discover some devices automatically
 discovery:
@@ -63,9 +63,9 @@ cloud:
 
 switch:
   - platform: tplink
-    host: 10.88.111.13
+    host: 10.88.111.6
   - platform: tplink
-    host: 10.88.111.19
+    host: 10.88.111.10
 
 media_player:
   - platform: cast

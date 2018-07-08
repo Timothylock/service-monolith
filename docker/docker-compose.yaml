@@ -13,7 +13,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: mysql:3306
        WORDPRESS_DB_USER: root
-       WORDPRESS_DB_PASSWORD: password
+       WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASS}
        WORDPRESS_DB_NAME: timothy-blog
        VIRTUAL_HOST: blog.timothylock.ca
      volumes:
@@ -32,7 +32,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: mysql:3306
        WORDPRESS_DB_USER: root
-       WORDPRESS_DB_PASSWORD: password
+       WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASS}
        WORDPRESS_DB_NAME: timothysstuffPRIVATE
        VIRTUAL_HOST: timothys-stuff.timothylock.ca
      volumes:
@@ -49,9 +49,9 @@ services:
      restart: always
      environment:
        WORDPRESS_DB_USER: root
-       MYSQL_ROOT_PASSWORD: password
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
        MYSQL_USER: user
-       MYSQL_PASSWORD: password
+       MYSQL_PASSWORD: ${MYSQL_USER_PASS}
      network_mode: "bridge"
 
 #  phpmyadmin:
@@ -91,7 +91,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: mysql:3306
        WORDPRESS_DB_USER: root
-       WORDPRESS_DB_PASSWORD: password
+       WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASS}
        WORDPRESS_DB_NAME: 8thmarkham-blog
        VIRTUAL_HOST: 8thmarkham.com
      volumes:
@@ -213,7 +213,20 @@ services:
     volumes:
       - ../src/homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
+    environment:
+      - HOME_ASSISTANT_API_PASSWORD=${HOME_ASSISTANT_API_PASSWORD}
+      - HOME_ASSISTANT_DB_URL=${HOME_ASSISTANT_DB_URL}
     network_mode: "host"
+
+  screenboard:
+     image: ianneub/redirect
+     ports:
+       - "9090:80"
+     restart: always
+     environment:
+       VIRTUAL_HOST: screenboard.timothylock.ca
+       REDIRECT: http://preview.risevision.com/?type=presentation&id=5b3ed960-d778-420d-87da-c73ba8e7d76d
+     network_mode: "bridge"
 
 volumes:
     mysqldata:
