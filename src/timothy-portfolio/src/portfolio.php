@@ -22,9 +22,8 @@ function getAge($then)
 <div class="row top-buffer">
     <div class="col-lg-12">
         <h1 class="page-header">Portfolio
-            <br>
-            <small>Click on a project to be taken to its page!</small>
-        </h1>
+            <br></h1>
+        <h2>Click on a project to be taken to its page!</h2>
     </div>
 </div>
 <!-- /.row -->

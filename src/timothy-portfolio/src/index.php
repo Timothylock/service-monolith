@@ -18,66 +18,38 @@ function getAge($then)
 </head>
 <body>
 <!-- Navbar -->
-<?php require 'assets/navbar.php'; ?>
+<?php //require 'assets/navbar.php'; ?>
+<!-- temporarily disabled -->
 
 <!-- Content -->
 <div class="container body-content">
-    <div class="row top-buffer">
+    <div class="row">
         <div class="col-md-12">
-            <h1>Home</h1>
+            <h1>Timothy Lock</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <h2>Who are you?</h2>
-            <p>I am enrolled in the Computer Science program at the <a href="https://www.utoronto.ca/">University of Toronto</a>. I am currently working as an associate engineer at
-                        <a href="https://www.wattpad.com/timmy">Wattpad</a>! I'm also a programming / robotics instructor at
-                        <a href="https://www.logicfusion.ca/">LogicFusion</a>.
-            <br><br>
-            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> and recently as a division lead for over <?php echo getAge('2015-05-16'); ?> years! I have worked on many
-                quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>! I also play guitar and love climbing.</p>
+            <p>I am enrolled in the Computer Science program at the <a href="https://www.utoronto.ca/">University of Toronto</a>. </p>
+            <p>I am currently working as an associate engineer at <a href="https://www.wattpad.com/timmy">Wattpad</a></p>
+            <p>I am also a programming / robotics instructor at <a href="https://www.logicfusion.ca/">LogicFusion</a>.</p>
+            <p>I have been a part of <a href="http://www.utat.ca">University of Toronto Aerospace Team</a> and recently as a division lead for over <?php echo getAge('2015-05-16'); ?> years.</p>
+            <p>I have worked on many quirky hardware projects including a <a href="http://timothylock.ca/portfolio.php">pancake printer</a> and a <a href="http://timothylock.ca/portfolio.php">WiiU controlled drone</a>.</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h2>Code examples or it didn't happen</h2>
-            <p>You can see examples of my code on my <a href="portfolio.php">portfolio page</a> as well as my <a
-                        href="https://github.com/Timothylock">GitHub</a>.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Cool stuff, but I still need your resume</h2>
-            <p><a href="timothy_lock_resume.pdf">Of course</a>!</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Wow! You got me excited. How can I connect with you?</h2>
+            <h2>Examples or it didn't happen</h2>
+            <p>I write <a href="https://github.com/Timothylock">code</a> and some <a href="https://twitter.com/timothyklock">idiotic comments</a> about things I see.</p>
+            <p>I sometimes write <a href="https://blog.timothylock.cs">longer idiotic comments</a> too.</p>
+            <p>I made some cool <a href="portfolio.php">projects</a> as well.</p>
+            <p>I have a <a href="timothy_lock_resume.pdf">résumé</a> if you're into that sort of thing.</p>
         </div>
     </div>
 </div>
 
 <!-- Footer -->
 <?php require 'assets/footer.php'; ?>
-
-<!-- oMG itz G00gle Tr@ckingggg -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
-
-    ga("create", "UA-82271632-1", "auto");
-    ga("send", "pageview");
-
-</script>
 </body>
 </html>
