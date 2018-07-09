@@ -60,11 +60,11 @@
 
 /* Content */
 body {
-    background-color: black;
+    background-color: #efefef;
 }
 
 .top-buffer {
-    margin-top:50px;
+    margin-top:75px;
 }
 
 .body-content {
@@ -74,7 +74,7 @@ body {
     transition: 0.15s;
     font-size: 17px;
     line-height: 150%;
-    color: white;
+    color: #333;
 }
 
 .body-content h1 {

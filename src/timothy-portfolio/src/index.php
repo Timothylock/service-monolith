@@ -18,14 +18,13 @@ function getAge($then)
 </head>
 <body>
 <!-- Navbar -->
-<?php //require 'assets/navbar.php'; ?>
-<!-- temporarily disabled -->
+<?php require 'assets/navbar.php'; ?>
 
 <!-- Content -->
 <div class="container body-content">
-    <div class="row">
+    <div class="row top-buffer">
         <div class="col-md-12">
-            <h1>Timothy Lock</h1>
+            <h1>Welcome</h1>
         </div>
     </div>
     <div class="row">
