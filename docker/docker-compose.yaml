@@ -73,7 +73,7 @@ services:
        - "9020:80"
      restart: always
      environment:
-       VIRTUAL_HOST: timothylock.ca
+       VIRTUAL_HOST: www.timothylock.ca,timothylock.ca
      volumes:
        - ../src/timothy-portfolio/src:/var/www/html
        - ../src/timothy-portfolio/config/nginx.conf /etc/nginx/nginx.conf
