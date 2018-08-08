@@ -228,5 +228,25 @@ services:
        REDIRECT: http://preview.risevision.com/?type=presentation&id=5b3ed960-d778-420d-87da-c73ba8e7d76d
      network_mode: "bridge"
 
+  utat-inventory-backend:
+     depends_on:
+       - mysql
+     links:
+       - mysql:mysql
+     image: node:7
+     user: "node"
+     working_dir: /home/node/app
+     volumes:
+       - ../src/utat-inventory-backend/:/home/node/app
+     ports:
+       - "8500:8080"
+     restart: always
+     environment:
+       DB_USER: root
+       DB_PASS: ${MYSQL_ROOT_PASS}
+       PORT: 8080
+     command: "node index.js"
+     network_mode: "bridge"
+
 volumes:
     mysqldata:
