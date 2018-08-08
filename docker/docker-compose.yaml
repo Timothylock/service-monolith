@@ -242,6 +242,7 @@ services:
        - "8500:8080"
      restart: always
      environment:
+       VIRTUAL_HOST: utatinventorybe.timothylock.ca
        DB_USER: root
        DB_PASS: ${MYSQL_ROOT_PASS}
        PORT: 8080
