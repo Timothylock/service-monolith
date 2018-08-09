@@ -144,17 +144,19 @@ services:
        VIRTUAL_HOST: homemonitordemo.timothylock.ca
      network_mode: "bridge"
 
-  lock-family:
-     image: richarvey/nginx-php-fpm:latest
-     ports:
-       - "9060:80"
-     restart: always
-     environment:
-       VIRTUAL_HOST: lockfamily.timothylock.ca
-     volumes:
-       - ../src/lock-family/src:/var/www/html
-       - ../src/lock-family/config/nginx.conf:/etc/nginx/nginx.conf
-     network_mode: "bridge"
+#  REASON: Hosted on Github Pages now
+#
+#  lock-family:
+#     image: richarvey/nginx-php-fpm:latest
+#     ports:
+#       - "9060:80"
+#     restart: always
+#     environment:
+#       VIRTUAL_HOST: lockfamily.timothylock.ca
+#     volumes:
+#       - ../src/lock-family/src:/var/www/html
+#       - ../src/lock-family/config/nginx.conf:/etc/nginx/nginx.conf
+#     network_mode: "bridge"
 
   comp-with-tim:
      image: ianneub/redirect

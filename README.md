@@ -40,7 +40,7 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9040          | 80            | csc309-tb-exchange| uoftextbookexchange.timothylock.ca |
 | 27017         | 27017         | csc309-mongodb    |                                    |
 | 9050          | 80            | tim-Pi-monitor    | homemonitordemo.timothylock.ca     |
-| 9060          | 80            | lock-family       | lockfamily.timothylock.ca          |
+| ~~9060~~      | ~~80~~        | ~~lock-family~~   | ~~lockfamily.timothylock.ca~~      |
 | 9070          | 80            | computers-with-tim| computerswithtim.ml                |
 | ~~9071~~      | ~~80~~        | ~~security~~      | ~~security.timothylock.ca~~        |
 | 9080          | 80            | nextcloud         | data.timothylock.ca                |
