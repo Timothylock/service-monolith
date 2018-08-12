@@ -31,10 +31,10 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | External Port | Internal Port | Container Name    | URL (if reachable from internet)   |
 |---------------|---------------|-------------------|------------------------------------|
 | 80            | 80            | nginx-proxy       | ALL                                |
-| 9000          | 80            | timothy-blog      | blog.timothylock.ca                |
+| ~~9000~~      | ~~80~~        | ~~timothy-blog~~  | ~~blog.timothylock.ca~~            |
 | 9010          | 3306          | mysql             |                                    |
 | ~~9011~~      | ~~80~~        | ~~phpmyadmin~~    | ~~phpmyadmin.timothylock.ca~~      |
-| 9020          | 80            | timothy-portfolio | timothylock.ca, www.timothylock.ca |
+| ~~9020~~      | ~~80~~        | ~~timothy-portfolio~~| ~~timothylock.ca, www.timothylock.ca~~ |
 | 9030          | 80            | markham8-blog     | 8thmarkham.com                     |
 | 9031          | 80            | markham8-leaders  | leaders.8thmarkham.com             |
 | 9040          | 80            | csc309-tb-exchange| uoftextbookexchange.timothylock.ca |
