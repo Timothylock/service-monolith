@@ -179,7 +179,7 @@ services:
       - "10010:80"
     restart: always
     environment:
-      VIRTUAL_HOST: security.timothylock.ca
+      VIRTUAL_HOST: calendar.timothylock.ca
       REDIRECT: https://calendar.google.com/calendar/embed?src=lock.k.timothy%40gmail.com&ctz=America%2FToronto&mode=WEEK&showNav=0&showPrint=0&showTabs=0&showTitle=0
     network_mode: "bridge"
 
