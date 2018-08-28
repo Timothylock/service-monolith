@@ -1,18 +1,18 @@
 - id: keep_hallway_off_night
-  alias: 'keep hallway door light off at night'
+  alias: keep hallway door light off at night
   trigger:
     platform: state
     entity_id: light.door
     to: 'on'
   condition:
     condition: time
-    after: '00:00:00'
-    before: '08:00:00'
+    after: 00:00:00
+    before: 08:00:00
   action:
     service: light.turn_off
     entity_id: light.door
 - id: kitchen_light_timeout
-  alias: 'turn off kitchen light after 4 hours'
+  alias: turn off kitchen light after 4 hours
   trigger:
     platform: state
     entity_id: switch.wemo_light_switch
@@ -23,3 +23,54 @@
   action:
     service: switch.turn_on
     entity_id: switch.wemo_light_switch
+- id: '1532198509716'
+  alias: Living Room Ambient Lights On With Projector
+  trigger:
+  - entity_id: switch.projector
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.living_room_ambient_lights
+    service: switch.turn_on
+- id: '1532198563390'
+  alias: Living Room Ambient Lights Off With Projector
+  trigger:
+  - entity_id: switch.projector
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.living_room_ambient_lights
+    service: switch.turn_off
+- id: '1532198811568'
+  alias: Always One Light On When Projector On
+  trigger:
+  - entity_id: light.left_kitchen
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.projector
+    state: 'on'
+  action:
+  - data:
+      entity_id: switch.wemo_light_switch
+    service: switch.turn_on
+- id: '1532312579916'
+  alias: Kitchen Lights off with Projector
+  trigger:
+  - entity_id: switch.projector
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.wemo_light_switch
+    service: switch.turn_on

@@ -24,6 +24,7 @@ app.post('/api/item/move', moveItems.moveItems);
 app.delete('/api/item/delete', moveItems.deleteItem);
 app.get('/api/item/search', searchItems.searchItem);
 app.post('/api/item/add', moveItems.addItem);
+app.get('/api/item/add', moveItems.addItem);
 
 app.listen(process.env.PORT || 8080);
 
