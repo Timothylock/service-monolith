@@ -1,27 +1,6 @@
 version: '2'
 
 services:
-#  REASON: Hosted on Github Pages now
-#
-#  timothy-blog:
-#     depends_on:
-#       - mysql
-#     links:
-#       - mysql:mysql
-#     image: wordpress:latest
-#     ports:
-#       - "9000:80"
-#     restart: always
-#     environment:
-#       WORDPRESS_DB_HOST: mysql:3306
-#       WORDPRESS_DB_USER: root
-#       WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASS}
-#       WORDPRESS_DB_NAME: timothy-blog
-#       VIRTUAL_HOST: blog.timothylock.ca
-#     volumes:
-#       - ../src/timothy-blog/wp-content:/var/www/html/wp-content/
-#     network_mode: "bridge"
-
   timothys-stuff:
      depends_on:
        - mysql
@@ -55,33 +34,6 @@ services:
        MYSQL_USER: user
        MYSQL_PASSWORD: ${MYSQL_USER_PASS}
      network_mode: "bridge"
-
-#  phpmyadmin:
-#     depends_on:
-#       - mysql
-#     image: phpmyadmin/phpmyadmin:latest
-#     ports:
-#       - "9011:80"
-#     restart: always
-#     environment:
-#       MYSQL_ROOT_PASSWORD: password
-#       PMA_HOST: mysql:9010
-#       VIRTUAL_HOST: phpmyadmin.timothylock.ca
-#     network_mode: "bridge"
-
-#  REASON: Hosted on Github Pages now
-#
-#  timothy-portfolio:
-#     image: richarvey/nginx-php-fpm:latest
-#     ports:
-#       - "9020:80"
-#     restart: always
-#     environment:
-#       VIRTUAL_HOST: www.timothylock.ca,timothylock.ca
-#     volumes:
-#       - ../src/timothy-portfolio/src:/var/www/html
-#       - ../src/timothy-portfolio/config/nginx.conf /etc/nginx/nginx.conf
-#     network_mode: "bridge"
 
   markham8-blog:
      depends_on:
@@ -148,20 +100,6 @@ services:
        VIRTUAL_HOST: homemonitordemo.timothylock.ca
      network_mode: "bridge"
 
-#  REASON: Hosted on Github Pages now
-#
-#  lock-family:
-#     image: richarvey/nginx-php-fpm:latest
-#     ports:
-#       - "9060:80"
-#     restart: always
-#     environment:
-#       VIRTUAL_HOST: lockfamily.timothylock.ca
-#     volumes:
-#       - ../src/lock-family/src:/var/www/html
-#       - ../src/lock-family/config/nginx.conf:/etc/nginx/nginx.conf
-#     network_mode: "bridge"
-
   comp-with-tim:
      image: ianneub/redirect
      ports:
@@ -171,16 +109,6 @@ services:
        VIRTUAL_HOST: computerswithtim.ml
        REDIRECT: https://sites.google.com/logicfusion.ca/tims-class-site
      network_mode: "bridge"
-
-#  security:
-#     image: ianneub/redirect
-#     ports:
-#       - "9071:80"
-#     restart: always
-#     environment:
-#       VIRTUAL_HOST: security.timothylock.ca
-#       REDIRECT: http://10.88.111.12:8123
-#     network_mode: "bridge"
 
   nextcloud:
     image: nextcloud:latest
@@ -235,7 +163,7 @@ services:
      volumes:
        - ../src/utat-inventory-backend/:/home/node/app
      ports:
-       - "8500:8080"
+       - "10000:8080"
      restart: always
      environment:
        VIRTUAL_HOST: utatinventorybe.timothylock.ca
@@ -244,6 +172,16 @@ services:
        PORT: 8080
      command: "node index.js"
      network_mode: "bridge"
+
+  calendar:
+    image: ianneub/redirect
+    ports:
+      - "10010:80"
+    restart: always
+    environment:
+      VIRTUAL_HOST: security.timothylock.ca
+      REDIRECT: https://calendar.google.com/calendar/embed?src=lock.k.timothy%40gmail.com&ctz=America%2FToronto&mode=WEEK&showNav=0&showPrint=0&showTabs=0&showTitle=0
+    network_mode: "bridge"
 
 volumes:
     mysqldata:
