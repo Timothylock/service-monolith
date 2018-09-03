@@ -188,7 +188,7 @@ services:
        - mysql
      links:
        - mysql:mysql
-     image: inventory:latest
+     image: timothylock/inventory-management:latest
      ports:
        - "10020:9090"
      restart: always
