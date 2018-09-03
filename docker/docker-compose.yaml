@@ -183,5 +183,23 @@ services:
       REDIRECT: https://calendar.google.com/calendar/embed?src=lock.k.timothy%40gmail.com&ctz=America%2FToronto&mode=WEEK&showNav=0&showPrint=0&showTabs=0&showTitle=0
     network_mode: "bridge"
 
+  inventory-personal:
+     depends_on:
+       - mysql
+     links:
+       - mysql:mysql
+     image: inventory:latest
+     ports:
+       - "10020:9090"
+     restart: always
+     environment:
+       DB_URL: mysql:3306
+       DB_USER: root
+       DB_PASS: ${MYSQL_ROOT_PASS}
+       DB_NAME: inventory
+       UPC_URL: https://www.buycott.com/api/v3/products/lookup
+       UPC_TOKEN: ${UPC_LOOKUP_TOKEN}
+       FRONTEND_PATH: /frontend
+     network_mode: "bridge"
 volumes:
     mysqldata:
