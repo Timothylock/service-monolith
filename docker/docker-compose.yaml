@@ -210,7 +210,7 @@ services:
       restart: always
       environment:
         VIRTUAL_HOST: home.timothylock.ca
-        REDIRECT: https://vpn.timothylock.ca:8080
+        REDIRECT: http://vpn.timothylock.ca:8080
       network_mode: "bridge"
 volumes:
     mysqldata:
