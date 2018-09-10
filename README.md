@@ -43,4 +43,5 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10000         | 8080          | utat-inventory-backend | utatinventorybe.timothylock.ca  |
 | 10010         | 80            | calendar          | calendar.timothylock.ca            |
 | 10020         | 9090          | inventory-personal| inventory.timothylock.ca           |
+| 10021         | 9090          | inventory-demo    | inventorydemo.timothylock.ca       |
 | 10030         | 80            | home-assistant-re | home.timothylock.ca                |
