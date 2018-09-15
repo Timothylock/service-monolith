@@ -23,6 +23,9 @@ The docker pulls from dockerhub repo. All of these images are also on that repo.
 
 You must already be logged in to dockerhub to be able to push. If not, run `docker login`.
 
+## Auto Updating
+There is a container called [Watchtower](https://github.com/v2tec/watchtower) that will update the containers with the newest images every 5 minutes.
+
 # Ports
 
 While these ports aren't externally exposed or used by nginx-proxy, they are useful for local development. Not a great practice, but the dockerfile is shared between prod and dev so these ports are _theoretically_ exposed on prod as well. In my case, the firewall only opens up port 80 so its * fine * for now.
