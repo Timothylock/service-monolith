@@ -47,5 +47,5 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10010         | 80            | calendar          | calendar.timothylock.ca            |
 | 10020         | 9090          | inventory-personal| inventory.timothylock.ca           |
 | 10021         | 9090          | inventory-demo    | inventorydemo.timothylock.ca       |
-| 10022         | 9090          | inventory-aero    | inventoryaero.timothylock.ca       |
+| 10022         | 9090          | inventory-aero    | inventoryaero.utat.ca              |
 | 10030         | 80            | home-assistant-re | home.timothylock.ca                |
