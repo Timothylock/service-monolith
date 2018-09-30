@@ -229,6 +229,26 @@ services:
        FRONTEND_PATH: /frontend
      network_mode: "bridge"
 
+  inventory-utat:
+     depends_on:
+       - mysql
+     links:
+       - mysql:mysql
+     image: timothylock/inventory-management:latest
+     ports:
+       - "10022:9090"
+     restart: always
+     environment:
+       VIRTUAL_HOST: aeroinventory.timothylock.ca
+       DB_URL: mysql:3306
+       DB_USER: root
+       DB_PASS: ${MYSQL_ROOT_PASS}
+       DB_NAME: inventoryutat
+       UPC_URL: https://www.buycott.com/api/v3/products/lookup
+       UPC_TOKEN: ${UPC_LOOKUP_TOKEN}
+       FRONTEND_PATH: /frontend
+     network_mode: "bridge"
+
   home-assistant-redirect:
       image: ianneub/redirect
       ports:
