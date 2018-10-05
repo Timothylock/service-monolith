@@ -239,7 +239,7 @@ services:
        - "10022:9090"
      restart: always
      environment:
-       VIRTUAL_HOST: aeroinventory.utat.ca
+       VIRTUAL_HOST: aeroinventory.utat.ca aeroinventory.timothylock.ca
        DB_URL: mysql:3306
        DB_USER: root
        DB_PASS: ${MYSQL_ROOT_PASS}
