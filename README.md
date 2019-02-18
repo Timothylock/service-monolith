@@ -11,12 +11,13 @@ All of the containers running on my server
 run `startServer.sh`
 
 ## Secrets
-A secrets file is required. Make `~/docker/.env` and add all of the required variables. The variables are as follows:
+A secrets file is required. Make `./docker/.env` and add all of the required variables. The variables are as follows:
 
 - MYSQL_ROOT_PASS
 - MYSQL_USER_PASS
 - HOME_ASSISTANT_API_PASSWORD
 - HOME_ASSISTANT_DB_URL
+- UPC_LOOKUP_TOKEN
 - ZOHO_SERV
 - ZOHO_PORT
 - ZOHO_USR

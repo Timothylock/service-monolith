@@ -207,11 +207,11 @@ services:
        UPC_URL: https://www.buycott.com/api/v3/products/lookup
        UPC_TOKEN: ${UPC_LOOKUP_TOKEN}
        FRONTEND_PATH: /frontend
-       EmailSmtpServ: ${ZOHO_SERV}
-       EmailSmtpPort: ${ZOHO_PORT}
-       EmailUsername: ${ZOHO_USR}
-       EmailPassword: ${ZOHO_PASS}
-       EmailFromAddr: ${ZOHO_FROM_ADDR}
+       EMAIL_SMTP_SERV: ${ZOHO_SERV}
+       EMAIL_SMTP_PORT: ${ZOHO_PORT}
+       EMAIL_USERNAME: ${ZOHO_USR}
+       EMAIL_PASSWORD: ${ZOHO_PASS}
+       EMAIL_FROM_ADDR: ${ZOHO_FROM_ADDR}
      network_mode: "bridge"
 
   inventory-demo:
@@ -232,11 +232,11 @@ services:
        UPC_URL: https://www.buycott.com/api/v3/products/lookup
        UPC_TOKEN: ${UPC_LOOKUP_TOKEN}
        FRONTEND_PATH: /frontend
-       EmailSmtpServ: none
-       EmailSmtpPort: none
-       EmailUsername: none
-       EmailPassword: none
-       EmailFromAddr: none
+       EMAIL_SMTP_SERV: none
+       EMAIL_SMTP_PORT: none
+       EMAIL_USERNAME: none
+       EMAIL_PASSWORD: none
+       EMAIL_FROM_ADDR: none
      network_mode: "bridge"
 
   inventory-utat:
@@ -257,11 +257,11 @@ services:
        UPC_URL: https://www.buycott.com/api/v3/products/lookup
        UPC_TOKEN: ${UPC_LOOKUP_TOKEN}
        FRONTEND_PATH: /frontend
-       EmailSmtpServ: ${ZOHO_SERV}
-       EmailSmtpPort: ${ZOHO_PORT}
-       EmailUsername: ${ZOHO_USR}
-       EmailPassword: ${ZOHO_PASS}
-       EmailFromAddr: ${ZOHO_FROM_ADDR}
+       EMAIL_SMTP_SERV: ${ZOHO_SERV}
+       EMAIL_SMTP_PORT: ${ZOHO_PORT}
+       EMAIL_USERNAME: ${ZOHO_USR}
+       EMAIL_PASSWORD: ${ZOHO_PASS}
+       EMAIL_FROM_ADDR: ${ZOHO_FROM_ADDR}
      network_mode: "bridge"
 
   home-assistant-redirect:
