@@ -11,20 +11,22 @@ All of the containers running on my server
 run `startServer.sh`
 
 ## Secrets
-A secrets file is required. Make `./docker/.env` and add all of the required variables. The variables are as follows:
+A secrets file is required. Make `~/docker/.env` and add all of the required variables. The variables are as follows:
 
 - MYSQL_ROOT_PASS
 - MYSQL_USER_PASS
 - HOME_ASSISTANT_API_PASSWORD
 - HOME_ASSISTANT_DB_URL
+- ZOHO_SERV
+- ZOHO_PORT
+- ZOHO_USR
+- ZOHO_PASS
+- ZOHO_FROM_ADDR
 
 ## Building
 The docker pulls from dockerhub repo. All of these images are also on that repo. To build and push, navigate to `./src/CONTAINERNAME` and run `./build.sh`.
 
 You must already be logged in to dockerhub to be able to push. If not, run `docker login`.
-
-## Auto Updating
-There is a container called [Watchtower](https://github.com/v2tec/watchtower) that will update the containers with the newest images every 5 minutes.
 
 # Ports
 
