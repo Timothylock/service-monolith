@@ -60,12 +60,12 @@ tts:
 
 switch:
   - platform: tplink
-    host: 10.88.111.8
+    host: 10.88.111.2
   - platform: tplink
-    host: 10.88.111.13
+    host: 10.88.111.14
   - platform: rest
     name: Blinds
-    resource: http://10.88.111.25:5000/state
+    resource: http://10.88.111.13:5000/state
     body_on: '{"active": "true"}'
     body_off: '{"active": "false"}'
     is_on_template: '{{ value_json.is_active }}'
