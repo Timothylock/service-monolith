@@ -58,23 +58,30 @@ sensor:
 tts:
   - platform: google
 
-# Cloud
-cloud:
-
 switch:
   - platform: tplink
-    host: 10.88.111.6
+    host: 10.88.111.8
   - platform: tplink
-    host: 10.88.111.10
+    host: 10.88.111.13
+  - platform: rest
+    name: Blinds
+    resource: http://10.88.111.25:5000/state
+    body_on: '{"active": "true"}'
+    body_off: '{"active": "false"}'
+    is_on_template: '{{ value_json.is_active }}'
+    headers:
+      Content-Type: application/json
 
-media_player:
-  - platform: cast
+wemo:
 
 camera:
   - platform: generic
     name: Weather
     still_image_url: https://www.yr.no/place/Canada/Ontario/Toronto/meteogram.svg
     content_type: 'image/svg+xml'
+
+tradfri:
+  host: 10.88.111.2
 
 group: !include groups.yaml
 automation: !include automations.yaml

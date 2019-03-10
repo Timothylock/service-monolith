@@ -1,2 +1,24 @@
-2018-08-28 14:44:41 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=16 from 2018-08-28 18:43:22)
-2018-08-28 14:44:43 WARNING (MainThread) [homeassistant.components.media_player.cast] Setting configuration for Cast via platform is deprecated. Configure via Cast component instead.
+2019-03-10 00:23:58 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
+2019-03-10 00:23:59 WARNING (MainThread) [coap] Error received in UDP connection under DTLS: [Errno 111] Connection refused
+2019-03-10 00:23:59 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-03-10 00:23:59 ERROR (MainThread) [homeassistant.components.tradfri] Tradfri setup failed.
+2019-03-10 00:23:59 WARNING (SyncWorker_3) [homeassistant.components.switch.tplink] Could not read state for TP-Link Switch: Communication error
+2019-03-10 00:24:02 ERROR (MainThread) [homeassistant.components.switch.rest] No route to resource/endpoint: http://10.88.111.25:5000/state
+2019-03-10 00:24:04 WARNING (SyncWorker_0) [homeassistant.components.switch.tplink] Could not read state for TP-Link Switch: Communication error
+2019-03-10 00:26:37 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-03-10 00:26:40 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-03-10 00:26:40 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-03-10 00:26:40 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/aiocoap/transports/tinydtls.py", line 157, in _run
+    yield from self._connecting
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/aiocoap/transports/tinydtls.py", line 169, in _run
+    self.coaptransport.new_error_callback(-1, self)
+  File "/usr/local/lib/python3.6/site-packages/aiocoap/protocol.py", line 192, in _dispatch_error
+    request.response.set_exception(OSError(errno, os.strerror(errno)))
+asyncio.base_futures.InvalidStateError: invalid state

@@ -1,28 +1,30 @@
 - id: keep_hallway_off_night
   alias: keep hallway door light off at night
   trigger:
+  - entity_id: light.door
     platform: state
-    entity_id: light.door
     to: 'on'
   condition:
+  - after: 00:00:00
+    before: '10:30:00'
     condition: time
-    after: 00:00:00
-    before: 08:00:00
   action:
+  - entity_id: light.door
     service: light.turn_off
-    entity_id: light.door
 - id: kitchen_light_timeout
   alias: turn off kitchen light after 4 hours
   trigger:
-    platform: state
-    entity_id: switch.wemo_light_switch
-    to: 'on'
+  - entity_id: switch.wemo_light_switch
     for:
       hours: 4
       minutes: 0
+    platform: state
+    to: 'on'
   action:
-    service: switch.turn_on
+  - data:
+      entity_id: switch.wemo_light_switch
     entity_id: switch.wemo_light_switch
+    service: switch.turn_off
 - id: '1532198509716'
   alias: Living Room Ambient Lights On With Projector
   trigger:
@@ -48,10 +50,80 @@
       entity_id: switch.living_room_ambient_lights
     service: switch.turn_off
 - id: '1532198811568'
-  alias: Always One Light On When Projector On
+  alias: Decrease Brightness When Chromecast Is Playing
   trigger:
-  - entity_id: light.left_kitchen
+  - entity_id: media_player.living_room_tv_2
+    from: idle
+    platform: state
+    to: playing
+  - entity_id: media_player.living_room_tv_2
+    platform: state
+    to: playing
+  condition: []
+  action:
+  - data:
+      brightness_pct: '50'
+      entity_id: light.left_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '10'
+      entity_id: light.right_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '30'
+      entity_id: light.middle_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '10'
+      entity_id: light.living_room_lamp
+      transition: '3'
+    service: light.turn_on
+- id: '1532312579916'
+  alias: Increase Brightness When Chromecast Stops
+  trigger:
+  - entity_id: media_player.living_room_tv_2
+    platform: state
+    to: idle
+  - entity_id: media_player.living_room_tv_2
+    from: paused
+    platform: state
+    to: 'off'
+  - entity_id: media_player.living_room_tv_2
+    platform: state
+    to: paused
+  condition: []
+  action:
+  - data:
+      brightness_pct: '85'
+      entity_id: light.left_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '85'
+      entity_id: light.middle_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '85'
+      entity_id: light.right_kitchen
+      transition: '3'
+    service: light.turn_on
+  - data:
+      brightness_pct: '85'
+      entity_id: light.living_room_lamp
+      transition: '3'
+    service: light.turn_on
+- id: '1536592141931'
+  alias: Keep Lights On When Projector On
+  trigger:
+  - entity_id: light.right_kitchen
     from: 'on'
+    platform: state
+    to: 'off'
+  - entity_id: light.right_kitchen
     platform: state
     to: 'off'
   condition:
@@ -60,10 +132,72 @@
     state: 'on'
   action:
   - data:
-      entity_id: switch.wemo_light_switch
+      entity_id: light.right_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.living_room_lamp
+    service: light.turn_on
+  - delay: 00:00:1
+  - data:
+      entity_id: light.living_room_lamp
+    service: light.turn_on
+  - data:
+      entity_id: light.middle_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.left_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.right_kitchen
+    service: light.turn_on
+- id: '1541795941142'
+  alias: Pi Monitor On With kitchen lights
+  trigger:
+  - entity_id: light.right_kitchen
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.jason_room
     service: switch.turn_on
-- id: '1532312579916'
-  alias: Kitchen Lights off with Projector
+- id: '1541795976155'
+  alias: Pi Monitor off with kitchen lights 5 min
+  trigger:
+  - entity_id: light.right_kitchen
+    for: 00:05:00
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.jason_room
+    service: switch.turn_off
+- id: '1542948016043'
+  alias: Auto restart
+  trigger:
+  - at: 00:00
+    platform: time
+  - at: '12:00'
+    platform: time
+  condition: []
+  action:
+  - service: homeassistant.restart
+- id: '1550446861368'
+  alias: Turn off Jasons Room 10am
+  trigger:
+  - at: '10:00:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: light.tradfri_bulb_e26_opal_1000lm_5
+    service: light.turn_off
+  - data:
+      entity_id: light.tradfri_bulb_e26_w_opal_1000lm_4
+    service: light.turn_off
+- id: '1550684678719'
+  alias: Open Blinds When Projector Off
   trigger:
   - entity_id: switch.projector
     from: 'on'
@@ -72,5 +206,61 @@
   condition: []
   action:
   - data:
-      entity_id: switch.wemo_light_switch
+      entity_id: switch.blinds
+    service: switch.turn_on
+- id: '1550684737655'
+  alias: Close Blinds When Projector Turns On
+  trigger:
+  - entity_id: switch.projector
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - after: sunrise
+    before: sunset
+    condition: sun
+  action:
+  - data:
+      entity_id: switch.blinds
+    service: switch.turn_off
+- id: '1551837669782'
+  alias: All lights max 30s after 1am
+  trigger:
+  - entity_id: light.right_kitchen
+    for: 00:00:30
+    platform: state
+    to: 'on'
+  condition:
+  - after: 01:30:00
+    before: 07:00:00
+    condition: time
+  action:
+  - data:
+      entity_id: light.left_kitchen
+      transition: '3'
+    service: light.turn_off
+  - data:
+      entity_id: light.middle_kitchen
+      transition: '3'
+    service: light.turn_off
+  - data:
+      entity_id: light.right_kitchen
+      transition: '3'
+    service: light.turn_off
+  - data:
+      entity_id: light.living_room_lamp
+      transition: '3'
+    service: light.turn_off
+  - data:
+      entity_id: switch.living_room_ambient_lights
+    service: switch.turn_off
+- id: '1551913613559'
+  alias: Open Blinds at Sunset
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - data:
+      entity_id: switch.blinds
     service: switch.turn_on
