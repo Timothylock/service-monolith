@@ -1,24 +1,22 @@
-2019-03-10 00:23:58 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
-2019-03-10 00:23:59 WARNING (MainThread) [coap] Error received in UDP connection under DTLS: [Errno 111] Connection refused
-2019-03-10 00:23:59 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-03-10 00:23:59 ERROR (MainThread) [homeassistant.components.tradfri] Tradfri setup failed.
-2019-03-10 00:23:59 WARNING (SyncWorker_3) [homeassistant.components.switch.tplink] Could not read state for TP-Link Switch: Communication error
-2019-03-10 00:24:02 ERROR (MainThread) [homeassistant.components.switch.rest] No route to resource/endpoint: http://10.88.111.25:5000/state
-2019-03-10 00:24:04 WARNING (SyncWorker_0) [homeassistant.components.switch.tplink] Could not read state for TP-Link Switch: Communication error
-2019-03-10 00:26:37 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-03-10 00:26:40 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-03-10 00:26:40 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-03-10 00:26:40 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+2019-04-06 14:02:26 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http component has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
+2019-04-06 14:02:26 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
+2019-04-06 14:02:28 WARNING (MainThread) [homeassistant.components.tplink.switch] Loading as a platform is no longer supported, convert to use the tplink component.
+2019-04-06 14:02:28 ERROR (MainThread) [homeassistant.components.switch] Error while setting up platform tplink
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/site-packages/aiocoap/transports/tinydtls.py", line 157, in _run
-    yield from self._connecting
-concurrent.futures._base.CancelledError
-
-During handling of the above exception, another exception occurred:
-
+  File "/usr/src/app/homeassistant/helpers/entity_platform.py", line 125, in _async_setup_platform
+    asyncio.shield(task, loop=hass.loop),
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 769, in shield
+    inner = ensure_future(arg, loop=loop)
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 592, in ensure_future
+    raise TypeError('An asyncio.Future, a coroutine or an awaitable is '
+TypeError: An asyncio.Future, a coroutine or an awaitable is required
+2019-04-06 14:02:28 WARNING (MainThread) [homeassistant.components.tplink.switch] Loading as a platform is no longer supported, convert to use the tplink component.
+2019-04-06 14:02:28 ERROR (MainThread) [homeassistant.components.switch] Error while setting up platform tplink
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/site-packages/aiocoap/transports/tinydtls.py", line 169, in _run
-    self.coaptransport.new_error_callback(-1, self)
-  File "/usr/local/lib/python3.6/site-packages/aiocoap/protocol.py", line 192, in _dispatch_error
-    request.response.set_exception(OSError(errno, os.strerror(errno)))
-asyncio.base_futures.InvalidStateError: invalid state
+  File "/usr/src/app/homeassistant/helpers/entity_platform.py", line 125, in _async_setup_platform
+    asyncio.shield(task, loop=hass.loop),
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 769, in shield
+    inner = ensure_future(arg, loop=loop)
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 592, in ensure_future
+    raise TypeError('An asyncio.Future, a coroutine or an awaitable is '
+TypeError: An asyncio.Future, a coroutine or an awaitable is required
