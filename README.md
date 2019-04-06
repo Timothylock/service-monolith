@@ -52,3 +52,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10021         | 9090          | inventory-demo    | inventorydemo.timothylock.ca       |
 | 10022         | 9090          | inventory-aero    | inventoryaero.utat.ca              |
 | 10030         | 80            | home-assistant-re | home.timothylock.ca                |
+| 10040         | 80            | php-sandbox       | php-sandbox.timothylock.ca         |
