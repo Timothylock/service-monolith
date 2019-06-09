@@ -126,6 +126,10 @@
   - entity_id: light.right_kitchen
     platform: state
     to: 'off'
+  - hours: '*'
+    minutes: '*'
+    platform: time_pattern
+    seconds: /15
   condition:
   - condition: state
     entity_id: switch.projector
@@ -184,17 +188,17 @@
   action:
   - service: homeassistant.restart
 - id: '1550446861368'
-  alias: Turn off Jasons Room 10am
+  alias: Turn off Jasons Room 9:30am
   trigger:
-  - at: '10:00:00'
+  - at: '9:30:00'
     platform: time
   condition: []
   action:
   - data:
-      entity_id: light.tradfri_bulb_e26_opal_1000lm_5
+      entity_id: light.tradfri_bulb_7
     service: light.turn_off
   - data:
-      entity_id: light.tradfri_bulb_e26_w_opal_1000lm_4
+      entity_id: light.tradfri_bulb_8
     service: light.turn_off
 - id: '1550684678719'
   alias: Open Blinds When Projector Off
@@ -234,22 +238,21 @@
   - after: 01:30:00
     before: 07:00:00
     condition: time
+  - condition: state
+    entity_id: automation.warning_all_lights_on
+    state: 'off'
   action:
   - data:
       entity_id: light.left_kitchen
-      transition: '3'
     service: light.turn_off
   - data:
       entity_id: light.middle_kitchen
-      transition: '3'
     service: light.turn_off
   - data:
       entity_id: light.right_kitchen
-      transition: '3'
     service: light.turn_off
   - data:
       entity_id: light.living_room_lamp
-      transition: '3'
     service: light.turn_off
   - data:
       entity_id: switch.living_room_ambient_lights
@@ -264,3 +267,47 @@
   - data:
       entity_id: switch.blinds
     service: switch.turn_on
+- id: '1555609203486'
+  alias: Keep PC Off
+  trigger:
+  - hours: '*'
+    minutes: /1
+    platform: time_pattern
+    seconds: '*'
+  condition: []
+  action:
+  - service: rest_command.turn_off_pc
+- id: '1556257698901'
+  alias: '[WARNING] ALL LIGHTS ON'
+  trigger:
+  - entity_id: light.right_kitchen
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: light.right_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.living_room_lamp
+    service: light.turn_on
+  - data:
+      entity_id: light.middle_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.left_kitchen
+    service: light.turn_on
+  - delay: 00:00:1
+  - data:
+      entity_id: light.left_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.middle_kitchen
+    service: light.turn_on
+  - data:
+      entity_id: light.living_room_lamp
+    service: light.turn_on
+  - data:
+      entity_id: light.right_kitchen
+    service: light.turn_on

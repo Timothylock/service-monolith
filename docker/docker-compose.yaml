@@ -7,6 +7,33 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /root/.docker/config.json:/config.json
 
+  urlshortener:
+    image: yourls
+    restart: always
+    links: 
+      - mysql:mysql
+    ports:
+      - 10050:80
+    environment:
+      YOURLS_DB_PASS: ${MYSQL_ROOT_PASS}
+      YOURLS_DB_HOST: mysql:3306
+      YOURLS_DB_USER: root
+      YOURLS_SITE: https://r.timothylock.ca
+      YOURLS_USER: ${YOURURLS_USER}
+      YOURLS_PASS: ${YOURURLS_PASS}
+      VIRTUAL_HOST: r.timothylock.ca
+    network_mode: "bridge"
+
+  php-sandbox:
+     image: richarvey/nginx-php-fpm
+     restart: always
+     volumes:
+       - /home/timothy/sandbox-php:/var/www/html
+     ports:
+       - "10040:80"
+     environment:
+       VIRTUAL_HOST: php-sandbox.timothylock.ca
+         
   timothys-stuff:
      depends_on:
        - mysql
@@ -106,16 +133,6 @@ services:
        VIRTUAL_HOST: homemonitordemo.timothylock.ca
      network_mode: "bridge"
 
-  comp-with-tim:
-     image: ianneub/redirect
-     ports:
-       - "9070:80"
-     restart: always
-     environment:
-       VIRTUAL_HOST: computerswithtim.ml
-       REDIRECT: https://sites.google.com/logicfusion.ca/tims-class-site
-     network_mode: "bridge"
-
   nextcloud:
     image: nextcloud:latest
     ports:
@@ -157,27 +174,6 @@ services:
       - HOME_ASSISTANT_API_PASSWORD=${HOME_ASSISTANT_API_PASSWORD}
       - HOME_ASSISTANT_DB_URL=${HOME_ASSISTANT_DB_URL}
     network_mode: "host"
-
-  utat-inventory-backend:
-     depends_on:
-       - mysql
-     links:
-       - mysql:mysql
-     image: node:7
-     user: "node"
-     working_dir: /home/node/app
-     volumes:
-       - ../src/utat-inventory-backend/:/home/node/app
-     ports:
-       - "10000:8080"
-     restart: always
-     environment:
-       VIRTUAL_HOST: utatinventorybe.timothylock.ca
-       DB_USER: root
-       DB_PASS: ${MYSQL_ROOT_PASS}
-       PORT: 8080
-     command: "node index.js"
-     network_mode: "bridge"
 
   calendar:
     image: ianneub/redirect
