@@ -269,5 +269,15 @@ services:
         VIRTUAL_HOST: home.timothylock.ca
         REDIRECT: http://vpn.timothylock.ca:8080
       network_mode: "bridge"
+
+  twilio-buzzer-connector:
+    image: timothylock/twilio-buzzer-connector
+    ports:
+      - "10050:8080"
+    restart: always
+    environment:
+      VIRTUAL_HOST: buzzer.timothylock.ca
+    network_mode: "bridge"
+    
 volumes:
     mysqldata:
