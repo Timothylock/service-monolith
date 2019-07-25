@@ -13,7 +13,7 @@ services:
     links: 
       - mysql:mysql
     ports:
-      - 10050:80
+      - 10060:80
     environment:
       YOURLS_DB_PASS: ${MYSQL_ROOT_PASS}
       YOURLS_DB_HOST: mysql:3306
