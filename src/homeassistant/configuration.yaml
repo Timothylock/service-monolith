@@ -55,6 +55,14 @@ switch:
     is_on_template: '{{ value_json.is_active }}'
     headers:
       Content-Type: application/json
+  - platform: rest
+    name: Unlock Buzzer For 30 Min
+    resource: http://twilio-buzzer-connector:8080/buzzer/state
+    body_on: '{"active": "true"}'
+    body_off: '{"active": "false"}'
+    is_on_template: '{{ value_json.is_active }}'
+    headers:
+      Content-Type: application/json
 
 rest_command:
   turn_off_pc:
@@ -63,15 +71,6 @@ rest_command:
 wemo:
 
 tplink:
-
-camera:
-  - platform: generic
-    name: Weather
-    still_image_url: https://www.yr.no/place/Canada/Ontario/Toronto/meteogram.svg
-    content_type: 'image/svg+xml'
-
-tradfri:
-  host: 10.88.111.2
 
 group: !include groups.yaml
 automation: !include automations.yaml

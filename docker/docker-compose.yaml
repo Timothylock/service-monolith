@@ -277,7 +277,10 @@ services:
     restart: always
     environment:
       VIRTUAL_HOST: buzzer.timothylock.ca
+      WHITELISTED_NUMBERS: ${BUZZER_WHITELISTED_NUMBERS}
+      BUZZCODE: ${BUZZCODE}
+      MINUTES: 30
     network_mode: "bridge"
-    
+
 volumes:
     mysqldata:
