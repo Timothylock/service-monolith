@@ -19,8 +19,8 @@ services:
       YOURLS_DB_HOST: mysql:3306
       YOURLS_DB_USER: root
       YOURLS_SITE: https://r.timothylock.ca
-      YOURLS_USER: ${YOURURLS_USER}
-      YOURLS_PASS: ${YOURURLS_PASS}
+      YOURLS_USER: timothy
+      YOURLS_PASS: password
       VIRTUAL_HOST: r.timothylock.ca
     network_mode: "bridge"
 
