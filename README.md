@@ -46,10 +46,11 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 9070          | 80            | computers-with-tim| computerswithtim.ml                |
 | 9080          | 80            | nextcloud         | data.timothylock.ca                |
 | 8123          | 8123          | home-assistant    |                                    |
-| 10000         | 8080          | utat-inventory-backend | utatinventorybe.timothylock.ca  |
+| 10000         | 8080          | utat-inventory-backend | utatinventorybe.timothylock.ca|
 | 10010         | 80            | calendar          | calendar.timothylock.ca            |
 | 10020         | 9090          | inventory-personal| inventory.timothylock.ca           |
 | 10021         | 9090          | inventory-demo    | inventorydemo.timothylock.ca       |
 | 10022         | 9090          | inventory-aero    | inventoryaero.utat.ca              |
 | 10030         | 80            | home-assistant-re | home.timothylock.ca                |
 | 10040         | 80            | php-sandbox       | php-sandbox.timothylock.ca         |
+| 10050         | 8080          | twilio-buzzer-connector | buzzer.timothylock.ca        |
