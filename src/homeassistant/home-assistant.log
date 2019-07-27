@@ -1,4 +1,10 @@
-2019-07-27 03:58:28 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http integration has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
-2019-07-27 03:58:28 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
-2019-07-27 04:00:02 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-07-27 04:00:02 ERROR (MainThread) [homeassistant.components.tradfri] Tradfri setup failed.
+2019-07-27 08:00:07 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http integration has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
+2019-07-27 08:00:07 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
+2019-07-27 13:16:28 ERROR (Recorder) [homeassistant.components.recorder.util] Error executing query: (MySQLdb._exceptions.OperationalError) (2006, 'MySQL server has gone away')
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (%s, %s, %s, %s, %s, %s, %s)]
+[parameters: ('state_changed', '{"entity_id": "light.left_kitchen", "old_state": {"entity_id": "light.left_kitchen", "state": "on", "attributes": {"brightness": 216, "friendly_name" ... (427 characters truncated) ... :00", "last_updated": "2019-07-27T17:16:28.946811+00:00", "context": {"id": "0d785ec774c7481dba072c8ce46885b9", "parent_id": null, "user_id": null}}}', 'LOCAL', datetime.datetime(2019, 7, 27, 17, 16, 28, 946859, tzinfo=<UTC>), datetime.datetime(2019, 7, 27, 17, 16, 28, 950228), '0d785ec774c7481dba072c8ce46885b9', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-07-27 13:16:28 ERROR (Recorder) [homeassistant.components.recorder] Error in database connectivity: (MySQLdb._exceptions.OperationalError) (2006, 'MySQL server has gone away')
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (%s, %s, %s, %s, %s, %s, %s)]
+[parameters: ('state_changed', '{"entity_id": "light.left_kitchen", "old_state": {"entity_id": "light.left_kitchen", "state": "on", "attributes": {"brightness": 216, "friendly_name" ... (427 characters truncated) ... :00", "last_updated": "2019-07-27T17:16:28.946811+00:00", "context": {"id": "0d785ec774c7481dba072c8ce46885b9", "parent_id": null, "user_id": null}}}', 'LOCAL', datetime.datetime(2019, 7, 27, 17, 16, 28, 946859, tzinfo=<UTC>), datetime.datetime(2019, 7, 27, 17, 16, 28, 950228), '0d785ec774c7481dba072c8ce46885b9', None)]
+(Background on this error at: http://sqlalche.me/e/e3q8). (retrying in 3 seconds)
