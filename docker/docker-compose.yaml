@@ -6,6 +6,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/timothy/.docker/config.json:/config.json
+    environment:
+      WATCHTOWER_CLEANUP: true
 
   urlshortener:
     image: yourls
