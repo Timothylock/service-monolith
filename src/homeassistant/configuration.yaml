@@ -57,7 +57,7 @@ switch:
       Content-Type: application/json
   - platform: rest
     name: Unlock Buzzer For 30 Min
-    resource: http://twilio-buzzer-connector:8080/buzzer/state
+    resource: http://127.0.0.1:10050/buzzer/state
     body_on: '{"active": "true"}'
     body_off: '{"active": "false"}'
     is_on_template: '{{ value_json.is_active }}'

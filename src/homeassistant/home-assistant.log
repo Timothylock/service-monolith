@@ -1,19 +1,4 @@
-2019-07-24 20:00:06 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http component has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
-2019-07-24 20:00:06 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
-2019-07-24 20:01:40 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-07-24 20:01:40 ERROR (MainThread) [homeassistant.components.tradfri] Tradfri setup failed.
-2019-07-24 21:32:50 ERROR (SyncWorker_2) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/transports/tinydtls.py", line 157, in _run
-    yield from self._connecting
-concurrent.futures._base.CancelledError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/transports/tinydtls.py", line 169, in _run
-    self.coaptransport.new_error_callback(-1, self)
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 203, in _dispatch_error
-    for key, (monitor, cancellable_timeout) in self._active_exchanges.items():
-AttributeError: 'NoneType' object has no attribute 'items'
-2019-07-24 23:19:09 ERROR (MainThread) [homeassistant.components.automation] Error while executing automation automation.increase_brightness_when_chromecast_stops. Service not found for call_service at pos 1: Unable to find service light/turn_on
+2019-07-27 03:58:28 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http integration has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
+2019-07-27 03:58:28 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
+2019-07-27 04:00:02 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-07-27 04:00:02 ERROR (MainThread) [homeassistant.components.tradfri] Tradfri setup failed.
