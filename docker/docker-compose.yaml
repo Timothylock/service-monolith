@@ -6,8 +6,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/timothy/.docker/config.json:/config.json
-    environment:
-      WATCHTOWER_CLEANUP: true
 
   urlshortener:
     image: yourls
@@ -284,5 +282,31 @@ services:
       MINUTES: 30
     network_mode: "bridge"
 
+  rtorrent-flood:
+    image: wonderfall/rtorrent-flood:new
+    ports:
+      - "49184:49184"
+      - "3000:3000"
+    restart: always
+    environment: 
+      UID: 1000
+      GID: 1000
+      FLOOD_SECRET: youshallnotpass
+      VIRTUAL_HOST: torrent.timothylock.ca
+    tty: true
+    volumes: 
+      - /mnt/storage/torrent:/data
+      - /mnt/storage/torrent/db:/flood-db    
+
+  portainer:
+    restart: always
+    image: portainer/portainer
+    ports:
+      - 10070:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    privileged: true
+
 volumes:
     mysqldata:
+

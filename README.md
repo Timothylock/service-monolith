@@ -55,3 +55,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10040         | 80            | php-sandbox       | php-sandbox.timothylock.ca         |
 | 10050         | 8080          | twilio-buzzer-connector | buzzer.timothylock.ca        |
 | 10060         | 80            | urlshortener      | r.timothylock.ca                   |
+| 10070         | 80            | portainer         |                                    |
