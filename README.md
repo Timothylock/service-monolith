@@ -56,3 +56,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10050         | 8080          | twilio-buzzer-connector | buzzer.timothylock.ca        |
 | 10060         | 80            | urlshortener      | r.timothylock.ca                   |
 | 10070         | 80            | portainer         |                                    |
+| 10080         | 80            | mirror            | mirror.timothylock.ca              |

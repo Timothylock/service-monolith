@@ -176,13 +176,13 @@ services:
     network_mode: "host"
 
   calendar:
-    image: ianneub/redirect
+    image: morbz/docker-web-redirect
     ports:
       - "10010:80"
     restart: always
     environment:
       VIRTUAL_HOST: calendar.timothylock.ca
-      REDIRECT: https://calendar.google.com/calendar/embed?src=lock.k.timothy%40gmail.com&ctz=America%2FToronto&mode=WEEK
+      REDIRECT_TARGET: https://calendar.google.com/calendar/embed?src=lock.k.timothy%40gmail.com&ctz=America%2FToronto&mode=WEEK&
     network_mode: "bridge"
 
   inventory-personal:
@@ -261,13 +261,13 @@ services:
      network_mode: "bridge"
 
   home-assistant-redirect:
-      image: ianneub/redirect
+      image: morbz/docker-web-redirect
       ports:
         - "10030:80"
       restart: always
       environment:
         VIRTUAL_HOST: home.timothylock.ca
-        REDIRECT: http://vpn.timothylock.ca:8080
+        REDIRECT_TARGET: http://vpn.timothylock.ca:8080
       network_mode: "bridge"
 
   twilio-buzzer-connector:
@@ -306,6 +306,17 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     privileged: true
+
+  mirror:
+    restart: always
+    image: httpd:alpine
+    ports: 
+      - 10080:80
+    volumes:
+      - /mnt/storage/mirror:/usr/local/apache2/htdocs/
+    environment:
+      VIRTUAL_HOST: mirror.timothylock.ca
+    network_mode: "bridge"
 
 volumes:
     mysqldata:
