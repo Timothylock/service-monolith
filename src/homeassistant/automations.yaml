@@ -177,16 +177,6 @@
   - data:
       entity_id: switch.jason_room
     service: switch.turn_off
-- id: '1542948016043'
-  alias: Auto restart
-  trigger:
-  - at: 00:00
-    platform: time
-  - at: '12:00'
-    platform: time
-  condition: []
-  action:
-  - service: homeassistant.restart
 - id: '1550446861368'
   alias: Turn off Jasons Room 9:30am
   trigger:
@@ -267,16 +257,6 @@
   - data:
       entity_id: switch.blinds
     service: switch.turn_on
-- id: '1555609203486'
-  alias: Keep PC Off
-  trigger:
-  - hours: '*'
-    minutes: /1
-    platform: time_pattern
-    seconds: '*'
-  condition: []
-  action:
-  - service: rest_command.turn_off_pc
 - id: '1556257698901'
   alias: '[WARNING] ALL LIGHTS ON'
   trigger:
@@ -311,3 +291,17 @@
   - data:
       entity_id: light.right_kitchen
     service: light.turn_on
+- id: '1574649959097'
+  alias: Disable ALL LIGHTS ON after 1am
+  description: Turn off that to prevent lights from staying on all night
+  trigger:
+  - at: 01:00:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: automation.warning_all_lights_on
+    state: 'on'
+  action:
+  - condition: state
+    entity_id: automation.warning_all_lights_on
+    state: 'off'

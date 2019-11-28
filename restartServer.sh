@@ -13,6 +13,6 @@ docker run -d -p 80:80 \
 
 sleep 10
 
-cd docker
+cd /home/timothy/service-monolith/docker
 
 docker-compose up -d

@@ -1,4 +1,4 @@
-version: '2'
+version: '3.2'
 
 services:
   watchtower:
@@ -41,7 +41,7 @@ services:
        - mysql:mysql
      image: wordpress:latest
      ports:
-       - "9001:80"
+       - "9002:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: mysql:3306
@@ -75,7 +75,7 @@ services:
        - mysql:mysql
      image: wordpress:latest
      ports:
-       - "9030:80"
+       - "9032:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: mysql:3306
@@ -86,42 +86,6 @@ services:
      volumes:
        - ../src/markham8-blog/wp-content:/var/www/html/wp-content/
        - ../src/markham8-blog/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-     network_mode: "bridge"
-
-  markham8-leaders:
-     image: timothylock/markham8-leaders:latest
-     ports:
-       - "9031:80"
-     restart: always
-     environment:
-       VIRTUAL_HOST: leaders.8thmarkham.com
-     volumes:
-       - ../src/markham8-leaders/files:/var/www/html/files/
-     network_mode: "bridge"
-
-  csc309-tb-exchange:
-     depends_on:
-       - csc309-mongodb
-     links:
-       - csc309-mongodb:csc309-mongodb
-     image: timothylock/csc309-textbook-exchange:latest
-     ports:
-       - "9040:80"
-     restart: always
-     environment:
-       VIRTUAL_HOST: uoftextbookexchange.timothylock.ca
-     network_mode: "bridge"
-
-  csc309-mongodb:
-     image: mongo:latest
-     environment:
-       - MONGO_DATA_DIR=/data/db
-       - MONGO_LOG_DIR=/dev/null
-     volumes:
-       - ../src/csc309-mongodb/data:/data
-     ports:
-       - "27017:27017"
-     command: mongod --smallfiles --logpath=/dev/null
      network_mode: "bridge"
 
   pi-monitor:
@@ -163,9 +127,7 @@ services:
   home-assistant:
     image: homeassistant/home-assistant
     ports:
-      - "9090:9999"
-    environment:
-      VIRTUAL_HOST: home.timothylock.ca
+      - "8123:8123"
     restart: always
     volumes:
       - ../src/homeassistant:/config
@@ -173,7 +135,7 @@ services:
     environment:
       - HOME_ASSISTANT_API_PASSWORD=${HOME_ASSISTANT_API_PASSWORD}
       - HOME_ASSISTANT_DB_URL=${HOME_ASSISTANT_DB_URL}
-    network_mode: "host"
+    network_mode: host
 
   calendar:
     image: morbz/docker-web-redirect
@@ -260,16 +222,6 @@ services:
        EMAIL_FROM_ADDR: ${ZOHO_FROM_ADDR}
      network_mode: "bridge"
 
-  home-assistant-redirect:
-      image: morbz/docker-web-redirect
-      ports:
-        - "10030:80"
-      restart: always
-      environment:
-        VIRTUAL_HOST: home.timothylock.ca
-        REDIRECT_TARGET: http://vpn.timothylock.ca:8080
-      network_mode: "bridge"
-
   twilio-buzzer-connector:
     image: timothylock/twilio-buzzer-connector
     ports:
@@ -281,22 +233,6 @@ services:
       BUZZCODE: ${BUZZCODE}
       MINUTES: 30
     network_mode: "bridge"
-
-  rtorrent-flood:
-    image: wonderfall/rtorrent-flood:new
-    ports:
-      - "49184:49184"
-      - "3000:3000"
-    restart: always
-    environment: 
-      UID: 1000
-      GID: 1000
-      FLOOD_SECRET: youshallnotpass
-      VIRTUAL_HOST: torrent.timothylock.ca
-    tty: true
-    volumes: 
-      - /mnt/storage/torrent:/data
-      - /mnt/storage/torrent/db:/flood-db    
 
   portainer:
     restart: always
@@ -314,6 +250,7 @@ services:
       - 10080:80
     volumes:
       - /mnt/storage/mirror:/usr/local/apache2/htdocs/
+      - ../src/mirror/httpd.conf:/usr/local/apache2/conf/httpd.conf
     environment:
       VIRTUAL_HOST: mirror.timothylock.ca
     network_mode: "bridge"

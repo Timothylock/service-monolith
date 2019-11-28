@@ -38,7 +38,7 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 |---------------|---------------|-------------------|------------------------------------|
 | 80            | 80            | nginx-proxy       | ALL                                |
 | 9010          | 3306          | mysql             |                                    |
-| 9030          | 80            | markham8-blog     | 8thmarkham.com                     |
+| 9032          | 80            | markham8-blog     | 8thmarkham.com                     |
 | 9031          | 80            | markham8-leaders  | leaders.8thmarkham.com             |
 | 9040          | 80            | csc309-tb-exchange| uoftextbookexchange.timothylock.ca |
 | 27017         | 27017         | csc309-mongodb    |                                    |
@@ -57,3 +57,4 @@ While these ports aren't externally exposed or used by nginx-proxy, they are use
 | 10060         | 80            | urlshortener      | r.timothylock.ca                   |
 | 10070         | 80            | portainer         |                                    |
 | 10080         | 80            | mirror            | mirror.timothylock.ca              |
+| 10090         | 80            | rtorrent          |                                    |

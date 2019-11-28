@@ -1,129 +1,100 @@
-2019-09-28 08:00:09 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http integration has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
-2019-09-28 08:00:09 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
-2019-09-28 08:01:19 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform tradfri is taking over 10 seconds.
-2019-09-28 08:01:19 WARNING (MainThread) [homeassistant.components.switch] Setup of platform tradfri is taking over 10 seconds.
-2019-09-28 08:01:19 WARNING (MainThread) [homeassistant.components.light] Setup of platform tradfri is taking over 10 seconds.
-2019-09-28 08:02:09 ERROR (MainThread) [homeassistant.components.sensor] Setup of platform tradfri is taking longer than 60 seconds. Startup will proceed without waiting any longer.
-2019-09-28 08:02:09 ERROR (MainThread) [homeassistant.components.switch] Setup of platform tradfri is taking longer than 60 seconds. Startup will proceed without waiting any longer.
-2019-09-28 08:02:09 ERROR (MainThread) [homeassistant.components.light] Setup of platform tradfri is taking longer than 60 seconds. Startup will proceed without waiting any longer.
-2019-09-28 08:02:58 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
-2019-09-28 08:02:58 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+2019-11-28 14:46:28 WARNING (zeroconf-ServiceBrowser__axis-video._tcp.local.) [zeroconf] Exception occurred:
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 95, in _get_response
-    r = await pr.response
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 816, in _run_outer
-    yield from cls._run(app_request, response, weak_observation, protocol, log, exchange_monitor_factory)
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 865, in _run
-    blockresponse = yield from blockrequest.response
-aiocoap.error.RequestTimedOut
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/tradfri/sensor.py", line 21, in async_setup_entry
-    all_devices = await api(devices_commands)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 159, in request
-    command_results = await asyncio.gather(*commands, loop=self._loop)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 146, in _execute
-    _, res = await self._get_response(msg)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 100, in _get_response
-    await self._reset_protocol(e)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 78, in _reset_protocol
-    await protocol.shutdown()
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 133, in shutdown
-    for exchange_monitor, cancellable in self._active_exchanges.values():
-AttributeError: 'NoneType' object has no attribute 'values'
-2019-09-28 08:02:58 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 95, in _get_response
-    r = await pr.response
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 816, in _run_outer
-    yield from cls._run(app_request, response, weak_observation, protocol, log, exchange_monitor_factory)
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 865, in _run
-    blockresponse = yield from blockrequest.response
-OSError: [Errno -1] No error information
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/tradfri/switch.py", line 23, in async_setup_entry
-    devices = await api(devices_commands)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 159, in request
-    command_results = await asyncio.gather(*commands, loop=self._loop)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 146, in _execute
-    _, res = await self._get_response(msg)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 105, in _get_response
-    await self._reset_protocol(e)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 78, in _reset_protocol
-    await protocol.shutdown()
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 133, in shutdown
-    for exchange_monitor, cancellable in self._active_exchanges.values():
-AttributeError: 'NoneType' object has no attribute 'values'
-2019-09-28 08:02:58 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 95, in _get_response
-    r = await pr.response
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 816, in _run_outer
-    yield from cls._run(app_request, response, weak_observation, protocol, log, exchange_monitor_factory)
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 865, in _run
-    blockresponse = yield from blockrequest.response
-OSError: [Errno -1] No error information
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/src/homeassistant/homeassistant/components/tradfri/light.py", line 42, in async_setup_entry
-    devices = await api(devices_commands)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 159, in request
-    command_results = await asyncio.gather(*commands, loop=self._loop)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 146, in _execute
-    _, res = await self._get_response(msg)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 105, in _get_response
-    await self._reset_protocol(e)
-  File "/usr/local/lib/python3.7/site-packages/pytradfri/api/aiocoap_api.py", line 78, in _reset_protocol
-    await protocol.shutdown()
-  File "/usr/local/lib/python3.7/site-packages/aiocoap/protocol.py", line 133, in shutdown
-    for exchange_monitor, cancellable in self._active_exchanges.values():
-AttributeError: 'NoneType' object has no attribute 'values'
-2019-09-28 09:03:59 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2019-09-28 09:03:59 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2019-09-28 10:33:30 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.InvalidURLError: 400, message='invalid URL'
-2019-09-28 10:39:53 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2019-09-28 10:39:53 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2019-09-28 12:11:06 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2019-09-28 12:11:06 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+  File "/usr/local/lib/python3.7/site-packages/zeroconf.py", line 2245, in send
+    bytes_sent = s.sendto(packet, 0, (addr, port))
+OSError: [Errno 126] No error information
+2019-11-28 14:46:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2019-11-28 14:46:45 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:46:53 WARNING (SyncWorker_5) [pywemo.ssdp] Error fetching description at http://10.88.111.54:49153/setup.xml
+2019-11-28 14:46:56 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:47:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:47:12 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-11-28 14:47:12 ERROR (MainThread) [coap] Exception CancelledError() can not be represented as errno, setting -1.
+2019-11-28 14:47:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:47:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:47:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:47:55 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:48:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:48:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:48:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:48:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:48:54 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:49:06 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:49:17 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:49:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:49:41 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:49:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:50:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:50:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:50:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:50:40 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:50:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:51:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:51:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:51:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:51:40 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:51:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:52:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:52:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:52:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:52:40 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:52:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:53:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:53:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:53:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:53:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:53:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:54:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:54:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:54:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:54:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:54:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:55:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:55:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:55:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:55:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:55:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:47 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:56:59 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:57:11 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:57:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:57:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:57:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:57:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:58:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:58:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:58:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:58:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:58:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:59:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:59:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:59:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:59:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 14:59:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:00:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:00:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:00:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:00:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:00:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:01:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:01:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:01:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:01:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:01:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:02:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:02:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:02:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:02:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:02:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:03:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:03:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:03:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:03:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:03:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:04:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:04:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-11-28 15:04:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05

@@ -2,49 +2,14 @@ recorder:
   purge_keep_days: 30
   db_url: !env_var HOME_ASSISTANT_DB_URL
 
-# Enables the frontend
-frontend:
-
-# Enables configuration UI
-config:
-
-system_health:
-
 http:
-  # Secrets are defined in the file secrets.yaml
-  api_password: !env_var HOME_ASSISTANT_API_PASSWORD
   base_url: home.timothylock.ca
   server_port: 8123
 
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  include_used_components: true
+default_config:
 
-# Discover some devices automatically
-discovery:
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Track the sun
-sun:
-
-# Weather prediction
-sensor:
-  - platform: yr
-
-# Text to speech
 tts:
   - platform: google_translate
-    service_name: google_say
 
 switch:
   - platform: rest
@@ -64,14 +29,29 @@ switch:
     headers:
       Content-Type: application/json
 
-rest_command:
-  turn_off_pc:
-    url: http://10.88.111.32:9001
+binary_sensor:
+  - platform: ping
+    name: Timothys iPhone
+    host: 10.88.111.245
+    scan_interval: 5
+  - platform: ping
+    name: Jasons A50
+    host: 10.88.111.246
+    scan_interval: 5
+
+#device_tracker:
+#  - platform: ping
+#    interval_seconds: 5
+#    hosts:
+#      timothyiphone: 10.88.111.245
+#      jasonsamsung: 10.88.111.246
+
+#rest_command:
+#  turn_off_pc:
+#    url: http://10.88.111.32:9001
 
 wemo:
 
 tplink:
 
-group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
